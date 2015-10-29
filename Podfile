@@ -12,8 +12,8 @@ target 'Feedings' do
 end
 
 target 'FeedingsTests' do
-  'Quick', '~> 0.8'
-  'Nimble', '~> 3.0.0'
+  pod 'Quick', '~> 0.8'
+  pod 'Nimble', '~> 3.0.0'
 end
 
 target 'FeedingsUITests' do
