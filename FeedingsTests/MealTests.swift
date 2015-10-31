@@ -6,8 +6,5 @@
 //  Copyright © 2015 Kevin McGladdery. All rights reserved.
 //
 
-import ReactiveCocoa
-
-
 
 @testable import Feedings
