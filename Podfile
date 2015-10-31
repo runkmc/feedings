@@ -11,12 +11,16 @@ target 'Feedings' do
   pod 'ReactiveCocoa', '4.0.4-alpha-1'
 end
 
-target 'FeedingsTests' do
+def testing_pods
   pod 'Quick', '~> 0.8'
   pod 'Nimble', '~> 3.0.0'
 end
 
-target 'FeedingsUITests' do
+target 'FeedingsTests' do
+  testing_pods
+end
 
+target 'FeedingsUITests' do
+  testing_pods
 end
 
