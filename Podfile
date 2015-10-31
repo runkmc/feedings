@@ -6,8 +6,6 @@ source 'https://github.com/mentalfaculty/Specs.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
 target 'Feedings' do
-  pod 'Ensembles', '~> 2.0'
-  pod 'Ensembles/Dropbox', '~> 2.0'
   pod 'ReactiveCocoa', '4.0.4-alpha-1'
 end
 
