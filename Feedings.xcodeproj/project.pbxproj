@@ -15,7 +15,6 @@
 		0A28B1111BE1B55600C4FDA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A28B10F1BE1B55600C4FDA5 /* LaunchScreen.storyboard */; };
 		0A28B11C1BE1B55600C4FDA5 /* MealTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A28B11B1BE1B55600C4FDA5 /* MealTests.swift */; };
 		0A28B1271BE1B55600C4FDA5 /* FeedingsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A28B1261BE1B55600C4FDA5 /* FeedingsUITests.swift */; };
-		0A9D63E81BE48BCA000F4778 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A9D63E71BE48BCA000F4778 /* CloudKit.framework */; };
 		941CA0AF32956C557E82E674 /* Pods_FeedingsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1056BE9E4DD9299A4A84641E /* Pods_FeedingsTests.framework */; };
 		EBC7C6A69AA5230F2266DED9 /* Pods_FeedingsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5922000925E75AF67F6E6114 /* Pods_FeedingsUITests.framework */; };
 /* End PBXBuildFile section */
@@ -53,7 +52,6 @@
 		0A28B1261BE1B55600C4FDA5 /* FeedingsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedingsUITests.swift; sourceTree = "<group>"; };
 		0A28B1281BE1B55600C4FDA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A9D63E61BE48BC5000F4778 /* Feedings.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Feedings.entitlements; sourceTree = "<group>"; };
-		0A9D63E71BE48BCA000F4778 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		0ABB7BEBCD52ED7D367A1756 /* Pods-FeedingsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedingsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeedingsUITests/Pods-FeedingsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1056BE9E4DD9299A4A84641E /* Pods_FeedingsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeedingsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C56BB30152137C1D6C101D5 /* Pods-FeedingsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedingsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeedingsTests/Pods-FeedingsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -70,7 +68,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0340718519A485CDC93D5B48 /* Pods_Feedings.framework in Frameworks */,
-				0A9D63E81BE48BCA000F4778 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,7 +160,6 @@
 		AD6F0B6DF6C3B9AD02AB4CCA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0A9D63E71BE48BCA000F4778 /* CloudKit.framework */,
 				F89102230929853146E3140E /* Pods_Feedings.framework */,
 				1056BE9E4DD9299A4A84641E /* Pods_FeedingsTests.framework */,
 				5922000925E75AF67F6E6114 /* Pods_FeedingsUITests.framework */,
@@ -250,7 +246,7 @@
 						DevelopmentTeam = P3HAZUW5GC;
 						SystemCapabilities = {
 							com.apple.iCloud = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -581,7 +577,6 @@
 			baseConfigurationReference = C7CFF7A94C32FFD695CD0B6C /* Pods-Feedings.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Feedings/Feedings.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Feedings/Info.plist;
@@ -597,7 +592,6 @@
 			baseConfigurationReference = 58C13B6E011C877E7674181D /* Pods-Feedings.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Feedings/Feedings.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Feedings/Info.plist;
