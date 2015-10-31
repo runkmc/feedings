@@ -8,3 +8,16 @@
 
 
 @testable import Feedings
+import Quick
+import Nimble
+
+class MealSpec : QuickSpec {
+  override func spec() {
+    describe("It Exists") {
+      it("has a calories property") {
+        let meal : Meal = Meal(calories:250)
+        expect(meal.calories) == 250
+      }
+    }
+  }
+}
