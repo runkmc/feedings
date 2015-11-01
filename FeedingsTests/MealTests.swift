@@ -14,9 +14,16 @@ import Nimble
 class MealSpec : QuickSpec {
   override func spec() {
     describe("It Exists") {
+      let calories = 250
+      let date = NSDate()
+      let meal = Meal(calories:calories, date:date)
+      
       it("has a calories property") {
-        let meal : Meal = Meal(calories:250)
         expect(meal.calories) == 250
+      }
+      
+      it("has a date property") {
+        expect(meal.date) == date
       }
     }
   }

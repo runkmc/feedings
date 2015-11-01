@@ -11,8 +11,10 @@ import Foundation
 class Meal {
   
   var calories : Int
+  var date : NSDate
   
-  init(calories:Int) {
+  init(calories:Int, date:NSDate) {
     self.calories = calories
+    self.date = date
   }
 }
