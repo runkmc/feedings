@@ -16,7 +16,8 @@ class MealSpec : QuickSpec {
     describe("It Exists") {
       let calories = 250
       let date = NSDate()
-      let meal = Meal(calories:calories, date:date)
+      let volume = 220
+      let meal = Meal(calories:calories, date:date, volume:volume)
       
       it("has a calories property") {
         expect(meal.calories) == 250
@@ -24,6 +25,10 @@ class MealSpec : QuickSpec {
       
       it("has a date property") {
         expect(meal.date) == date
+      }
+      
+      it("has a volume") {
+        expect(meal.volume) == volume
       }
     }
   }
