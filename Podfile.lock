@@ -1,5 +1,8 @@
 PODS:
+  - Bolts/Tasks (1.5.0)
   - Nimble (3.0.0)
+  - Parse (1.9.1):
+    - Bolts/Tasks (>= 1.4.0)
   - Quick (0.8.0)
   - ReactiveCocoa (4.0.4-alpha-1):
     - ReactiveCocoa/UI (= 4.0.4-alpha-1)
@@ -16,11 +19,14 @@ PODS:
 
 DEPENDENCIES:
   - Nimble (~> 3.0.0)
+  - Parse (~> 1.9.1)
   - Quick (~> 0.8)
   - ReactiveCocoa (= 4.0.4-alpha-1)
 
 SPEC CHECKSUMS:
+  Bolts: 722ab9a4f8b50fc4ed1b9998a5a7a2b3f16d80b4
   Nimble: 4c353d43735b38b545cbb4cb91504588eb5de926
+  Parse: 54a965c8c19a6dde90284ab654dbcc77ef8c001b
   Quick: 563d0f6ec5f72e394645adb377708639b7dd38ab
   ReactiveCocoa: 618a2fc13d4ed80e380aa6fa56547cef43c7341d
   Result: 8ae33a29ed1e147514b9536de523a978d7faba1f
