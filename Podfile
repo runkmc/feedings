@@ -6,6 +6,7 @@ use_frameworks!
 target 'Feedings' do
   pod 'ReactiveCocoa', '4.0.4-alpha-1'
   pod 'Parse', '~> 1.9.1'
+  pod 'Colortools'
 end
 
 def testing_pods

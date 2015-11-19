@@ -1,5 +1,6 @@
 PODS:
   - Bolts/Tasks (1.5.0)
+  - Colortools (0.1.0)
   - Nimble (3.0.0)
   - Parse (1.9.1):
     - Bolts/Tasks (>= 1.4.0)
@@ -18,6 +19,7 @@ PODS:
   - Result (0.6.0-beta.5)
 
 DEPENDENCIES:
+  - Colortools
   - Nimble (~> 3.0.0)
   - Parse (~> 1.9.1)
   - Quick (~> 0.8)
@@ -25,6 +27,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Bolts: 722ab9a4f8b50fc4ed1b9998a5a7a2b3f16d80b4
+  Colortools: 61c9a7dd772be60394486d0ed7e1e15fc7750da7
   Nimble: 4c353d43735b38b545cbb4cb91504588eb5de926
   Parse: 54a965c8c19a6dde90284ab654dbcc77ef8c001b
   Quick: 563d0f6ec5f72e394645adb377708639b7dd38ab
