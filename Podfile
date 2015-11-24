@@ -7,6 +7,7 @@ target 'Feedings' do
   pod 'Bond', '~> 4.2.0'
   pod 'Parse', '~> 1.9.1'
   pod 'Colortools'
+  pod 'DZNEmptyDataSet', '~> 1.7.2'
 end
 
 def testing_pods
