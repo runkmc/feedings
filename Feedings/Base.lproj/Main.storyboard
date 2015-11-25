@@ -3,7 +3,18 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="FiraSans-Book.otf">
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -20,10 +31,132 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="EDN-8i-cLW"/>
+                    <connections>
+                        <segue destination="Px8-2o-VlV" kind="presentation" id="Ih8-yB-dr9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1098.5" y="815.5"/>
+            <point key="canvasLocation" x="1055.5" y="1288.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="rZR-XM-6dJ">
+            <objects>
+                <viewController id="Px8-2o-VlV" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gsl-2R-q5u"/>
+                        <viewControllerLayoutGuide type="bottom" id="uBH-9Z-zfv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SHZ-0V-nNk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feedings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYu-k2-gMk">
+                                <rect key="frame" x="16" y="34" width="343" height="32"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="26"/>
+                                <color key="textColor" red="0.95686274509803926" green="0.30196078431372547" blue="0.027450980392156862" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xPr-kY-A7I">
+                                <rect key="frame" x="34" y="103" width="307" height="17"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TIN-Sk-3Q4">
+                                <rect key="frame" x="34" y="146" width="307" height="17"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4AB-H8-hpw">
+                                <rect key="frame" x="34" y="340" width="307" height="48"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="bPN-nD-29R"/>
+                                    <constraint firstAttribute="height" constant="48" id="tnW-aE-pRc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="19"/>
+                                <state key="normal" title="Sign up"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="bPN-nD-29R"/>
+                                        <exclude reference="tnW-aE-pRc"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not registered?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFv-mn-ADH">
+                                <rect key="frame" x="34" y="303" width="307" height="20"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhE-MJ-RR2">
+                                <rect key="frame" x="34" y="205" width="307" height="48"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="hG0-Bo-G0r"/>
+                                    <constraint firstAttribute="height" constant="48" id="kA7-TH-mUS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="19"/>
+                                <state key="normal" title="Log in"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="hG0-Bo-G0r"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SYu-k2-gMk" firstAttribute="trailing" secondItem="SHZ-0V-nNk" secondAttribute="trailingMargin" id="8CM-pX-abE"/>
+                            <constraint firstItem="BFv-mn-ADH" firstAttribute="centerX" secondItem="TIN-Sk-3Q4" secondAttribute="centerX" id="8aW-RA-e8l"/>
+                            <constraint firstItem="DhE-MJ-RR2" firstAttribute="top" secondItem="TIN-Sk-3Q4" secondAttribute="bottom" constant="42" id="GVZ-En-tah"/>
+                            <constraint firstItem="TIN-Sk-3Q4" firstAttribute="top" secondItem="xPr-kY-A7I" secondAttribute="bottom" constant="26" id="HNz-bt-deK"/>
+                            <constraint firstItem="xPr-kY-A7I" firstAttribute="top" secondItem="SYu-k2-gMk" secondAttribute="bottom" constant="37" id="IvW-eH-f45"/>
+                            <constraint firstItem="DhE-MJ-RR2" firstAttribute="leading" secondItem="TIN-Sk-3Q4" secondAttribute="leading" id="MBX-DJ-HtB"/>
+                            <constraint firstItem="4AB-H8-hpw" firstAttribute="top" secondItem="BFv-mn-ADH" secondAttribute="bottom" constant="17" id="Rad-Md-YAB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xPr-kY-A7I" secondAttribute="trailing" constant="18" id="RyR-C4-o90"/>
+                            <constraint firstItem="BFv-mn-ADH" firstAttribute="top" secondItem="DhE-MJ-RR2" secondAttribute="bottom" constant="50" id="XbC-GC-QSZ"/>
+                            <constraint firstItem="DhE-MJ-RR2" firstAttribute="width" secondItem="TIN-Sk-3Q4" secondAttribute="width" id="YKg-IE-Yjf"/>
+                            <constraint firstItem="BFv-mn-ADH" firstAttribute="width" secondItem="DhE-MJ-RR2" secondAttribute="width" id="Z2y-bB-EfA"/>
+                            <constraint firstItem="TIN-Sk-3Q4" firstAttribute="centerX" secondItem="xPr-kY-A7I" secondAttribute="centerX" id="aaO-3M-cPR"/>
+                            <constraint firstItem="SYu-k2-gMk" firstAttribute="top" secondItem="gsl-2R-q5u" secondAttribute="bottom" constant="14" id="c0c-uy-yeA"/>
+                            <constraint firstItem="4AB-H8-hpw" firstAttribute="height" secondItem="DhE-MJ-RR2" secondAttribute="height" id="dqO-3s-tJq"/>
+                            <constraint firstItem="DhE-MJ-RR2" firstAttribute="centerX" secondItem="TIN-Sk-3Q4" secondAttribute="centerX" id="gEo-hA-aSH"/>
+                            <constraint firstItem="4AB-H8-hpw" firstAttribute="width" secondItem="DhE-MJ-RR2" secondAttribute="width" id="hzi-Fi-Wtg"/>
+                            <constraint firstItem="4AB-H8-hpw" firstAttribute="centerX" secondItem="TIN-Sk-3Q4" secondAttribute="centerX" id="jBT-Rs-paR"/>
+                            <constraint firstItem="xPr-kY-A7I" firstAttribute="leading" secondItem="SHZ-0V-nNk" secondAttribute="leadingMargin" constant="18" id="pbP-TC-mXg"/>
+                            <constraint firstItem="SYu-k2-gMk" firstAttribute="leading" secondItem="SHZ-0V-nNk" secondAttribute="leadingMargin" id="t74-GG-MAj"/>
+                            <constraint firstItem="TIN-Sk-3Q4" firstAttribute="width" secondItem="xPr-kY-A7I" secondAttribute="width" id="yqi-8D-sgm"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WZs-na-TpO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1564.5" y="617.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="svI-RQ-lBD">
+            <objects>
+                <viewController id="RWQ-Ek-mmZ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yqV-Ug-gs3"/>
+                        <viewControllerLayoutGuide type="bottom" id="nmF-66-6iQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="L7A-Ti-QaH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ptg-85-y9R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2146" y="584"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="n1i-tn-rfJ">
