@@ -6,7 +6,6 @@
 //  Copyright © 2015 Kevin McGladdery. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import Parse
 

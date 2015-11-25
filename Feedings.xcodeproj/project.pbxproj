@@ -10,6 +10,7 @@
 		0340718519A485CDC93D5B48 /* Pods_Feedings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F89102230929853146E3140E /* Pods_Feedings.framework */; };
 		0A0BAF911C0583F500933B9F /* FiraSans-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A0BAF901C0583F500933B9F /* FiraSans-Book.otf */; };
 		0A0BAF941C058E6300933B9F /* FeedingsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0BAF931C058E6300933B9F /* FeedingsListViewController.swift */; };
+		0A0BAF961C0662D100933B9F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0BAF951C0662D100933B9F /* LoginViewController.swift */; };
 		0A28B1071BE1B55600C4FDA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A28B1061BE1B55600C4FDA5 /* AppDelegate.swift */; };
 		0A28B1091BE1B55600C4FDA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A28B1081BE1B55600C4FDA5 /* ViewController.swift */; };
 		0A28B10C1BE1B55600C4FDA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A28B10A1BE1B55600C4FDA5 /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		00E536E399109CEAD49BCFC4 /* Pods-FeedingsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedingsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeedingsTests/Pods-FeedingsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0A0BAF901C0583F500933B9F /* FiraSans-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "FiraSans-Book.otf"; path = "Feedings/FiraSans-Book.otf"; sourceTree = "<group>"; };
 		0A0BAF931C058E6300933B9F /* FeedingsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedingsListViewController.swift; sourceTree = "<group>"; };
+		0A0BAF951C0662D100933B9F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0A28B1031BE1B55600C4FDA5 /* Feedings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Feedings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A28B1061BE1B55600C4FDA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A28B1081BE1B55600C4FDA5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			children = (
 				0A680D961BE5741F00379B69 /* Meal.swift */,
 				0A9D63E61BE48BC5000F4778 /* Feedings.entitlements */,
+				0A0BAF951C0662D100933B9F /* LoginViewController.swift */,
 				0A5555D81BF6F08700F1EA5A /* ParseStuff.swift */,
 				0A28B1061BE1B55600C4FDA5 /* AppDelegate.swift */,
 				0A28B1081BE1B55600C4FDA5 /* ViewController.swift */,
@@ -456,6 +459,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A0BAF961C0662D100933B9F /* LoginViewController.swift in Sources */,
 				0A28B1091BE1B55600C4FDA5 /* ViewController.swift in Sources */,
 				0A680D971BE5741F00379B69 /* Meal.swift in Sources */,
 				0A5555D91BF6F08700F1EA5A /* ParseStuff.swift in Sources */,
