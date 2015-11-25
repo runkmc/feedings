@@ -11,6 +11,9 @@
 		0A0BAF911C0583F500933B9F /* FiraSans-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A0BAF901C0583F500933B9F /* FiraSans-Book.otf */; };
 		0A0BAF941C058E6300933B9F /* FeedingsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0BAF931C058E6300933B9F /* FeedingsListViewController.swift */; };
 		0A0BAF961C0662D100933B9F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0BAF951C0662D100933B9F /* LoginViewController.swift */; };
+		0A0BAF981C0664A900933B9F /* UIColor-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0BAF971C0664A900933B9F /* UIColor-Extensions.swift */; };
+		0A0BAF9A1C06679500933B9F /* FiraSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A0BAF991C06679500933B9F /* FiraSans-Medium.otf */; };
+		0A0BAF9E1C066C2A00933B9F /* HighlightedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0BAF9D1C066C2A00933B9F /* HighlightedButton.swift */; };
 		0A28B1071BE1B55600C4FDA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A28B1061BE1B55600C4FDA5 /* AppDelegate.swift */; };
 		0A28B1091BE1B55600C4FDA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A28B1081BE1B55600C4FDA5 /* ViewController.swift */; };
 		0A28B10C1BE1B55600C4FDA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A28B10A1BE1B55600C4FDA5 /* Main.storyboard */; };
@@ -46,6 +49,9 @@
 		0A0BAF901C0583F500933B9F /* FiraSans-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "FiraSans-Book.otf"; path = "Feedings/FiraSans-Book.otf"; sourceTree = "<group>"; };
 		0A0BAF931C058E6300933B9F /* FeedingsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedingsListViewController.swift; sourceTree = "<group>"; };
 		0A0BAF951C0662D100933B9F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0A0BAF971C0664A900933B9F /* UIColor-Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extensions.swift"; sourceTree = "<group>"; };
+		0A0BAF991C06679500933B9F /* FiraSans-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-Medium.otf"; sourceTree = "<group>"; };
+		0A0BAF9D1C066C2A00933B9F /* HighlightedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighlightedButton.swift; sourceTree = "<group>"; };
 		0A28B1031BE1B55600C4FDA5 /* Feedings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Feedings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A28B1061BE1B55600C4FDA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A28B1081BE1B55600C4FDA5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +109,7 @@
 		0A0BAF921C0583FF00933B9F /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				0A0BAF991C06679500933B9F /* FiraSans-Medium.otf */,
 				0A0BAF901C0583F500933B9F /* FiraSans-Book.otf */,
 			);
 			name = Fonts;
@@ -135,12 +142,14 @@
 			isa = PBXGroup;
 			children = (
 				0A680D961BE5741F00379B69 /* Meal.swift */,
+				0A0BAF9D1C066C2A00933B9F /* HighlightedButton.swift */,
 				0A9D63E61BE48BC5000F4778 /* Feedings.entitlements */,
 				0A0BAF951C0662D100933B9F /* LoginViewController.swift */,
 				0A5555D81BF6F08700F1EA5A /* ParseStuff.swift */,
 				0A28B1061BE1B55600C4FDA5 /* AppDelegate.swift */,
 				0A28B1081BE1B55600C4FDA5 /* ViewController.swift */,
 				0A28B10A1BE1B55600C4FDA5 /* Main.storyboard */,
+				0A0BAF971C0664A900933B9F /* UIColor-Extensions.swift */,
 				0A0BAF931C058E6300933B9F /* FeedingsListViewController.swift */,
 				0A28B10D1BE1B55600C4FDA5 /* Assets.xcassets */,
 				0A28B10F1BE1B55600C4FDA5 /* LaunchScreen.storyboard */,
@@ -310,6 +319,7 @@
 			files = (
 				0A28B1111BE1B55600C4FDA5 /* LaunchScreen.storyboard in Resources */,
 				0A28B10E1BE1B55600C4FDA5 /* Assets.xcassets in Resources */,
+				0A0BAF9A1C06679500933B9F /* FiraSans-Medium.otf in Resources */,
 				0A28B10C1BE1B55600C4FDA5 /* Main.storyboard in Resources */,
 				0A0BAF911C0583F500933B9F /* FiraSans-Book.otf in Resources */,
 			);
@@ -464,7 +474,9 @@
 				0A680D971BE5741F00379B69 /* Meal.swift in Sources */,
 				0A5555D91BF6F08700F1EA5A /* ParseStuff.swift in Sources */,
 				0A0BAF941C058E6300933B9F /* FeedingsListViewController.swift in Sources */,
+				0A0BAF981C0664A900933B9F /* UIColor-Extensions.swift in Sources */,
 				0A28B1071BE1B55600C4FDA5 /* AppDelegate.swift in Sources */,
+				0A0BAF9E1C066C2A00933B9F /* HighlightedButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

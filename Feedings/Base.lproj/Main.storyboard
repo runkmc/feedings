@@ -16,8 +16,10 @@
             <string>FiraSans-Book</string>
             <string>FiraSans-Book</string>
             <string>FiraSans-Book</string>
-            <string>FiraSans-Book</string>
-            <string>FiraSans-Book</string>
+        </mutableArray>
+        <mutableArray key="FiraSans-Medium.otf">
+            <string>FiraSans-Medium</string>
+            <string>FiraSans-Medium</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -44,10 +46,10 @@
             </objects>
             <point key="canvasLocation" x="1055.5" y="1288.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="rZR-XM-6dJ">
             <objects>
-                <viewController id="Px8-2o-VlV" sceneMemberID="viewController">
+                <viewController id="Px8-2o-VlV" customClass="LoginViewController" customModule="Feedings" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gsl-2R-q5u"/>
                         <viewControllerLayoutGuide type="bottom" id="uBH-9Z-zfv"/>
@@ -75,15 +77,24 @@
                                 <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4AB-H8-hpw">
-                                <rect key="frame" x="34" y="403" width="307" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4AB-H8-hpw" customClass="HighlightedButton" customModule="Feedings" customModuleProvider="target">
+                                <rect key="frame" x="34" y="394" width="307" height="48"/>
                                 <animations/>
+                                <color key="backgroundColor" red="0.086274509803921567" green="0.68627450980392157" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="bPN-nD-29R"/>
                                     <constraint firstAttribute="height" constant="48" id="tnW-aE-pRc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="19"/>
-                                <state key="normal" title="Sign up"/>
+                                <fontDescription key="fontDescription" name="FiraSans-Medium" family="Fira Sans" pointSize="19"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Sign up">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                        <color key="value" red="0.086274509799999996" green="0.68627450980000004" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="bPN-nD-29R"/>
@@ -91,7 +102,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="RWQ-Ek-mmZ" kind="presentation" id="X5p-cF-NNm"/>
+                                    <segue destination="RWQ-Ek-mmZ" kind="presentation" id="gZd-rK-tzv"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not registered?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFv-mn-ADH">
@@ -101,15 +112,27 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhE-MJ-RR2">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhE-MJ-RR2" customClass="HighlightedButton" customModule="Feedings" customModuleProvider="target">
                                 <rect key="frame" x="34" y="268" width="307" height="48"/>
                                 <animations/>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.30196078430000001" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="hG0-Bo-G0r"/>
                                     <constraint firstAttribute="height" constant="48" id="kA7-TH-mUS"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="19"/>
-                                <state key="normal" title="Log in"/>
+                                <fontDescription key="fontDescription" name="FiraSans-Medium" family="Fira Sans" pointSize="19"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Log in">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                        <color key="value" red="0.95686274510000002" green="0.30196078430000001" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="hG0-Bo-G0r"/>
@@ -126,7 +149,7 @@
                             <constraint firstItem="TIN-Sk-3Q4" firstAttribute="top" secondItem="xPr-kY-A7I" secondAttribute="bottom" constant="26" id="HNz-bt-deK"/>
                             <constraint firstItem="xPr-kY-A7I" firstAttribute="top" secondItem="SYu-k2-gMk" secondAttribute="bottom" constant="57" id="IvW-eH-f45"/>
                             <constraint firstItem="DhE-MJ-RR2" firstAttribute="leading" secondItem="TIN-Sk-3Q4" secondAttribute="leading" id="MBX-DJ-HtB"/>
-                            <constraint firstItem="4AB-H8-hpw" firstAttribute="top" secondItem="BFv-mn-ADH" secondAttribute="bottom" constant="17" id="Rad-Md-YAB"/>
+                            <constraint firstItem="4AB-H8-hpw" firstAttribute="top" secondItem="BFv-mn-ADH" secondAttribute="bottom" constant="8" id="Rad-Md-YAB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xPr-kY-A7I" secondAttribute="trailing" constant="18" id="RyR-C4-o90"/>
                             <constraint firstItem="BFv-mn-ADH" firstAttribute="top" secondItem="DhE-MJ-RR2" secondAttribute="bottom" constant="50" id="XbC-GC-QSZ"/>
                             <constraint firstItem="DhE-MJ-RR2" firstAttribute="width" secondItem="TIN-Sk-3Q4" secondAttribute="width" id="YKg-IE-Yjf"/>
@@ -142,6 +165,12 @@
                             <constraint firstItem="TIN-Sk-3Q4" firstAttribute="width" secondItem="xPr-kY-A7I" secondAttribute="width" id="yqi-8D-sgm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="DhE-MJ-RR2" id="V2E-zS-6SX"/>
+                        <outlet property="passwordField" destination="TIN-Sk-3Q4" id="21g-Rc-4t2"/>
+                        <outlet property="signupButton" destination="4AB-H8-hpw" id="R3Q-uU-hxZ"/>
+                        <outlet property="usernameField" destination="xPr-kY-A7I" id="oEg-8L-2dt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WZs-na-TpO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -178,14 +207,23 @@
                                 <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jVD-bl-p7I">
-                                <rect key="frame" x="34" y="311" width="307" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jVD-bl-p7I" customClass="HighlightedButton" customModule="Feedings" customModuleProvider="target">
+                                <rect key="frame" x="34" y="311" width="307" height="48"/>
                                 <animations/>
+                                <color key="backgroundColor" red="0.086274509799999996" green="0.68627450980000004" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="6Bt-5q-FPs"/>
                                     <constraint firstAttribute="height" constant="48" id="he3-en-vrw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="19"/>
-                                <state key="normal" title="Sign up"/>
+                                <state key="normal" title="Sign up">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                        <color key="value" red="0.086274509799999996" green="0.68627450980000004" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="he3-en-vrw"/>
