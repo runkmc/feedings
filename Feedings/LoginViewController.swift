@@ -24,13 +24,7 @@ class LoginViewController: UIViewController {
     loginButton.layer.cornerRadius = 24
     signupButton.layer.cornerRadius = 24
     
-    let bottomUsernameBorder = CALayer()
-    bottomUsernameBorder.frame = CGRectMake(0.0, usernameField.frame.size.height - 1, usernameField.frame.size.width, 1.0)
-    bottomUsernameBorder.backgroundColor = UIColor.init(hex: 0xD5D5D5FF).CGColor
-    usernameField.layer.addSublayer(bottomUsernameBorder)
-    let bottomPasswordBorder = CALayer()
-    bottomPasswordBorder.frame = CGRectMake(0.0, usernameField.frame.size.height - 1, usernameField.frame.size.width, 1.0)
-    bottomPasswordBorder.backgroundColor = UIColor.init(hex: 0xD5D5D5FF).CGColor
-    passwordField.layer.addSublayer(bottomPasswordBorder)
+    usernameField.underline(UIColor.init(hex: 0xD5D5D5FF))
+    passwordField.underline(UIColor.init(hex: 0xD5D5D5FF))
   }
 }
