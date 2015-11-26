@@ -288,18 +288,20 @@
             </objects>
             <point key="canvasLocation" x="2061.5" y="617.5"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Feedings-->
         <scene sceneID="n1i-tn-rfJ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Yhy-Im-gG9" sceneMemberID="viewController">
+                <navigationController title="Feedings" automaticallyAdjustsScrollViewInsets="NO" id="Yhy-Im-gG9" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qju-Cf-pv5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
+                        <color key="tintColor" red="0.95686274510000002" green="0.30196078430000001" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="18"/>
                             <color key="textColor" red="0.95686274510000002" green="0.30196078430000001" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
                     </navigationBar>
