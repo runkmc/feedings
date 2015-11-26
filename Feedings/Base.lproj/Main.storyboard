@@ -59,26 +59,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feedings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYu-k2-gMk">
-                                <rect key="frame" x="16" y="77" width="343" height="32"/>
+                                <rect key="frame" x="16" y="39" width="343" height="32"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="26"/>
                                 <color key="textColor" red="0.95686274509803926" green="0.30196078431372547" blue="0.027450980392156862" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xPr-kY-A7I">
-                                <rect key="frame" x="34" y="166" width="307" height="23"/>
+                                <rect key="frame" x="34" y="138" width="307" height="23"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="19"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TIN-Sk-3Q4">
-                                <rect key="frame" x="34" y="207" width="307" height="23"/>
+                                <rect key="frame" x="34" y="176" width="307" height="23"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="19"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4AB-H8-hpw" customClass="HighlightedButton" customModule="Feedings" customModuleProvider="target">
-                                <rect key="frame" x="34" y="398" width="307" height="48"/>
+                                <rect key="frame" x="34" y="354" width="307" height="48"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.086274509803921567" green="0.68627450980392157" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -106,14 +106,14 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not registered?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFv-mn-ADH">
-                                <rect key="frame" x="34" y="370" width="307" height="20"/>
+                                <rect key="frame" x="34" y="328" width="307" height="20"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhE-MJ-RR2" customClass="HighlightedButton" customModule="Feedings" customModuleProvider="target">
-                                <rect key="frame" x="34" y="272" width="307" height="48"/>
+                                <rect key="frame" x="34" y="227" width="307" height="48"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.95686274510000002" green="0.30196078430000001" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -145,17 +145,17 @@
                         <constraints>
                             <constraint firstItem="SYu-k2-gMk" firstAttribute="trailing" secondItem="SHZ-0V-nNk" secondAttribute="trailingMargin" id="8CM-pX-abE"/>
                             <constraint firstItem="BFv-mn-ADH" firstAttribute="centerX" secondItem="TIN-Sk-3Q4" secondAttribute="centerX" id="8aW-RA-e8l"/>
-                            <constraint firstItem="DhE-MJ-RR2" firstAttribute="top" secondItem="TIN-Sk-3Q4" secondAttribute="bottom" constant="42" id="GVZ-En-tah"/>
-                            <constraint firstItem="TIN-Sk-3Q4" firstAttribute="top" secondItem="xPr-kY-A7I" secondAttribute="bottom" constant="18" id="HNz-bt-deK"/>
-                            <constraint firstItem="xPr-kY-A7I" firstAttribute="top" secondItem="SYu-k2-gMk" secondAttribute="bottom" constant="57" id="IvW-eH-f45"/>
+                            <constraint firstItem="DhE-MJ-RR2" firstAttribute="top" secondItem="TIN-Sk-3Q4" secondAttribute="bottom" constant="28" id="GVZ-En-tah"/>
+                            <constraint firstItem="TIN-Sk-3Q4" firstAttribute="top" secondItem="xPr-kY-A7I" secondAttribute="bottom" constant="15" id="HNz-bt-deK"/>
+                            <constraint firstItem="xPr-kY-A7I" firstAttribute="top" secondItem="SYu-k2-gMk" secondAttribute="bottom" constant="67" id="IvW-eH-f45"/>
                             <constraint firstItem="DhE-MJ-RR2" firstAttribute="leading" secondItem="TIN-Sk-3Q4" secondAttribute="leading" id="MBX-DJ-HtB"/>
-                            <constraint firstItem="4AB-H8-hpw" firstAttribute="top" secondItem="BFv-mn-ADH" secondAttribute="bottom" constant="8" id="Rad-Md-YAB"/>
+                            <constraint firstItem="4AB-H8-hpw" firstAttribute="top" secondItem="BFv-mn-ADH" secondAttribute="bottom" constant="6" id="Rad-Md-YAB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xPr-kY-A7I" secondAttribute="trailing" constant="18" id="RyR-C4-o90"/>
-                            <constraint firstItem="BFv-mn-ADH" firstAttribute="top" secondItem="DhE-MJ-RR2" secondAttribute="bottom" constant="50" id="XbC-GC-QSZ"/>
+                            <constraint firstItem="BFv-mn-ADH" firstAttribute="top" secondItem="DhE-MJ-RR2" secondAttribute="bottom" constant="53" id="XbC-GC-QSZ"/>
                             <constraint firstItem="DhE-MJ-RR2" firstAttribute="width" secondItem="TIN-Sk-3Q4" secondAttribute="width" id="YKg-IE-Yjf"/>
                             <constraint firstItem="BFv-mn-ADH" firstAttribute="width" secondItem="DhE-MJ-RR2" secondAttribute="width" id="Z2y-bB-EfA"/>
                             <constraint firstItem="TIN-Sk-3Q4" firstAttribute="centerX" secondItem="xPr-kY-A7I" secondAttribute="centerX" id="aaO-3M-cPR"/>
-                            <constraint firstItem="SYu-k2-gMk" firstAttribute="top" secondItem="gsl-2R-q5u" secondAttribute="bottom" constant="57" id="c0c-uy-yeA"/>
+                            <constraint firstItem="SYu-k2-gMk" firstAttribute="top" secondItem="gsl-2R-q5u" secondAttribute="bottom" constant="19" id="c0c-uy-yeA"/>
                             <constraint firstItem="4AB-H8-hpw" firstAttribute="height" secondItem="DhE-MJ-RR2" secondAttribute="height" id="dqO-3s-tJq"/>
                             <constraint firstItem="DhE-MJ-RR2" firstAttribute="centerX" secondItem="TIN-Sk-3Q4" secondAttribute="centerX" id="gEo-hA-aSH"/>
                             <constraint firstItem="4AB-H8-hpw" firstAttribute="width" secondItem="DhE-MJ-RR2" secondAttribute="width" id="hzi-Fi-Wtg"/>
@@ -176,10 +176,10 @@
             </objects>
             <point key="canvasLocation" x="1564.5" y="617.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Signup View Controller-->
         <scene sceneID="svI-RQ-lBD">
             <objects>
-                <viewController id="RWQ-Ek-mmZ" sceneMemberID="viewController">
+                <viewController id="RWQ-Ek-mmZ" customClass="SignupViewController" customModule="Feedings" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yqV-Ug-gs3"/>
                         <viewControllerLayoutGuide type="bottom" id="nmF-66-6iQ"/>
@@ -189,26 +189,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feedings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cZ-99-pht">
-                                <rect key="frame" x="34" y="77" width="307" height="32"/>
+                                <rect key="frame" x="34" y="39" width="307" height="32"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="26"/>
                                 <color key="textColor" red="0.95686274510000002" green="0.30196078430000001" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LNZ-qT-h51">
-                                <rect key="frame" x="34" y="166" width="307" height="17"/>
+                                <rect key="frame" x="34" y="138" width="307" height="23"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2gp-UB-kac">
-                                <rect key="frame" x="34" y="209" width="307" height="17"/>
+                                <rect key="frame" x="34" y="176" width="307" height="23"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jVD-bl-p7I" customClass="HighlightedButton" customModule="Feedings" customModuleProvider="target">
-                                <rect key="frame" x="34" y="311" width="307" height="48"/>
+                                <rect key="frame" x="34" y="265" width="307" height="48"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.086274509799999996" green="0.68627450980000004" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -231,17 +231,17 @@
                                 </variation>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eJf-JI-dDT">
-                                <rect key="frame" x="34" y="252" width="307" height="17"/>
+                                <rect key="frame" x="34" y="214" width="307" height="23"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
                             </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2gp-UB-kac" firstAttribute="centerX" secondItem="L7A-Ti-QaH" secondAttribute="centerX" id="0x4-1b-OCX"/>
-                            <constraint firstItem="9cZ-99-pht" firstAttribute="top" secondItem="yqV-Ug-gs3" secondAttribute="bottom" constant="57" id="1aE-ld-ppV"/>
+                            <constraint firstItem="9cZ-99-pht" firstAttribute="top" secondItem="yqV-Ug-gs3" secondAttribute="bottom" constant="19" id="1aE-ld-ppV"/>
                             <constraint firstItem="jVD-bl-p7I" firstAttribute="centerX" secondItem="L7A-Ti-QaH" secondAttribute="centerX" id="392-3J-2h0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9cZ-99-pht" secondAttribute="trailing" constant="18" id="8Ui-cX-Le3"/>
                             <constraint firstItem="9cZ-99-pht" firstAttribute="centerX" secondItem="L7A-Ti-QaH" secondAttribute="centerX" id="8qk-l7-LuZ"/>
@@ -251,13 +251,13 @@
                             <constraint firstItem="LNZ-qT-h51" firstAttribute="width" secondItem="9cZ-99-pht" secondAttribute="width" id="SkR-IL-cKE"/>
                             <constraint firstItem="9cZ-99-pht" firstAttribute="leading" secondItem="L7A-Ti-QaH" secondAttribute="leadingMargin" constant="18" id="UFl-sW-ffn"/>
                             <constraint firstItem="9cZ-99-pht" firstAttribute="top" secondItem="L7A-Ti-QaH" secondAttribute="topMargin" constant="14" id="eTK-of-iLc"/>
-                            <constraint firstItem="2gp-UB-kac" firstAttribute="top" secondItem="LNZ-qT-h51" secondAttribute="bottom" constant="26" id="gei-xx-dKa"/>
+                            <constraint firstItem="2gp-UB-kac" firstAttribute="top" secondItem="LNZ-qT-h51" secondAttribute="bottom" constant="15" id="gei-xx-dKa"/>
                             <constraint firstItem="eJf-JI-dDT" firstAttribute="width" secondItem="2gp-UB-kac" secondAttribute="width" id="idT-60-29f"/>
                             <constraint firstItem="eJf-JI-dDT" firstAttribute="centerX" secondItem="L7A-Ti-QaH" secondAttribute="centerX" id="jNC-zN-eLc"/>
                             <constraint firstItem="jVD-bl-p7I" firstAttribute="width" secondItem="eJf-JI-dDT" secondAttribute="width" id="jgI-eI-aWL"/>
-                            <constraint firstItem="LNZ-qT-h51" firstAttribute="top" secondItem="9cZ-99-pht" secondAttribute="bottom" constant="57" id="nrp-Tx-PsL"/>
-                            <constraint firstItem="eJf-JI-dDT" firstAttribute="top" secondItem="2gp-UB-kac" secondAttribute="bottom" constant="26" id="vwv-Gc-Awd"/>
-                            <constraint firstItem="jVD-bl-p7I" firstAttribute="top" secondItem="eJf-JI-dDT" secondAttribute="bottom" constant="42" id="wyo-pS-NuC"/>
+                            <constraint firstItem="LNZ-qT-h51" firstAttribute="top" secondItem="9cZ-99-pht" secondAttribute="bottom" constant="67" id="nrp-Tx-PsL"/>
+                            <constraint firstItem="eJf-JI-dDT" firstAttribute="top" secondItem="2gp-UB-kac" secondAttribute="bottom" constant="15" id="vwv-Gc-Awd"/>
+                            <constraint firstItem="jVD-bl-p7I" firstAttribute="top" secondItem="eJf-JI-dDT" secondAttribute="bottom" constant="28" id="wyo-pS-NuC"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -266,6 +266,12 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="eJf-JI-dDT" id="1aa-xA-EME"/>
+                        <outlet property="passwordField" destination="2gp-UB-kac" id="BuR-Zv-uoO"/>
+                        <outlet property="signupButton" destination="jVD-bl-p7I" id="RgA-jy-l9q"/>
+                        <outlet property="usernameField" destination="LNZ-qT-h51" id="QOd-nc-2nt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ptg-85-y9R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
