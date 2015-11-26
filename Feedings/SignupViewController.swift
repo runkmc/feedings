@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class SignupViewController: UIViewController {
 
@@ -14,6 +15,7 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +43,29 @@ class SignupViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func signupUser(sender: AnyObject) {
+        indicator.startAnimating()
+        let user = PFUser()
+        user.username = usernameField.text
+        user.password = passwordField.text
+        user.email = emailField.text
+        
+        user.signUpInBackgroundWithBlock {(succeeded: Bool, error: NSError?) -> Void in
+            self.indicator.stopAnimating()
+            if let signupError = error {
+                let errorString = signupError.userInfo["error"] as? String
+                let alert = UIAlertController.init(title: "Problem with Signup", message: errorString, preferredStyle: .Alert)
+                let action = UIAlertAction.init(title: "Ok", style: .Default, handler:nil)
+                alert.addAction(action)
+                self.presentViewController(alert, animated: true, completion: nil)
+            } else {
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }
+            
+        }
+            
+    }
+    
     /*
     // MARK: - Navigation
 

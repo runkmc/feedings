@@ -229,7 +229,15 @@
                                         <exclude reference="he3-en-vrw"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="signupUser:" destination="RWQ-Ek-mmZ" eventType="touchUpInside" id="Upu-Yx-knV"/>
+                                </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Kxg-Vb-HKH">
+                                <rect key="frame" x="177" y="87" width="20" height="20"/>
+                                <animations/>
+                                <color key="color" red="0.95686274510000002" green="0.30196078430000001" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eJf-JI-dDT">
                                 <rect key="frame" x="34" y="214" width="307" height="23"/>
                                 <animations/>
@@ -244,10 +252,12 @@
                             <constraint firstItem="9cZ-99-pht" firstAttribute="top" secondItem="yqV-Ug-gs3" secondAttribute="bottom" constant="19" id="1aE-ld-ppV"/>
                             <constraint firstItem="jVD-bl-p7I" firstAttribute="centerX" secondItem="L7A-Ti-QaH" secondAttribute="centerX" id="392-3J-2h0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9cZ-99-pht" secondAttribute="trailing" constant="18" id="8Ui-cX-Le3"/>
+                            <constraint firstItem="Kxg-Vb-HKH" firstAttribute="centerX" secondItem="L7A-Ti-QaH" secondAttribute="centerX" id="8bK-Ex-YNZ"/>
                             <constraint firstItem="9cZ-99-pht" firstAttribute="centerX" secondItem="L7A-Ti-QaH" secondAttribute="centerX" id="8qk-l7-LuZ"/>
                             <constraint firstItem="9cZ-99-pht" firstAttribute="top" secondItem="L7A-Ti-QaH" secondAttribute="topMargin" constant="14" id="BMT-OT-ivH"/>
                             <constraint firstItem="LNZ-qT-h51" firstAttribute="centerX" secondItem="9cZ-99-pht" secondAttribute="centerX" id="J5j-XU-XVy"/>
                             <constraint firstItem="2gp-UB-kac" firstAttribute="width" secondItem="LNZ-qT-h51" secondAttribute="width" id="Oql-uD-mvk"/>
+                            <constraint firstItem="Kxg-Vb-HKH" firstAttribute="top" secondItem="9cZ-99-pht" secondAttribute="bottom" constant="16" id="RfZ-6k-fws"/>
                             <constraint firstItem="LNZ-qT-h51" firstAttribute="width" secondItem="9cZ-99-pht" secondAttribute="width" id="SkR-IL-cKE"/>
                             <constraint firstItem="9cZ-99-pht" firstAttribute="leading" secondItem="L7A-Ti-QaH" secondAttribute="leadingMargin" constant="18" id="UFl-sW-ffn"/>
                             <constraint firstItem="9cZ-99-pht" firstAttribute="top" secondItem="L7A-Ti-QaH" secondAttribute="topMargin" constant="14" id="eTK-of-iLc"/>
@@ -268,6 +278,7 @@
                     </view>
                     <connections>
                         <outlet property="emailField" destination="eJf-JI-dDT" id="1aa-xA-EME"/>
+                        <outlet property="indicator" destination="Kxg-Vb-HKH" id="p4N-c3-qWa"/>
                         <outlet property="passwordField" destination="2gp-UB-kac" id="BuR-Zv-uoO"/>
                         <outlet property="signupButton" destination="jVD-bl-p7I" id="RgA-jy-l9q"/>
                         <outlet property="usernameField" destination="LNZ-qT-h51" id="QOd-nc-2nt"/>
