@@ -17,6 +17,7 @@
             <string>FiraSans-Book</string>
             <string>FiraSans-Book</string>
             <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
         </mutableArray>
         <mutableArray key="FiraSans-Medium.otf">
             <string>FiraSans-Medium</string>
@@ -39,7 +40,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Feedings" id="EDN-8i-cLW">
-                        <barButtonItem key="leftBarButtonItem" title="Settings" style="plain" id="g9E-k4-AbO"/>
+                        <barButtonItem key="leftBarButtonItem" title="Settings" style="plain" id="g9E-k4-AbO">
+                            <connections>
+                                <segue destination="l8K-rm-sO5" kind="show" id="mMC-Ro-bFk"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="Px8-2o-VlV" kind="presentation" identifier="showLoginController" id="Ih8-yB-dr9"/>
@@ -48,6 +53,62 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1055.5" y="1288.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dTg-We-be1">
+            <objects>
+                <viewController id="l8K-rm-sO5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ak5-Vq-wwR"/>
+                        <viewControllerLayoutGuide type="bottom" id="gRE-ii-nbg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QiP-Jr-7tb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHl-4X-Y76" customClass="HighlightedButton" customModule="Feedings" customModuleProvider="target">
+                                <rect key="frame" x="34" y="72" width="307" height="48"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.97254901959999995" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="7Db-Tx-nMv"/>
+                                    <constraint firstAttribute="height" constant="48" id="W6u-oH-g4Y"/>
+                                    <constraint firstAttribute="height" constant="48" id="WVJ-J9-AGT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="19"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                        <color key="value" red="0.97254901959999995" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7Db-Tx-nMv"/>
+                                        <exclude reference="WVJ-J9-AGT"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="cancelTapped:" destination="RWQ-Ek-mmZ" eventType="touchUpInside" id="BJ2-ef-qex"/>
+                                    <action selector="signupUser:" destination="RWQ-Ek-mmZ" eventType="touchUpInside" id="Sck-1f-gTm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eHl-4X-Y76" firstAttribute="centerX" secondItem="QiP-Jr-7tb" secondAttribute="centerX" id="40T-qn-n3k"/>
+                            <constraint firstItem="eHl-4X-Y76" firstAttribute="top" secondItem="ak5-Vq-wwR" secondAttribute="bottom" constant="8" id="AsD-4Z-G2r"/>
+                            <constraint firstItem="eHl-4X-Y76" firstAttribute="leading" secondItem="QiP-Jr-7tb" secondAttribute="leadingMargin" constant="18" id="nvr-ch-YVc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eHl-4X-Y76" secondAttribute="trailing" constant="18" id="y8P-Sx-KVQ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zfj-fw-Nmt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1564.5" y="1514.5"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="rZR-XM-6dJ">
