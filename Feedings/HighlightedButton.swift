@@ -11,18 +11,25 @@ import Colortools
 
 class HighlightedButton: UIButton {
   @IBInspectable var buttonColor: UIColor?
-  
-  override var highlighted: Bool {
-    get {
-      return super.highlighted
+    
+    func animateBackgroundColorChange(color: UIColor?) {
+        UIView.beginAnimations(nil, context: nil)
+        UIView.setAnimationDuration(0.1)
+        self.backgroundColor = color
+        UIView.commitAnimations()
     }
-    set {
-      if newValue {
-        self.backgroundColor = buttonColor?.tint(0.15)
-      } else {
-        self.backgroundColor = buttonColor
-      }
-      super.highlighted = newValue
-    }
-  }
+    
+    override var highlighted: Bool {
+        get {
+            return super.highlighted
+        }
+        set {
+            if newValue {
+                self.animateBackgroundColorChange(buttonColor?.tint(0.15))
+            } else {
+                self.backgroundColor = buttonColor
+            }
+            super.highlighted = newValue
+            }
+        }
 }
