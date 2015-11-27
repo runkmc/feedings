@@ -145,7 +145,7 @@
                                     <action selector="loginTapped:" destination="Px8-2o-VlV" eventType="touchUpInside" id="PVA-4L-xvE"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="a8V-5S-rDn">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="a8V-5S-rDn">
                                 <rect key="frame" x="177" y="87" width="20" height="20"/>
                                 <animations/>
                                 <color key="color" red="0.95686274510000002" green="0.30196078430000001" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
