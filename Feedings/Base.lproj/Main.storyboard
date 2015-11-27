@@ -179,6 +179,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="indicator" destination="a8V-5S-rDn" id="ey3-hq-HfF"/>
                         <outlet property="loginButton" destination="DhE-MJ-RR2" id="V2E-zS-6SX"/>
                         <outlet property="passwordField" destination="TIN-Sk-3Q4" id="21g-Rc-4t2"/>
                         <outlet property="signupButton" destination="4AB-H8-hpw" id="R3Q-uU-hxZ"/>
