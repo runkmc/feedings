@@ -118,7 +118,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhE-MJ-RR2" customClass="HighlightedButton" customModule="Feedings" customModuleProvider="target">
                                 <rect key="frame" x="34" y="227" width="307" height="48"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.95686274510000002" green="0.30196078430000001" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.086274509799999996" green="0.68627450980000004" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="hG0-Bo-G0r"/>
                                     <constraint firstAttribute="height" constant="48" id="kA7-TH-mUS"/>
@@ -133,7 +133,7 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
-                                        <color key="value" red="0.95686274510000002" green="0.30196078430000001" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.086274509799999996" green="0.68627450980000004" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
@@ -141,13 +141,22 @@
                                         <exclude reference="hG0-Bo-G0r"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="loginTapped:" destination="Px8-2o-VlV" eventType="touchUpInside" id="PVA-4L-xvE"/>
+                                </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="a8V-5S-rDn">
+                                <rect key="frame" x="177" y="87" width="20" height="20"/>
+                                <animations/>
+                                <color key="color" red="0.95686274510000002" green="0.30196078430000001" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="SYu-k2-gMk" firstAttribute="trailing" secondItem="SHZ-0V-nNk" secondAttribute="trailingMargin" id="8CM-pX-abE"/>
                             <constraint firstItem="BFv-mn-ADH" firstAttribute="centerX" secondItem="TIN-Sk-3Q4" secondAttribute="centerX" id="8aW-RA-e8l"/>
+                            <constraint firstItem="a8V-5S-rDn" firstAttribute="centerX" secondItem="SHZ-0V-nNk" secondAttribute="centerX" id="E2O-Dg-Y9a"/>
                             <constraint firstItem="DhE-MJ-RR2" firstAttribute="top" secondItem="TIN-Sk-3Q4" secondAttribute="bottom" constant="28" id="GVZ-En-tah"/>
                             <constraint firstItem="TIN-Sk-3Q4" firstAttribute="top" secondItem="xPr-kY-A7I" secondAttribute="bottom" constant="15" id="HNz-bt-deK"/>
                             <constraint firstItem="xPr-kY-A7I" firstAttribute="top" secondItem="SYu-k2-gMk" secondAttribute="bottom" constant="67" id="IvW-eH-f45"/>
@@ -164,6 +173,7 @@
                             <constraint firstItem="4AB-H8-hpw" firstAttribute="width" secondItem="DhE-MJ-RR2" secondAttribute="width" id="hzi-Fi-Wtg"/>
                             <constraint firstItem="4AB-H8-hpw" firstAttribute="centerX" secondItem="TIN-Sk-3Q4" secondAttribute="centerX" id="jBT-Rs-paR"/>
                             <constraint firstItem="xPr-kY-A7I" firstAttribute="leading" secondItem="SHZ-0V-nNk" secondAttribute="leadingMargin" constant="18" id="pbP-TC-mXg"/>
+                            <constraint firstItem="a8V-5S-rDn" firstAttribute="top" secondItem="SYu-k2-gMk" secondAttribute="bottom" constant="16" id="rPX-C8-jbc"/>
                             <constraint firstItem="SYu-k2-gMk" firstAttribute="leading" secondItem="SHZ-0V-nNk" secondAttribute="leadingMargin" id="t74-GG-MAj"/>
                             <constraint firstItem="TIN-Sk-3Q4" firstAttribute="width" secondItem="xPr-kY-A7I" secondAttribute="width" id="yqi-8D-sgm"/>
                         </constraints>

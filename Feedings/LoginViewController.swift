@@ -27,4 +27,8 @@ class LoginViewController: UIViewController {
     usernameField.underline(UIColor.init(hex: 0xD5D5D5FF))
     passwordField.underline(UIColor.init(hex: 0xD5D5D5FF))
   }
+    
+    @IBAction func loginTapped(sender: AnyObject) {
+    }
+    
 }

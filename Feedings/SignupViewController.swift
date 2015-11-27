@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import Bond
 
 class SignupViewController: UIViewController {
 
@@ -23,13 +24,26 @@ class SignupViewController: UIViewController {
       
         signupButton.layer.cornerRadius = 24
         cancelButton.layer.cornerRadius = 24
+        signupButton.enabled = false
+        self.signupButton.backgroundColor = UIColor.darkGrayColor()
         
         let underlineColor = UIColor.init(hex: 0xD5D5D5FF)
         usernameField.underline(underlineColor)
         passwordField.underline(underlineColor)
         emailField.underline(underlineColor)
 
-        // Do any additional setup after loading the view.
+        signupButton.bnd_enabled.observe {enabled in
+            if enabled {
+                self.signupButton.backgroundColor = UIColor.feedingsBlue
+            } else {
+                self.signupButton.backgroundColor = UIColor.darkGrayColor()
+            }
+        }
+        
+        combineLatest(usernameField.bnd_text, passwordField.bnd_text, emailField.bnd_text)
+            .map {name, pass, email in
+                return (name?.characters.count > 0) && (pass?.characters.count > 0) && (email?.characters.count > 0)
+        }.bindTo(signupButton.bnd_enabled)
     }
 
     override func didReceiveMemoryWarning() {
