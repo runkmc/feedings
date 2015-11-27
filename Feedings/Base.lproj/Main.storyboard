@@ -54,10 +54,10 @@
             </objects>
             <point key="canvasLocation" x="1055.5" y="1288.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="dTg-We-be1">
             <objects>
-                <viewController id="l8K-rm-sO5" sceneMemberID="viewController">
+                <viewController id="l8K-rm-sO5" customClass="SettingsViewController" customModule="Feedings" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ak5-Vq-wwR"/>
                         <viewControllerLayoutGuide type="bottom" id="gRE-ii-nbg"/>
@@ -76,7 +76,7 @@
                                     <constraint firstAttribute="height" constant="48" id="WVJ-J9-AGT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="19"/>
-                                <state key="normal" title="Cancel">
+                                <state key="normal" title="Logout">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -92,6 +92,7 @@
                                 </variation>
                                 <connections>
                                     <action selector="cancelTapped:" destination="RWQ-Ek-mmZ" eventType="touchUpInside" id="BJ2-ef-qex"/>
+                                    <action selector="logoutTapped:" destination="l8K-rm-sO5" eventType="touchUpInside" id="6ai-6o-hFG"/>
                                     <action selector="signupUser:" destination="RWQ-Ek-mmZ" eventType="touchUpInside" id="Sck-1f-gTm"/>
                                 </connections>
                             </button>
