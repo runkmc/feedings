@@ -16,24 +16,18 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var indicator: UIActivityIndicatorView!
+    @IBOutlet weak var cancelButton: HighlightedButton!
   
     override func viewDidLoad() {
         super.viewDidLoad()
       
         signupButton.layer.cornerRadius = 24
-      
-        let bottomUsernameBorder = CALayer()
-        bottomUsernameBorder.frame = CGRectMake(0.0, usernameField.frame.size.height - 1, usernameField.frame.size.width, 1.0)
-        bottomUsernameBorder.backgroundColor = UIColor.init(hex: 0xD5D5D5FF).CGColor
-        usernameField.layer.addSublayer(bottomUsernameBorder)
-        let bottomPasswordBorder = CALayer()
-        bottomPasswordBorder.frame = CGRectMake(0.0, usernameField.frame.size.height - 1, usernameField.frame.size.width, 1.0)
-        bottomPasswordBorder.backgroundColor = UIColor.init(hex: 0xD5D5D5FF).CGColor
-        passwordField.layer.addSublayer(bottomPasswordBorder)
-        let bottomEmailBorder = CALayer()
-        bottomEmailBorder.frame = CGRectMake(0.0, usernameField.frame.size.height - 1, usernameField.frame.size.width, 1.0)
-        bottomEmailBorder.backgroundColor = UIColor.init(hex: 0xD5D5D5FF).CGColor
-        emailField.layer.addSublayer(bottomEmailBorder)
+        cancelButton.layer.cornerRadius = 24
+        
+        let underlineColor = UIColor.init(hex: 0xD5D5D5FF)
+        usernameField.underline(underlineColor)
+        passwordField.underline(underlineColor)
+        emailField.underline(underlineColor)
 
         // Do any additional setup after loading the view.
     }
@@ -61,9 +55,11 @@ class SignupViewController: UIViewController {
             } else {
                 self.dismissViewControllerAnimated(true, completion: nil)
             }
-            
         }
-            
+    }
+    
+    @IBAction func cancelTapped(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     /*

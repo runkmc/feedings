@@ -16,6 +16,7 @@
             <string>FiraSans-Book</string>
             <string>FiraSans-Book</string>
             <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
         </mutableArray>
         <mutableArray key="FiraSans-Medium.otf">
             <string>FiraSans-Medium</string>
@@ -246,6 +247,34 @@
                                 <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLy-pO-bVY" customClass="HighlightedButton" customModule="Feedings" customModuleProvider="target">
+                                <rect key="frame" x="34" y="321" width="307" height="48"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.97254901959999995" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="xQf-To-rXb"/>
+                                    <constraint firstAttribute="height" constant="48" id="yUK-2k-mS0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="19"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                        <color key="value" red="0.97254901960784312" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="xQf-To-rXb"/>
+                                        <exclude reference="yUK-2k-mS0"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="cancelTapped:" destination="RWQ-Ek-mmZ" eventType="touchUpInside" id="E0H-zm-51C"/>
+                                    <action selector="signupUser:" destination="RWQ-Ek-mmZ" eventType="touchUpInside" id="bGt-lZ-hCp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -259,7 +288,10 @@
                             <constraint firstItem="9cZ-99-pht" firstAttribute="top" secondItem="L7A-Ti-QaH" secondAttribute="topMargin" constant="14" id="BMT-OT-ivH"/>
                             <constraint firstItem="LNZ-qT-h51" firstAttribute="centerX" secondItem="9cZ-99-pht" secondAttribute="centerX" id="J5j-XU-XVy"/>
                             <constraint firstItem="2gp-UB-kac" firstAttribute="width" secondItem="LNZ-qT-h51" secondAttribute="width" id="Oql-uD-mvk"/>
+                            <constraint firstItem="wLy-pO-bVY" firstAttribute="height" secondItem="jVD-bl-p7I" secondAttribute="height" id="PRT-gd-bVI"/>
+                            <constraint firstItem="wLy-pO-bVY" firstAttribute="centerX" secondItem="jVD-bl-p7I" secondAttribute="centerX" id="Pua-eO-2nX"/>
                             <constraint firstItem="Kxg-Vb-HKH" firstAttribute="top" secondItem="9cZ-99-pht" secondAttribute="bottom" constant="16" id="RfZ-6k-fws"/>
+                            <constraint firstItem="wLy-pO-bVY" firstAttribute="top" secondItem="jVD-bl-p7I" secondAttribute="bottom" constant="8" id="SYe-hB-Z9E"/>
                             <constraint firstItem="LNZ-qT-h51" firstAttribute="width" secondItem="9cZ-99-pht" secondAttribute="width" id="SkR-IL-cKE"/>
                             <constraint firstItem="9cZ-99-pht" firstAttribute="leading" secondItem="L7A-Ti-QaH" secondAttribute="leadingMargin" constant="18" id="UFl-sW-ffn"/>
                             <constraint firstItem="9cZ-99-pht" firstAttribute="top" secondItem="L7A-Ti-QaH" secondAttribute="topMargin" constant="14" id="eTK-of-iLc"/>
@@ -269,6 +301,7 @@
                             <constraint firstItem="jVD-bl-p7I" firstAttribute="width" secondItem="eJf-JI-dDT" secondAttribute="width" id="jgI-eI-aWL"/>
                             <constraint firstItem="LNZ-qT-h51" firstAttribute="top" secondItem="9cZ-99-pht" secondAttribute="bottom" constant="67" id="nrp-Tx-PsL"/>
                             <constraint firstItem="eJf-JI-dDT" firstAttribute="top" secondItem="2gp-UB-kac" secondAttribute="bottom" constant="15" id="vwv-Gc-Awd"/>
+                            <constraint firstItem="wLy-pO-bVY" firstAttribute="width" secondItem="jVD-bl-p7I" secondAttribute="width" id="wFV-yV-6va"/>
                             <constraint firstItem="jVD-bl-p7I" firstAttribute="top" secondItem="eJf-JI-dDT" secondAttribute="bottom" constant="28" id="wyo-pS-NuC"/>
                         </constraints>
                         <variation key="default">
@@ -279,6 +312,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="cancelButton" destination="wLy-pO-bVY" id="06J-0s-DHA"/>
                         <outlet property="emailField" destination="eJf-JI-dDT" id="1aa-xA-EME"/>
                         <outlet property="indicator" destination="Kxg-Vb-HKH" id="p4N-c3-qWa"/>
                         <outlet property="passwordField" destination="2gp-UB-kac" id="BuR-Zv-uoO"/>
