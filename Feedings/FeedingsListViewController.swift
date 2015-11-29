@@ -11,12 +11,16 @@ import Parse
 
 class FeedingsListViewController: UIViewController {
   
-  override func viewDidAppear(animated: Bool) {
-    super.viewDidAppear(animated)
-    guard let currentUser = PFUser.currentUser() else {
-      performSegueWithIdentifier("showLoginController", sender: self)
-      return
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        guard let currentUser = PFUser.currentUser() else {
+            performSegueWithIdentifier("showLoginController", sender: self)
+            return
+        }
     }
-  }
+    
+    @IBAction func unwindWithSignup(segue: UIStoryboardSegue) {
+        
+    }
 
 }

@@ -21,11 +21,25 @@ class LoginViewController: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
+        loginButton.backgroundColor = UIColor.darkGrayColor()
         loginButton.layer.cornerRadius = 24
         signupButton.layer.cornerRadius = 24
         
         usernameField.underline(UIColor.init(hex: 0xD5D5D5FF))
         passwordField.underline(UIColor.init(hex: 0xD5D5D5FF))
+        
+        combineLatest(usernameField.bnd_text, passwordField.bnd_text).map {
+            name, pass in
+            return name?.characters.count > 0 && pass?.characters.count > 0
+        }.bindTo(loginButton.bnd_enabled)
+        
+        loginButton.bnd_enabled.observe { event in
+            if event {
+                self.loginButton.backgroundColor = UIColor.feedingsBlue
+            } else {
+                self.loginButton.backgroundColor = UIColor.darkGrayColor()
+            }
+        }
     }
     
     @IBAction func loginTapped(sender: AnyObject) {
@@ -44,5 +58,4 @@ class LoginViewController: UIViewController {
                 
         }
     }
-    
 }
