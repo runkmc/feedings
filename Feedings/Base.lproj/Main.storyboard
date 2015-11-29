@@ -52,6 +52,9 @@
                                     <constraint firstAttribute="height" constant="48" id="Du3-vd-40S"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="m17-Ag-zXV" kind="show" id="aUt-4A-hJA"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h1s-hp-gMi">
                                 <rect key="frame" x="-4" y="98" width="383" height="521"/>
@@ -100,6 +103,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1055.5" y="1288.5"/>
+        </scene>
+        <!--Add Feeding View Controller-->
+        <scene sceneID="l63-CP-Rhk">
+            <objects>
+                <viewController id="m17-Ag-zXV" customClass="AddFeedingViewController" customModule="Feedings" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NeB-Vb-oyt"/>
+                        <viewControllerLayoutGuide type="bottom" id="j3L-Vh-55u"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9ZQ-Vd-WPf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="adS-xq-uWq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1564.5" y="1367.5"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="dTg-We-be1">
@@ -156,7 +178,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zfj-fw-Nmt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1564.5" y="1514.5"/>
+            <point key="canvasLocation" x="1564.5" y="2230.5"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="rZR-XM-6dJ">
