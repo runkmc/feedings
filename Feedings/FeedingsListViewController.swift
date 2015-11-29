@@ -8,15 +8,19 @@
 
 import UIKit
 import Parse
+import DZNEmptyDataSet
 
-class FeedingsListViewController: UIViewController {
+class FeedingsListViewController: UIViewController, DZNEmptyDataSetDelegate, DZNEmptyDataSetSource {
+    
+    var currentUser: PFUser?
   
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        guard let currentUser = PFUser.currentUser() else {
+        guard let user = PFUser.currentUser() else {
             performSegueWithIdentifier("showLoginController", sender: self)
             return
         }
+        self.currentUser = user
     }
     
     @IBAction func unwindWithSignup(segue: UIStoryboardSegue) {
