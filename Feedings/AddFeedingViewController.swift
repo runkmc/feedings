@@ -15,11 +15,22 @@ class AddFeedingViewController: UIViewController {
     @IBOutlet weak var caloriesField: UITextField!
     @IBOutlet weak var timeField: UITextField!
     @IBOutlet weak var notesField: UITextView!
+    @IBOutlet weak var addFeedingButton: HighlightedButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let underlineColor = UIColor.init(hex: 0xD5D5D5FF)
+        caloriesField.underline(underlineColor)
+        dateField.underline(underlineColor)
+        timeField.underline(underlineColor)
+        mlField.underline(underlineColor)
+        
+        notesField.layer.borderColor = underlineColor.CGColor
+        notesField.layer.borderWidth = 1.0
+        notesField.layer.cornerRadius = 3.0
 
+        addFeedingButton.backgroundColor = UIColor.darkGrayColor()
         // Do any additional setup after loading the view.
     }
 

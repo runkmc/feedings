@@ -128,25 +128,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lu7-Ea-Nak">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lu7-Ea-Nak">
                                 <rect key="frame" x="16" y="98" width="161" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Dp-LF-dXt">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Dp-LF-dXt">
                                 <rect key="frame" x="16" y="173" width="161" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PxO-1H-fN6">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PxO-1H-fN6">
                                 <rect key="frame" x="198" y="173" width="161" height="30"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Orx-RW-Tbv"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bVs-aD-QQf">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bVs-aD-QQf">
                                 <rect key="frame" x="198" y="98" width="161" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
@@ -187,7 +190,7 @@
                                 <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sr-Cd-f0B" customClass="HighlightedButton" customModule="Feedings" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sr-Cd-f0B">
                                 <rect key="frame" x="-4" y="619" width="383" height="48"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.086274509799999996" green="0.68627450980000004" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -219,6 +222,7 @@
                             <constraint firstItem="Thl-4C-VTy" firstAttribute="top" secondItem="PxO-1H-fN6" secondAttribute="bottom" constant="3" id="AzR-So-sEO"/>
                             <constraint firstItem="PxO-1H-fN6" firstAttribute="width" secondItem="Lu7-Ea-Nak" secondAttribute="width" id="FNN-wx-OA5"/>
                             <constraint firstItem="bVs-aD-QQf" firstAttribute="top" secondItem="NeB-Vb-oyt" secondAttribute="bottom" constant="34" id="FPy-mK-WZa"/>
+                            <constraint firstItem="PxO-1H-fN6" firstAttribute="height" secondItem="3Dp-LF-dXt" secondAttribute="height" id="HM2-Fm-Mku"/>
                             <constraint firstItem="Thl-4C-VTy" firstAttribute="trailing" secondItem="PxO-1H-fN6" secondAttribute="trailing" id="JY0-3m-hCr"/>
                             <constraint firstItem="5sr-Cd-f0B" firstAttribute="trailing" secondItem="TS9-lM-FeK" secondAttribute="trailing" id="KSA-C8-fLt"/>
                             <constraint firstItem="cKe-AS-zuP" firstAttribute="top" secondItem="bVs-aD-QQf" secondAttribute="bottom" constant="3" id="Mv8-L9-WPw"/>
@@ -235,6 +239,8 @@
                             <constraint firstAttribute="trailingMargin" secondItem="bVs-aD-QQf" secondAttribute="trailing" id="Zc6-dv-Dff"/>
                             <constraint firstItem="TS9-lM-FeK" firstAttribute="top" secondItem="3Dp-LF-dXt" secondAttribute="bottom" constant="45" id="aQH-UN-7cw"/>
                             <constraint firstItem="TS9-lM-FeK" firstAttribute="trailing" secondItem="PxO-1H-fN6" secondAttribute="trailing" id="dea-hK-zrJ"/>
+                            <constraint firstItem="PxO-1H-fN6" firstAttribute="height" secondItem="Lu7-Ea-Nak" secondAttribute="height" id="fnE-j7-UQ1"/>
+                            <constraint firstItem="PxO-1H-fN6" firstAttribute="height" secondItem="bVs-aD-QQf" secondAttribute="height" id="gWE-9e-smY"/>
                             <constraint firstItem="yJw-yM-enn" firstAttribute="top" secondItem="3Dp-LF-dXt" secondAttribute="bottom" constant="3" id="i2C-K5-c2j"/>
                             <constraint firstItem="yJw-yM-enn" firstAttribute="trailing" secondItem="3Dp-LF-dXt" secondAttribute="trailing" id="k6P-RT-tRt"/>
                             <constraint firstItem="5sr-Cd-f0B" firstAttribute="leading" secondItem="9ZQ-Vd-WPf" secondAttribute="leadingMargin" constant="-20" id="mRr-o9-eHp"/>
@@ -252,6 +258,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="addFeedingButton" destination="5sr-Cd-f0B" id="28p-zr-vNq"/>
                         <outlet property="caloriesField" destination="Lu7-Ea-Nak" id="3vD-hl-aEZ"/>
                         <outlet property="dateField" destination="3Dp-LF-dXt" id="dh6-BG-EQ8"/>
                         <outlet property="mlField" destination="bVs-aD-QQf" id="zAK-mX-2PM"/>
@@ -415,11 +422,6 @@
                                 <connections>
                                     <action selector="loginTapped:" destination="Px8-2o-VlV" eventType="touchUpInside" id="PVA-4L-xvE"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQU-Qs-VT4">
-                                <rect key="frame" x="44" y="237" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Button"/>
                             </button>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="a8V-5S-rDn">
                                 <rect key="frame" x="177" y="87" width="20" height="20"/>
