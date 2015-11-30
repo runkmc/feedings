@@ -10,6 +10,13 @@ import UIKit
 
 class AddFeedingViewController: UIViewController {
 
+    @IBOutlet weak var dateField: UITextField!
+    @IBOutlet weak var mlField: UITextField!
+    @IBOutlet weak var caloriesField: UITextField!
+    @IBOutlet weak var timeField: UITextField!
+    @IBOutlet weak var notesField: UITextView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

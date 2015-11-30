@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="FiraSans-Book.otf">
@@ -18,8 +19,19 @@
             <string>FiraSans-Book</string>
             <string>FiraSans-Book</string>
             <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
         </mutableArray>
         <mutableArray key="FiraSans-Medium.otf">
+            <string>FiraSans-Medium</string>
+            <string>FiraSans-Medium</string>
             <string>FiraSans-Medium</string>
             <string>FiraSans-Medium</string>
         </mutableArray>
@@ -115,9 +127,137 @@
                     <view key="view" contentMode="scaleToFill" id="9ZQ-Vd-WPf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lu7-Ea-Nak">
+                                <rect key="frame" x="16" y="98" width="161" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Dp-LF-dXt">
+                                <rect key="frame" x="16" y="173" width="161" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PxO-1H-fN6">
+                                <rect key="frame" x="198" y="173" width="161" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bVs-aD-QQf">
+                                <rect key="frame" x="198" y="98" width="161" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="calories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcv-Qi-bfz">
+                                <rect key="frame" x="127" y="131" width="50" height="17"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
+                                <color key="textColor" red="0.54940846530920062" green="0.54940846530920062" blue="0.54940846530920062" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Thl-4C-VTy">
+                                <rect key="frame" x="330" y="206" width="29" height="17"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
+                                <color key="textColor" red="0.54940846530920062" green="0.54940846530920062" blue="0.54940846530920062" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mililiters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKe-AS-zuP">
+                                <rect key="frame" x="302" y="131" width="57" height="17"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
+                                <color key="textColor" red="0.54940846530920062" green="0.54940846530920062" blue="0.54940846530920062" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJw-yM-enn">
+                                <rect key="frame" x="148" y="206" width="29" height="17"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
+                                <color key="textColor" red="0.54940846530920062" green="0.54940846530920062" blue="0.54940846530920062" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TS9-lM-FeK">
+                                <rect key="frame" x="16" y="248" width="343" height="167"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sr-Cd-f0B" customClass="HighlightedButton" customModule="Feedings" customModuleProvider="target">
+                                <rect key="frame" x="-4" y="619" width="383" height="48"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.086274509799999996" green="0.68627450980000004" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="eY2-HR-m96"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="FiraSans-Medium" family="Fira Sans" pointSize="19"/>
+                                <state key="normal" title="Add Feeding">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZm-Oc-uRV">
+                                <rect key="frame" x="323" y="418" width="36" height="17"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
+                                <color key="textColor" red="0.54940846529999998" green="0.54940846529999998" blue="0.54940846529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Lu7-Ea-Nak" firstAttribute="width" secondItem="9ZQ-Vd-WPf" secondAttribute="width" multiplier="0.43" id="1ad-Nq-l7B"/>
+                            <constraint firstItem="5sr-Cd-f0B" firstAttribute="leading" secondItem="TS9-lM-FeK" secondAttribute="leading" id="1jD-R4-4il"/>
+                            <constraint firstItem="cKe-AS-zuP" firstAttribute="trailing" secondItem="bVs-aD-QQf" secondAttribute="trailing" id="3Pb-z8-QVA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5sr-Cd-f0B" secondAttribute="trailing" constant="-20" id="3Qu-q3-115"/>
+                            <constraint firstItem="PxO-1H-fN6" firstAttribute="trailing" secondItem="bVs-aD-QQf" secondAttribute="trailing" id="5by-rf-yXa"/>
+                            <constraint firstItem="j3L-Vh-55u" firstAttribute="top" secondItem="5sr-Cd-f0B" secondAttribute="bottom" id="9oJ-0a-Mqb"/>
+                            <constraint firstItem="Thl-4C-VTy" firstAttribute="top" secondItem="PxO-1H-fN6" secondAttribute="bottom" constant="3" id="AzR-So-sEO"/>
+                            <constraint firstItem="PxO-1H-fN6" firstAttribute="width" secondItem="Lu7-Ea-Nak" secondAttribute="width" id="FNN-wx-OA5"/>
+                            <constraint firstItem="bVs-aD-QQf" firstAttribute="top" secondItem="NeB-Vb-oyt" secondAttribute="bottom" constant="34" id="FPy-mK-WZa"/>
+                            <constraint firstItem="Thl-4C-VTy" firstAttribute="trailing" secondItem="PxO-1H-fN6" secondAttribute="trailing" id="JY0-3m-hCr"/>
+                            <constraint firstItem="5sr-Cd-f0B" firstAttribute="trailing" secondItem="TS9-lM-FeK" secondAttribute="trailing" id="KSA-C8-fLt"/>
+                            <constraint firstItem="cKe-AS-zuP" firstAttribute="top" secondItem="bVs-aD-QQf" secondAttribute="bottom" constant="3" id="Mv8-L9-WPw"/>
+                            <constraint firstItem="3Dp-LF-dXt" firstAttribute="top" secondItem="Lu7-Ea-Nak" secondAttribute="bottom" constant="45" id="NqB-Z8-zN9"/>
+                            <constraint firstItem="3Dp-LF-dXt" firstAttribute="trailing" secondItem="Lu7-Ea-Nak" secondAttribute="trailing" id="P9e-By-gAp"/>
+                            <constraint firstItem="RZm-Oc-uRV" firstAttribute="trailing" secondItem="TS9-lM-FeK" secondAttribute="trailing" id="QJS-EU-e8z"/>
+                            <constraint firstItem="TS9-lM-FeK" firstAttribute="leading" secondItem="3Dp-LF-dXt" secondAttribute="leading" id="QOm-Ee-LEd"/>
+                            <constraint firstItem="lcv-Qi-bfz" firstAttribute="trailing" secondItem="Lu7-Ea-Nak" secondAttribute="trailing" id="QQY-Td-Jjp"/>
+                            <constraint firstItem="lcv-Qi-bfz" firstAttribute="top" secondItem="Lu7-Ea-Nak" secondAttribute="bottom" constant="3" id="TJX-hT-fOa"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Lu7-Ea-Nak" secondAttribute="leading" id="Tap-dr-wYh"/>
+                            <constraint firstItem="PxO-1H-fN6" firstAttribute="top" secondItem="bVs-aD-QQf" secondAttribute="bottom" constant="45" id="Uza-wr-3AY"/>
+                            <constraint firstItem="TS9-lM-FeK" firstAttribute="height" secondItem="9ZQ-Vd-WPf" secondAttribute="height" multiplier="0.25" id="XCk-6d-9up"/>
+                            <constraint firstItem="j3L-Vh-55u" firstAttribute="top" secondItem="5sr-Cd-f0B" secondAttribute="bottom" constant="8" id="XUr-ze-6Nd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bVs-aD-QQf" secondAttribute="trailing" id="Zc6-dv-Dff"/>
+                            <constraint firstItem="TS9-lM-FeK" firstAttribute="top" secondItem="3Dp-LF-dXt" secondAttribute="bottom" constant="45" id="aQH-UN-7cw"/>
+                            <constraint firstItem="TS9-lM-FeK" firstAttribute="trailing" secondItem="PxO-1H-fN6" secondAttribute="trailing" id="dea-hK-zrJ"/>
+                            <constraint firstItem="yJw-yM-enn" firstAttribute="top" secondItem="3Dp-LF-dXt" secondAttribute="bottom" constant="3" id="i2C-K5-c2j"/>
+                            <constraint firstItem="yJw-yM-enn" firstAttribute="trailing" secondItem="3Dp-LF-dXt" secondAttribute="trailing" id="k6P-RT-tRt"/>
+                            <constraint firstItem="5sr-Cd-f0B" firstAttribute="leading" secondItem="9ZQ-Vd-WPf" secondAttribute="leadingMargin" constant="-20" id="mRr-o9-eHp"/>
+                            <constraint firstItem="3Dp-LF-dXt" firstAttribute="width" secondItem="Lu7-Ea-Nak" secondAttribute="width" id="mwU-bk-bxm"/>
+                            <constraint firstItem="bVs-aD-QQf" firstAttribute="width" secondItem="Lu7-Ea-Nak" secondAttribute="width" id="tub-ck-PSU"/>
+                            <constraint firstItem="Lu7-Ea-Nak" firstAttribute="top" secondItem="NeB-Vb-oyt" secondAttribute="bottom" constant="34" id="umO-R0-JC6"/>
+                            <constraint firstItem="RZm-Oc-uRV" firstAttribute="top" secondItem="TS9-lM-FeK" secondAttribute="bottom" constant="3" id="yQl-7b-SEt"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1jD-R4-4il"/>
+                                <exclude reference="KSA-C8-fLt"/>
+                                <exclude reference="XUr-ze-6Nd"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="caloriesField" destination="Lu7-Ea-Nak" id="3vD-hl-aEZ"/>
+                        <outlet property="dateField" destination="3Dp-LF-dXt" id="dh6-BG-EQ8"/>
+                        <outlet property="mlField" destination="bVs-aD-QQf" id="zAK-mX-2PM"/>
+                        <outlet property="notesField" destination="TS9-lM-FeK" id="13c-B7-U5z"/>
+                        <outlet property="timeField" destination="PxO-1H-fN6" id="h4F-vH-dsW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="adS-xq-uWq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -144,7 +284,7 @@
                                     <constraint firstAttribute="height" constant="48" id="W6u-oH-g4Y"/>
                                     <constraint firstAttribute="height" constant="48" id="WVJ-J9-AGT"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="19"/>
+                                <fontDescription key="fontDescription" name="FiraSans-Medium" family="Fira Sans" pointSize="19"/>
                                 <state key="normal" title="Logout">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -275,6 +415,11 @@
                                 <connections>
                                     <action selector="loginTapped:" destination="Px8-2o-VlV" eventType="touchUpInside" id="PVA-4L-xvE"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQU-Qs-VT4">
+                                <rect key="frame" x="44" y="237" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Button"/>
                             </button>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="a8V-5S-rDn">
                                 <rect key="frame" x="177" y="87" width="20" height="20"/>
