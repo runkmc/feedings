@@ -31,7 +31,16 @@ class AddFeedingViewController: UIViewController {
         notesField.layer.cornerRadius = 3.0
 
         addFeedingButton.backgroundColor = UIColor.darkGrayColor()
+        
+        let datePicker = UIDatePicker()
+        datePicker.datePickerMode = .Date
+        dateField.inputView = datePicker
+        datePicker.addTarget(self, action: "updateDate:", forControlEvents: .ValueChanged)
         // Do any additional setup after loading the view.
+    }
+    
+    func updateDate(sender:UIDatePicker) {
+        
     }
 
     override func didReceiveMemoryWarning() {
