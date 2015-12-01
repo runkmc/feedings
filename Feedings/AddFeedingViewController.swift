@@ -35,6 +35,7 @@ class AddFeedingViewController: UIViewController {
         let datePicker = UIDatePicker()
         datePicker.datePickerMode = .Date
         dateField.inputView = datePicker
+        datePicker.backgroundColor = UIColor.whiteColor()
         datePicker.addTarget(self, action: "updateDate:", forControlEvents: .ValueChanged)
         // Do any additional setup after loading the view.
     }
