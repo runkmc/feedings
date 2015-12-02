@@ -36,8 +36,11 @@ class AddFeedingViewController: UIViewController {
         datePicker.datePickerMode = .Date
         dateField.inputView = datePicker
         datePicker.backgroundColor = UIColor.whiteColor()
-        datePicker.addTarget(self, action: "updateDate:", forControlEvents: .ValueChanged)
-        // Do any additional setup after loading the view.
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "dd-MM-yyyy"
+        datePicker.bnd_date.observe { date in
+            self.dateField.text = formatter.stringFromDate(date)
+        }
     }
     
     func updateDate(sender:UIDatePicker) {
