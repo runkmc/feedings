@@ -32,8 +32,11 @@
             <string>FiraSans-Book</string>
             <string>FiraSans-Book</string>
             <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
         </mutableArray>
         <mutableArray key="FiraSans-Medium.otf">
+            <string>FiraSans-Medium</string>
             <string>FiraSans-Medium</string>
             <string>FiraSans-Medium</string>
             <string>FiraSans-Medium</string>
@@ -77,13 +80,50 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="l3B-4e-M77" customClass="FeedingsCell" customModule="Feedings" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="383" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="64" id="l3B-4e-M77" customClass="FeedingsCell" customModule="Feedings" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="383" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="l3B-4e-M77" id="Df9-MP-7dp">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="63"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qo-yl-2JP">
+                                                    <rect key="frame" x="16" y="8" width="50" height="24"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="FiraSans-Medium" family="Fira Sans" pointSize="20"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMA-s3-1l8">
+                                                    <rect key="frame" x="16" y="37" width="33" height="16"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="13"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHb-36-VT5">
+                                                    <rect key="frame" x="317" y="8" width="50" height="24"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="20"/>
+                                                    <color key="textColor" red="0.086274509799999996" green="0.68627450980000004" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                             <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="topMargin" secondItem="9qo-yl-2JP" secondAttribute="top" id="NwP-Ce-L5A"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="DHb-36-VT5" secondAttribute="trailing" constant="8" id="Qu3-D5-e7p"/>
+                                                <constraint firstItem="9qo-yl-2JP" firstAttribute="leading" secondItem="Df9-MP-7dp" secondAttribute="leadingMargin" constant="8" id="Y9c-k2-9Nc"/>
+                                                <constraint firstItem="qMA-s3-1l8" firstAttribute="leading" secondItem="9qo-yl-2JP" secondAttribute="leading" id="bjx-Ja-64p"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="9qo-yl-2JP" secondAttribute="leading" constant="-8" id="dCv-hX-Hqg"/>
+                                                <constraint firstItem="qMA-s3-1l8" firstAttribute="top" secondItem="9qo-yl-2JP" secondAttribute="bottom" constant="5" id="pYA-XC-7t7"/>
+                                                <constraint firstAttribute="topMargin" secondItem="DHb-36-VT5" secondAttribute="top" id="rhI-LT-h44"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="dCv-hX-Hqg"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <animations/>
                                     </tableViewCell>
