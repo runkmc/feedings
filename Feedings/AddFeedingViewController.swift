@@ -20,6 +20,7 @@ class AddFeedingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let underlineColor = UIColor.init(hex: 0xD5D5D5FF)
         notesField.layer.borderColor = underlineColor.CGColor
         notesField.layer.borderWidth = 1.0
         notesField.layer.cornerRadius = 3.0
