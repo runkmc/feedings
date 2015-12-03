@@ -41,6 +41,7 @@
             <string>FiraSans-Medium</string>
             <string>FiraSans-Medium</string>
             <string>FiraSans-Medium</string>
+            <string>FiraSans-Medium</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -67,10 +68,14 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Hc-Xm-Jdj">
                                 <rect key="frame" x="-4" y="619" width="383" height="48"/>
                                 <animations/>
+                                <color key="backgroundColor" red="0.086274509799999996" green="0.68627450980000004" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="Du3-vd-40S"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" name="FiraSans-Medium" family="Fira Sans" pointSize="19"/>
+                                <state key="normal" title="Add Feeding">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="m17-Ag-zXV" kind="show" id="aUt-4A-hJA"/>
                                 </connections>
@@ -241,7 +246,7 @@
                         <viewControllerLayoutGuide type="top" id="NeB-Vb-oyt"/>
                         <viewControllerLayoutGuide type="bottom" id="j3L-Vh-55u"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="9ZQ-Vd-WPf">
+                    <view key="view" contentMode="scaleToFill" id="9ZQ-Vd-WPf" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -420,6 +425,9 @@
                                 <exclude reference="XUr-ze-6Nd"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <action selector="tappedBackground:" destination="m17-Ag-zXV" eventType="touchDown" id="ojr-LM-ZDe"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="addFeedingButton" destination="5sr-Cd-f0B" id="28p-zr-vNq"/>
