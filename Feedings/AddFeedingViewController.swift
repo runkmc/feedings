@@ -36,6 +36,16 @@ class AddFeedingViewController: UIViewController {
         datePicker.bnd_date.observe { date in
             self.dateField.text = formatter.stringFromDate(date)
         }
+        
+        let timePicker = UIDatePicker()
+        timePicker.datePickerMode = .Time
+        timeField.inputView = timePicker
+        timePicker.backgroundColor = UIColor.whiteColor()
+        let timeFormatter = NSDateFormatter()
+        timeFormatter.dateFormat = "h:mm a"
+        timePicker.bnd_date.observe { date in
+            self.timeField.text = timeFormatter.stringFromDate(date)
+        }
     }
     
     @IBAction func tappedBackground(sender: AnyObject) {
