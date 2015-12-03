@@ -1,7 +1,7 @@
 PODS:
   - Bolts/Tasks (1.5.0)
-  - Bond (4.2.0)
-  - Colortools (0.1.0)
+  - Bond (4.3.0)
+  - Colortools (0.1.1)
   - DZNEmptyDataSet (1.7.2)
   - Nimble (3.0.0)
   - Parse (1.9.1):
@@ -9,7 +9,7 @@ PODS:
   - Quick (0.8.0)
 
 DEPENDENCIES:
-  - Bond (~> 4.2.0)
+  - Bond (~> 4.2)
   - Colortools
   - DZNEmptyDataSet (~> 1.7.2)
   - Nimble (~> 3.0.0)
@@ -18,8 +18,8 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Bolts: 722ab9a4f8b50fc4ed1b9998a5a7a2b3f16d80b4
-  Bond: 944cdfcc6ffad0fe57742a7fa5c3b6923019f353
-  Colortools: 61c9a7dd772be60394486d0ed7e1e15fc7750da7
+  Bond: ebe2364b18130690083cbceff036420b21494ae4
+  Colortools: e68dfcede27bda002c9b2717dc48e2bdd48e7dca
   DZNEmptyDataSet: 0ec00bfc230d7450997b60c127afdd0b9f24f3b6
   Nimble: 4c353d43735b38b545cbb4cb91504588eb5de926
   Parse: 54a965c8c19a6dde90284ab654dbcc77ef8c001b
