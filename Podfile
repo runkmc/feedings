@@ -4,7 +4,7 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'Feedings' do
-  pod 'Bond', '~> 4.2.0'
+  pod 'Bond', '~> 4.2'
   pod 'Parse', '~> 1.9.1'
   pod 'Colortools'
   pod 'DZNEmptyDataSet', '~> 1.7.2'
