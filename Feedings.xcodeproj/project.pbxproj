@@ -20,12 +20,10 @@
 		0A28B10C1BE1B55600C4FDA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A28B10A1BE1B55600C4FDA5 /* Main.storyboard */; };
 		0A28B10E1BE1B55600C4FDA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A28B10D1BE1B55600C4FDA5 /* Assets.xcassets */; };
 		0A28B1111BE1B55600C4FDA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A28B10F1BE1B55600C4FDA5 /* LaunchScreen.storyboard */; };
-		0A28B11C1BE1B55600C4FDA5 /* MealTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A28B11B1BE1B55600C4FDA5 /* MealTests.swift */; };
 		0A28B1271BE1B55600C4FDA5 /* FeedingsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A28B1261BE1B55600C4FDA5 /* FeedingsUITests.swift */; };
 		0A28E0621C0BAA5100D75D04 /* AddFeedingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A28E0611C0BAA5100D75D04 /* AddFeedingViewController.swift */; };
 		0A33C4A11C08F0F1002BB5E9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A33C4A01C08F0F1002BB5E9 /* SettingsViewController.swift */; };
 		0A5555D91BF6F08700F1EA5A /* ParseStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5555D81BF6F08700F1EA5A /* ParseStuff.swift */; };
-		0A680D971BE5741F00379B69 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A680D961BE5741F00379B69 /* Meal.swift */; };
 		0AE592251C07C5F40069F9FD /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE592241C07C5F40069F9FD /* UITextField.swift */; };
 		0AFE4F3E1C0AD14B0007C419 /* FeedingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFE4F3D1C0AD14B0007C419 /* FeedingsCell.swift */; };
 		941CA0AF32956C557E82E674 /* Pods_FeedingsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1056BE9E4DD9299A4A84641E /* Pods_FeedingsTests.framework */; };
@@ -66,7 +64,6 @@
 		0A28B1101BE1B55600C4FDA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A28B1121BE1B55600C4FDA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A28B1171BE1B55600C4FDA5 /* FeedingsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeedingsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0A28B11B1BE1B55600C4FDA5 /* MealTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTests.swift; sourceTree = "<group>"; };
 		0A28B11D1BE1B55600C4FDA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A28B1221BE1B55600C4FDA5 /* FeedingsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeedingsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A28B1261BE1B55600C4FDA5 /* FeedingsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedingsUITests.swift; sourceTree = "<group>"; };
@@ -74,7 +71,6 @@
 		0A28E0611C0BAA5100D75D04 /* AddFeedingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFeedingViewController.swift; sourceTree = "<group>"; };
 		0A33C4A01C08F0F1002BB5E9 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0A5555D81BF6F08700F1EA5A /* ParseStuff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseStuff.swift; sourceTree = "<group>"; };
-		0A680D961BE5741F00379B69 /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Meal.swift; path = Feedings/Meal.swift; sourceTree = SOURCE_ROOT; };
 		0A9D63E61BE48BC5000F4778 /* Feedings.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Feedings.entitlements; sourceTree = "<group>"; };
 		0ABB7BEBCD52ED7D367A1756 /* Pods-FeedingsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedingsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeedingsUITests/Pods-FeedingsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0AE592241C07C5F40069F9FD /* UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
@@ -151,7 +147,6 @@
 		0A28B1051BE1B55600C4FDA5 /* Feedings */ = {
 			isa = PBXGroup;
 			children = (
-				0A680D961BE5741F00379B69 /* Meal.swift */,
 				0A0BAF9D1C066C2A00933B9F /* HighlightedButton.swift */,
 				0A9D63E61BE48BC5000F4778 /* Feedings.entitlements */,
 				0A0BAF951C0662D100933B9F /* LoginViewController.swift */,
@@ -176,7 +171,6 @@
 		0A28B11A1BE1B55600C4FDA5 /* FeedingsTests */ = {
 			isa = PBXGroup;
 			children = (
-				0A28B11B1BE1B55600C4FDA5 /* MealTests.swift */,
 				0A28B11D1BE1B55600C4FDA5 /* Info.plist */,
 			);
 			path = FeedingsTests;
@@ -491,7 +485,6 @@
 				0A0BAF961C0662D100933B9F /* LoginViewController.swift in Sources */,
 				0A28E0621C0BAA5100D75D04 /* AddFeedingViewController.swift in Sources */,
 				0A28B1091BE1B55600C4FDA5 /* ViewController.swift in Sources */,
-				0A680D971BE5741F00379B69 /* Meal.swift in Sources */,
 				0A5555D91BF6F08700F1EA5A /* ParseStuff.swift in Sources */,
 				0A0BAF941C058E6300933B9F /* FeedingsListViewController.swift in Sources */,
 				0A0BAF981C0664A900933B9F /* UIColor-Extensions.swift in Sources */,
@@ -504,7 +497,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A28B11C1BE1B55600C4FDA5 /* MealTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
