@@ -147,22 +147,18 @@
 		0A28B1051BE1B55600C4FDA5 /* Feedings */ = {
 			isa = PBXGroup;
 			children = (
-				0A0BAF9D1C066C2A00933B9F /* HighlightedButton.swift */,
+				0AF412DA1C13755300B8C2A8 /* storyboards */,
+				0AF412D91C13752A00B8C2A8 /* subclasses */,
 				0A9D63E61BE48BC5000F4778 /* Feedings.entitlements */,
 				0A0BAF951C0662D100933B9F /* LoginViewController.swift */,
-				0AE592241C07C5F40069F9FD /* UITextField.swift */,
 				0A5555D81BF6F08700F1EA5A /* ParseStuff.swift */,
 				0A28B1061BE1B55600C4FDA5 /* AppDelegate.swift */,
 				0A28B1081BE1B55600C4FDA5 /* ViewController.swift */,
-				0A28B10A1BE1B55600C4FDA5 /* Main.storyboard */,
 				0A28E0611C0BAA5100D75D04 /* AddFeedingViewController.swift */,
-				0AFE4F3D1C0AD14B0007C419 /* FeedingsCell.swift */,
 				0A33C4A01C08F0F1002BB5E9 /* SettingsViewController.swift */,
 				0A0BAF9F1C06874D00933B9F /* SignupViewController.swift */,
-				0A0BAF971C0664A900933B9F /* UIColor-Extensions.swift */,
 				0A0BAF931C058E6300933B9F /* FeedingsListViewController.swift */,
 				0A28B10D1BE1B55600C4FDA5 /* Assets.xcassets */,
-				0A28B10F1BE1B55600C4FDA5 /* LaunchScreen.storyboard */,
 				0A28B1121BE1B55600C4FDA5 /* Info.plist */,
 			);
 			path = Feedings;
@@ -183,6 +179,26 @@
 				0A28B1281BE1B55600C4FDA5 /* Info.plist */,
 			);
 			path = FeedingsUITests;
+			sourceTree = "<group>";
+		};
+		0AF412D91C13752A00B8C2A8 /* subclasses */ = {
+			isa = PBXGroup;
+			children = (
+				0AE592241C07C5F40069F9FD /* UITextField.swift */,
+				0AFE4F3D1C0AD14B0007C419 /* FeedingsCell.swift */,
+				0A0BAF971C0664A900933B9F /* UIColor-Extensions.swift */,
+				0A0BAF9D1C066C2A00933B9F /* HighlightedButton.swift */,
+			);
+			name = subclasses;
+			sourceTree = "<group>";
+		};
+		0AF412DA1C13755300B8C2A8 /* storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				0A28B10A1BE1B55600C4FDA5 /* Main.storyboard */,
+				0A28B10F1BE1B55600C4FDA5 /* LaunchScreen.storyboard */,
+			);
+			name = storyboards;
 			sourceTree = "<group>";
 		};
 		812D06D7CA59A6F629DC5C02 /* Pods */ = {
