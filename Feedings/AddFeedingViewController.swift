@@ -27,24 +27,20 @@ class AddFeedingViewController: UIViewController {
 
         addFeedingButton.backgroundColor = UIColor.darkGrayColor()
         
-        let datePicker = UIDatePicker()
-        datePicker.datePickerMode = .Date
-        dateField.inputView = datePicker
-        datePicker.backgroundColor = UIColor.whiteColor()
+        addPickerTo(timeField, mode: .Time, format: "h:mm a")
+        addPickerTo(dateField, mode: .Date, format: "dd-MM-yyyy")
+    }
+    
+    func addPickerTo(field:UITextField, mode:UIDatePickerMode, format:String) {
+        let picker = UIDatePicker()
+        picker.datePickerMode = mode
+        picker.backgroundColor = UIColor.whiteColor()
         let formatter = NSDateFormatter()
-        formatter.dateFormat = "dd-MM-yyyy"
-        datePicker.bnd_date.observe { date in
-            self.dateField.text = formatter.stringFromDate(date)
-        }
+        formatter.dateFormat = format
         
-        let timePicker = UIDatePicker()
-        timePicker.datePickerMode = .Time
-        timeField.inputView = timePicker
-        timePicker.backgroundColor = UIColor.whiteColor()
-        let timeFormatter = NSDateFormatter()
-        timeFormatter.dateFormat = "h:mm a"
-        timePicker.bnd_date.observe { date in
-            self.timeField.text = timeFormatter.stringFromDate(date)
+        field.inputView = picker
+        picker.bnd_date.observe { date in
+            field.text = formatter.stringFromDate(date)
         }
     }
     
