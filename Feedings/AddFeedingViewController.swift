@@ -35,13 +35,28 @@ class AddFeedingViewController: UIViewController {
         let picker = UIDatePicker()
         picker.datePickerMode = mode
         picker.backgroundColor = UIColor.whiteColor()
+        picker.tintColor = UIColor.feedingsOrange
         let formatter = NSDateFormatter()
         formatter.dateFormat = format
         
+        let toolbar = UIToolbar()
+        toolbar.translucent = true
+        toolbar.backgroundColor = UIColor.whiteColor()
+        toolbar.tintColor = UIColor.feedingsOrange
+        toolbar.sizeToFit()
+        let barItems = [UIBarButtonItem.init(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil),
+            UIBarButtonItem(title: "Done", style: .Plain, target: self, action: "tappedDone")]
+        toolbar.setItems(barItems, animated: true)
+        
         field.inputView = picker
+        field.inputAccessoryView = toolbar
         picker.bnd_date.observe { date in
             field.text = formatter.stringFromDate(date)
         }
+    }
+    
+    func tappedDone() {
+        view.endEditing(true)
     }
     
     @IBAction func tappedBackground(sender: AnyObject) {
