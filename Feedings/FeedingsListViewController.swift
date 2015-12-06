@@ -23,4 +23,11 @@ class FeedingsListViewController: UIViewController, DZNEmptyDataSetDelegate, DZN
         self.currentUser = user
     }
     
+    @IBAction func unwindFromAddingFeeding(sender: UIStoryboardSegue) {
+        
+    }
+    
+    @IBAction func unwindFromSignup(sender: UIStoryboardSegue) {
+        
+    }
 }

@@ -67,8 +67,7 @@ class SignupViewController: UIViewController {
                 alert.addAction(action)
                 self.presentViewController(alert, animated: true, completion: nil)
             } else {
-                self.dismissViewControllerAnimated(true, completion: nil)
-                self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+                self.performSegueWithIdentifier("unwindFromSignup", sender: self)
             }
         }
     }
