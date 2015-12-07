@@ -29,6 +29,8 @@ class AddFeedingViewController: UIViewController {
         
         addPickerTo(timeField, mode: .Time, format: "h:mm a")
         addPickerTo(dateField, mode: .Date, format: "dd-MM-yyyy")
+        addToolbarTo(caloriesField)
+        addToolbarTo(mlField)
     }
     
     func addPickerTo(field:UITextField, mode:UIDatePickerMode, format:String) {
@@ -38,7 +40,15 @@ class AddFeedingViewController: UIViewController {
         picker.tintColor = UIColor.feedingsOrange
         let formatter = NSDateFormatter()
         formatter.dateFormat = format
+        field.inputView = picker
+        addToolbarTo(field)
         
+        picker.bnd_date.observe { date in
+            field.text = formatter.stringFromDate(date)
+        }
+    }
+    
+    func addToolbarTo(field:UITextField) {
         let toolbar = UIToolbar()
         toolbar.translucent = true
         toolbar.backgroundColor = UIColor.whiteColor()
@@ -47,12 +57,7 @@ class AddFeedingViewController: UIViewController {
         let barItems = [UIBarButtonItem.init(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil),
             UIBarButtonItem(title: "Done", style: .Plain, target: self, action: "tappedDone")]
         toolbar.setItems(barItems, animated: true)
-        
-        field.inputView = picker
         field.inputAccessoryView = toolbar
-        picker.bnd_date.observe { date in
-            field.text = formatter.stringFromDate(date)
-        }
     }
     
     func tappedDone() {
