@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Bond
 
 class AddFeedingViewController: UIViewController {
 
@@ -31,6 +32,18 @@ class AddFeedingViewController: UIViewController {
         addPickerTo(dateField, mode: .Date, format: "dd-MM-yyyy")
         addToolbarTo(caloriesField)
         addToolbarTo(mlField)
+        
+        addFeedingButton.bnd_enabled.observe { enabled in
+            if enabled {
+                self.addFeedingButton.backgroundColor = UIColor.feedingsOrange
+            } else {
+                self.addFeedingButton.backgroundColor = UIColor.darkGrayColor()
+            }
+        }
+        
+        combineLatest(caloriesField.bnd_text, mlField.bnd_text).map { cal, ml in
+            return cal?.characters.count > 0 && ml?.characters.count > 0
+        }.bindTo(addFeedingButton.bnd_enabled)
     }
     
     func addPickerTo(field:UITextField, mode:UIDatePickerMode, format:String) {
