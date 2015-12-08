@@ -231,7 +231,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="tableView" destination="h1s-hp-gMi" id="be9-Qg-BZf"/>
                         <segue destination="Px8-2o-VlV" kind="presentation" identifier="showLoginController" id="Ih8-yB-dr9"/>
                     </connections>
                 </viewController>
@@ -329,6 +328,9 @@
                                 <state key="normal" title="Add Feeding">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="tappedAdd:" destination="m17-Ag-zXV" eventType="touchUpInside" id="vOk-Bj-89q"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZm-Oc-uRV">
                                 <rect key="frame" x="323" y="418" width="36" height="17"/>

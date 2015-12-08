@@ -77,6 +77,9 @@ class AddFeedingViewController: UIViewController {
         view.endEditing(true)
     }
     
+    @IBAction func tappedAdd(sender: AnyObject) {
+    }
+    
     @IBAction func tappedBackground(sender: AnyObject) {
         view.endEditing(true)
     }
