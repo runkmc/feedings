@@ -10,9 +10,10 @@ import UIKit
 import Parse
 import DZNEmptyDataSet
 
-class FeedingsListViewController: UIViewController, DZNEmptyDataSetDelegate, DZNEmptyDataSetSource {
+class FeedingsListViewController: UIViewController {
     
     var currentUser: PFUser?
+    @IBOutlet weak var tableView: UITableView!
   
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
@@ -30,4 +31,8 @@ class FeedingsListViewController: UIViewController, DZNEmptyDataSetDelegate, DZN
     @IBAction func unwindFromSignup(sender: UIStoryboardSegue) {
         
     }
+}
+
+extension FeedingsListViewController: UITableViewDelegate {
+    
 }

@@ -231,6 +231,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="tableView" destination="h1s-hp-gMi" id="be9-Qg-BZf"/>
                         <segue destination="Px8-2o-VlV" kind="presentation" identifier="showLoginController" id="Ih8-yB-dr9"/>
                     </connections>
                 </viewController>
