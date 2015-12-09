@@ -25,8 +25,6 @@ class LoginViewController: UIViewController {
         loginButton.layer.cornerRadius = 24
         signupButton.layer.cornerRadius = 24
         
-        usernameField.underline(UIColor.init(hex: 0xD5D5D5FF))
-        passwordField.underline(UIColor.init(hex: 0xD5D5D5FF))
         
         combineLatest(usernameField.bnd_text, passwordField.bnd_text).map {
             name, pass in

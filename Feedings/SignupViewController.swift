@@ -28,9 +28,6 @@ class SignupViewController: UIViewController {
         self.signupButton.backgroundColor = UIColor.darkGrayColor()
         
         let underlineColor = UIColor.init(hex: 0xD5D5D5FF)
-        usernameField.underline(underlineColor)
-        passwordField.underline(underlineColor)
-        emailField.underline(underlineColor)
 
         signupButton.bnd_enabled.observe {enabled in
             if enabled {
