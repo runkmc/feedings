@@ -15,6 +15,7 @@
 		0A0BAF9A1C06679500933B9F /* FiraSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A0BAF991C06679500933B9F /* FiraSans-Medium.otf */; };
 		0A0BAF9E1C066C2A00933B9F /* HighlightedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0BAF9D1C066C2A00933B9F /* HighlightedButton.swift */; };
 		0A0BAFA01C06874D00933B9F /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0BAF9F1C06874D00933B9F /* SignupViewController.swift */; };
+		0A1417B31C17CBCC00D49CA1 /* UITextFieldWithDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1417B21C17CBCC00D49CA1 /* UITextFieldWithDate.swift */; };
 		0A28B1071BE1B55600C4FDA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A28B1061BE1B55600C4FDA5 /* AppDelegate.swift */; };
 		0A28B1091BE1B55600C4FDA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A28B1081BE1B55600C4FDA5 /* ViewController.swift */; };
 		0A28B10C1BE1B55600C4FDA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A28B10A1BE1B55600C4FDA5 /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 		0A0BAF991C06679500933B9F /* FiraSans-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-Medium.otf"; sourceTree = "<group>"; };
 		0A0BAF9D1C066C2A00933B9F /* HighlightedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighlightedButton.swift; sourceTree = "<group>"; };
 		0A0BAF9F1C06874D00933B9F /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		0A1417B21C17CBCC00D49CA1 /* UITextFieldWithDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldWithDate.swift; sourceTree = "<group>"; };
 		0A28B1031BE1B55600C4FDA5 /* Feedings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Feedings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A28B1061BE1B55600C4FDA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A28B1081BE1B55600C4FDA5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 		0AF412D91C13752A00B8C2A8 /* subclasses */ = {
 			isa = PBXGroup;
 			children = (
+				0A1417B21C17CBCC00D49CA1 /* UITextFieldWithDate.swift */,
 				0AFE4F3D1C0AD14B0007C419 /* FeedingsCell.swift */,
 				0A0BAF971C0664A900933B9F /* UIColor-Extensions.swift */,
 				0A0BAF9D1C066C2A00933B9F /* HighlightedButton.swift */,
@@ -496,6 +499,7 @@
 				0A33C4A11C08F0F1002BB5E9 /* SettingsViewController.swift in Sources */,
 				0A0BAF961C0662D100933B9F /* LoginViewController.swift in Sources */,
 				0A28E0621C0BAA5100D75D04 /* AddFeedingViewController.swift in Sources */,
+				0A1417B31C17CBCC00D49CA1 /* UITextFieldWithDate.swift in Sources */,
 				0A28B1091BE1B55600C4FDA5 /* ViewController.swift in Sources */,
 				0A5555D91BF6F08700F1EA5A /* ParseStuff.swift in Sources */,
 				0A0BAF941C058E6300933B9F /* FeedingsListViewController.swift in Sources */,
