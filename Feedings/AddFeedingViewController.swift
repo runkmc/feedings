@@ -11,10 +11,10 @@ import Bond
 
 class AddFeedingViewController: UIViewController {
 
-    @IBOutlet weak var dateField: UITextField!
+    @IBOutlet weak var dateField: UITextFieldWithDate!
     @IBOutlet weak var mlField: UITextField!
     @IBOutlet weak var caloriesField: UITextField!
-    @IBOutlet weak var timeField: UITextField!
+    @IBOutlet weak var timeField: UITextFieldWithDate!
     @IBOutlet weak var notesField: UITextView!
     @IBOutlet weak var addFeedingButton: HighlightedButton!
     
@@ -46,7 +46,7 @@ class AddFeedingViewController: UIViewController {
         }.bindTo(addFeedingButton.bnd_enabled)
     }
     
-    func addPickerTo(field:UITextField, mode:UIDatePickerMode, format:String) {
+    func addPickerTo(field:UITextFieldWithDate, mode:UIDatePickerMode, format:String) {
         let picker = UIDatePicker()
         picker.datePickerMode = mode
         picker.backgroundColor = UIColor.whiteColor()
@@ -58,6 +58,7 @@ class AddFeedingViewController: UIViewController {
         
         picker.bnd_date.observe { date in
             field.text = formatter.stringFromDate(date)
+            field.date = date
         }
     }
     

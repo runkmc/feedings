@@ -257,14 +257,14 @@
                                 <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="3Dp-LF-dXt">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="3Dp-LF-dXt" customClass="UITextFieldWithDate" customModule="Feedings" customModuleProvider="target">
                                 <rect key="frame" x="16" y="173" width="161" height="30"/>
                                 <animations/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="PxO-1H-fN6">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="PxO-1H-fN6" customClass="UITextFieldWithDate" customModule="Feedings" customModuleProvider="target">
                                 <rect key="frame" x="198" y="173" width="161" height="30"/>
                                 <animations/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
