@@ -24,7 +24,6 @@
 		0A28E0621C0BAA5100D75D04 /* AddFeedingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A28E0611C0BAA5100D75D04 /* AddFeedingViewController.swift */; };
 		0A33C4A11C08F0F1002BB5E9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A33C4A01C08F0F1002BB5E9 /* SettingsViewController.swift */; };
 		0A5555D91BF6F08700F1EA5A /* ParseStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5555D81BF6F08700F1EA5A /* ParseStuff.swift */; };
-		0AE592251C07C5F40069F9FD /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE592241C07C5F40069F9FD /* UITextField.swift */; };
 		0AFE4F3E1C0AD14B0007C419 /* FeedingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFE4F3D1C0AD14B0007C419 /* FeedingsCell.swift */; };
 		941CA0AF32956C557E82E674 /* Pods_FeedingsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1056BE9E4DD9299A4A84641E /* Pods_FeedingsTests.framework */; };
 		EBC7C6A69AA5230F2266DED9 /* Pods_FeedingsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5922000925E75AF67F6E6114 /* Pods_FeedingsUITests.framework */; };
@@ -73,7 +72,6 @@
 		0A5555D81BF6F08700F1EA5A /* ParseStuff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseStuff.swift; sourceTree = "<group>"; };
 		0A9D63E61BE48BC5000F4778 /* Feedings.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Feedings.entitlements; sourceTree = "<group>"; };
 		0ABB7BEBCD52ED7D367A1756 /* Pods-FeedingsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedingsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeedingsUITests/Pods-FeedingsUITests.release.xcconfig"; sourceTree = "<group>"; };
-		0AE592241C07C5F40069F9FD /* UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		0AFE4F3D1C0AD14B0007C419 /* FeedingsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedingsCell.swift; sourceTree = "<group>"; };
 		1056BE9E4DD9299A4A84641E /* Pods_FeedingsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeedingsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C56BB30152137C1D6C101D5 /* Pods-FeedingsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedingsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeedingsTests/Pods-FeedingsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -184,7 +182,6 @@
 		0AF412D91C13752A00B8C2A8 /* subclasses */ = {
 			isa = PBXGroup;
 			children = (
-				0AE592241C07C5F40069F9FD /* UITextField.swift */,
 				0AFE4F3D1C0AD14B0007C419 /* FeedingsCell.swift */,
 				0A0BAF971C0664A900933B9F /* UIColor-Extensions.swift */,
 				0A0BAF9D1C066C2A00933B9F /* HighlightedButton.swift */,
@@ -495,7 +492,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A0BAFA01C06874D00933B9F /* SignupViewController.swift in Sources */,
-				0AE592251C07C5F40069F9FD /* UITextField.swift in Sources */,
 				0AFE4F3E1C0AD14B0007C419 /* FeedingsCell.swift in Sources */,
 				0A33C4A11C08F0F1002BB5E9 /* SettingsViewController.swift in Sources */,
 				0A0BAF961C0662D100933B9F /* LoginViewController.swift in Sources */,
