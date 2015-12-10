@@ -8,6 +8,7 @@
 
 import UIKit
 import Bond
+import Parse
 
 class AddFeedingViewController: UIViewController {
 
@@ -78,11 +79,35 @@ class AddFeedingViewController: UIViewController {
         view.endEditing(true)
     }
     
-    @IBAction func tappedAdd(sender: AnyObject) {
-    }
-    
     @IBAction func tappedBackground(sender: AnyObject) {
         view.endEditing(true)
+    }
+    
+    @IBAction func tappedAdd(sender: AnyObject) {
+        let date = putTogetherDate(dateField.date!, timeDate: timeField.date!)
+        let feeding = PFObject(className: "Feeding")
+        feeding["date"] = date
+        feeding["calories"] = Int(caloriesField.text!)
+        feeding["volume"] = Int(mlField.text!)
+        feeding["notes"] = notesField.text
+        feeding.saveInBackgroundWithBlock {
+            (success: Bool, error: NSError?) -> Void in
+            
+        }
+    }
+    
+    func putTogetherDate(calendarDate: NSDate, timeDate: NSDate) -> NSDate {
+        let calendar = NSCalendar.currentCalendar()
+        let calendarComponents = calendar.components([.Month, .Day, .Year], fromDate: calendarDate)
+        let timeComponents = calendar.components([.Hour, .Minute], fromDate: timeDate)
+        let components = NSDateComponents()
+        components.year = calendarComponents.year
+        components.month = calendarComponents.month
+        components.day = calendarComponents.day
+        components.hour = timeComponents.hour
+        components.minute = timeComponents.minute
+        
+        return calendar.dateFromComponents(components)!
     }
     
     override func didReceiveMemoryWarning() {
