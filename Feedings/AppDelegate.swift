@@ -18,6 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // Override point for customization after application launch.
     Parse.setApplicationId(ParseStuff.appId.rawValue, clientKey: ParseStuff.clientKey.rawValue)
+        UINavigationBar.appearance().tintColor = UIColor.feedingsOrange
+        let font = [NSFontAttributeName: UIFont(name: "FiraSans-Book", size: 17)!, NSForegroundColorAttributeName: UIColor.feedingsOrange]
+        UIBarButtonItem.appearance().setTitleTextAttributes(font, forState: .Normal)
+        UIBarButtonItem.appearance().setTitleTextAttributes(font, forState: .Highlighted)
     return true
   }
 

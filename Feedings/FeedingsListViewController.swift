@@ -22,9 +22,12 @@ class FeedingsListViewController: UIViewController {
             return
         }
         self.currentUser = user
-        navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "FiraSans-Medium", size: 22)!, NSForegroundColorAttributeName: UIColor.feedingsOrange]
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "FiraSans-Book", size: 20)!, NSForegroundColorAttributeName: UIColor.feedingsOrange]
+    }
     @IBAction func unwindFromAddingFeeding(sender: UIStoryboardSegue) {
         
     }
