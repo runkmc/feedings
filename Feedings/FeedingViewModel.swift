@@ -11,4 +11,9 @@ import Parse
 
 class FeedingViewModel {
     
+    let calories: String
+    
+    init(feeding:PFObject) {
+        self.calories = "\(feeding["calories"])"
+    }
 }
