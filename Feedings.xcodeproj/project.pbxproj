@@ -17,7 +17,6 @@
 		0A0BAFA01C06874D00933B9F /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0BAF9F1C06874D00933B9F /* SignupViewController.swift */; };
 		0A1417B31C17CBCC00D49CA1 /* UITextFieldWithDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1417B21C17CBCC00D49CA1 /* UITextFieldWithDate.swift */; };
 		0A28B1071BE1B55600C4FDA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A28B1061BE1B55600C4FDA5 /* AppDelegate.swift */; };
-		0A28B1091BE1B55600C4FDA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A28B1081BE1B55600C4FDA5 /* ViewController.swift */; };
 		0A28B10C1BE1B55600C4FDA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A28B10A1BE1B55600C4FDA5 /* Main.storyboard */; };
 		0A28B10E1BE1B55600C4FDA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A28B10D1BE1B55600C4FDA5 /* Assets.xcassets */; };
 		0A28B1111BE1B55600C4FDA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A28B10F1BE1B55600C4FDA5 /* LaunchScreen.storyboard */; };
@@ -59,7 +58,6 @@
 		0A1417B21C17CBCC00D49CA1 /* UITextFieldWithDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldWithDate.swift; sourceTree = "<group>"; };
 		0A28B1031BE1B55600C4FDA5 /* Feedings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Feedings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A28B1061BE1B55600C4FDA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0A28B1081BE1B55600C4FDA5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0A28B10B1BE1B55600C4FDA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0A28B10D1BE1B55600C4FDA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A28B1101BE1B55600C4FDA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -112,6 +110,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A03EE821C1BA72F000C9423 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		0A03EE831C1BA740000C9423 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		0A0BAF921C0583FF00933B9F /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,13 +159,14 @@
 		0A28B1051BE1B55600C4FDA5 /* Feedings */ = {
 			isa = PBXGroup;
 			children = (
+				0A03EE831C1BA740000C9423 /* Controllers */,
+				0A03EE821C1BA72F000C9423 /* models */,
 				0AF412DA1C13755300B8C2A8 /* storyboards */,
 				0AF412D91C13752A00B8C2A8 /* subclasses */,
 				0A9D63E61BE48BC5000F4778 /* Feedings.entitlements */,
 				0A0BAF951C0662D100933B9F /* LoginViewController.swift */,
 				0A5555D81BF6F08700F1EA5A /* ParseStuff.swift */,
 				0A28B1061BE1B55600C4FDA5 /* AppDelegate.swift */,
-				0A28B1081BE1B55600C4FDA5 /* ViewController.swift */,
 				0A28E0611C0BAA5100D75D04 /* AddFeedingViewController.swift */,
 				0A33C4A01C08F0F1002BB5E9 /* SettingsViewController.swift */,
 				0A0BAF9F1C06874D00933B9F /* SignupViewController.swift */,
@@ -500,7 +513,6 @@
 				0A0BAF961C0662D100933B9F /* LoginViewController.swift in Sources */,
 				0A28E0621C0BAA5100D75D04 /* AddFeedingViewController.swift in Sources */,
 				0A1417B31C17CBCC00D49CA1 /* UITextFieldWithDate.swift in Sources */,
-				0A28B1091BE1B55600C4FDA5 /* ViewController.swift in Sources */,
 				0A5555D91BF6F08700F1EA5A /* ParseStuff.swift in Sources */,
 				0A0BAF941C058E6300933B9F /* FeedingsListViewController.swift in Sources */,
 				0A0BAF981C0664A900933B9F /* UIColor-Extensions.swift in Sources */,
