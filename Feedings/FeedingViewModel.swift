@@ -15,6 +15,7 @@ class FeedingViewModel {
     let volume: String
     let date: NSDate
     let time: String
+    let notes: String
     var summary: String {
         return "\(self.calories)Cal / \(self.volume)ml"
     }
@@ -26,5 +27,6 @@ class FeedingViewModel {
         let formatter = NSDateFormatter()
         formatter.dateFormat = "h:mm a"
         self.time = formatter.stringFromDate(self.date)
+        self.notes = feeding["notes"] as! String
     }
 }

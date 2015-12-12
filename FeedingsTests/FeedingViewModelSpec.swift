@@ -41,6 +41,11 @@ class FeedingViewModelSpec: QuickSpec {
                 let model = FeedingViewModel(feeding: feeding)
                 expect(model.time) == "1:30 PM"
             }
+            
+            it("returns a feeding's notes") {
+                let model = FeedingViewModel(feeding: feeding)
+                expect(model.notes) == "I mixed in some crunchberries. This turned out to be a mistake."
+            }
         }
     }
 }
