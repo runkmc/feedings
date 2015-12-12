@@ -36,6 +36,11 @@ class FeedingViewModelSpec: QuickSpec {
                 let model = FeedingViewModel(feeding: feeding)
                 expect(model.summary) == "200Cal / 240ml"
             }
+            
+            it("returns a time string") {
+                let model = FeedingViewModel(feeding: feeding)
+                expect(model.time) == "1:30 PM"
+            }
         }
     }
 }

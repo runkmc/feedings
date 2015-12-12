@@ -13,6 +13,8 @@ class FeedingViewModel {
     
     let calories: String
     let volume: String
+    let date: NSDate
+    let time: String
     var summary: String {
         return "\(self.calories)Cal / \(self.volume)ml"
     }
@@ -20,5 +22,9 @@ class FeedingViewModel {
     init(feeding:PFObject) {
         self.calories = "\(feeding["calories"])"
         self.volume = "\(feeding["volume"])"
+        self.date = feeding["date"] as! NSDate
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "h:mm a"
+        self.time = formatter.stringFromDate(self.date)
     }
 }
