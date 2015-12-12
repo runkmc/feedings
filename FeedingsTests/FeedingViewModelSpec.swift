@@ -21,29 +21,25 @@ class FeedingViewModelSpec: QuickSpec {
             feeding["calories"] = 200
             feeding["volume"] = 240
             feeding["notes"] = "I mixed in some crunchberries. This turned out to be a mistake."
-        
+            let model = FeedingViewModel(feeding: feeding)
+            
             it("returns a string with calories") {
-                let model = FeedingViewModel(feeding: feeding)
                 expect(model.calories) == "200"
             }
             
             it("returns a string with volume") {
-                let model = FeedingViewModel(feeding: feeding)
                 expect(model.volume) == "240"
             }
             
             it("returns a summary string") {
-                let model = FeedingViewModel(feeding: feeding)
                 expect(model.summary) == "200Cal / 240ml"
             }
             
             it("returns a time string") {
-                let model = FeedingViewModel(feeding: feeding)
                 expect(model.time) == "1:30 PM"
             }
             
             it("returns a feeding's notes") {
-                let model = FeedingViewModel(feeding: feeding)
                 expect(model.notes) == "I mixed in some crunchberries. This turned out to be a mistake."
             }
         }
