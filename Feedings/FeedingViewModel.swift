@@ -13,6 +13,9 @@ class FeedingViewModel {
     
     let calories: String
     let volume: String
+    var summary: String {
+        return "\(self.calories)Cal / \(self.volume)ml"
+    }
     
     init(feeding:PFObject) {
         self.calories = "\(feeding["calories"])"
