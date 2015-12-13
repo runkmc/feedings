@@ -39,6 +39,10 @@ class DaySpec: QuickSpec {
             it("returns the day's calorie count") {
                 expect(day.calories) == "645"
             }
+            
+            it("returns the day's volume amount") {
+                expect(day.volume) == "770"
+            }
         }
     }
 }

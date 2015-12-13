@@ -14,6 +14,9 @@ class Day {
     var calories: String {
         return "\(feedings.map({$0.calories}).reduce(0, combine: +))"
     }
+    var volume: String {
+        return "\(feedings.map({$0.volume}).reduce(0, combine: +))"
+    }
     var feedings: [FeedingViewModel]
     
     init(feedings: [FeedingViewModel]) {
