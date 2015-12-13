@@ -10,6 +10,9 @@ import UIKit
 
 class FeedingsCell: UITableViewCell {
 
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var notesLabel: UILabel!
+    @IBOutlet weak var mainLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

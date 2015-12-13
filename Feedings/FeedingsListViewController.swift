@@ -12,16 +12,33 @@ import DZNEmptyDataSet
 
 class FeedingsListViewController: UIViewController {
     
-    var currentUser: PFUser?
     @IBOutlet weak var tableView: UITableView!
+    var currentUser: PFUser?
+    var day = Day(feedings: [])
   
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.delegate = self
+        tableView.dataSource = self
         guard let user = PFUser.currentUser() else {
             performSegueWithIdentifier("showLoginController", sender: self)
             return
         }
         self.currentUser = user
+        
+        let calendar = NSCalendar.currentCalendar()
+        let thisMorning = calendar.startOfDayForDate(NSDate())
+        let tonight = calendar.dateByAddingUnit(.Day, value: 1, toDate: thisMorning, options: [])!
+        let query = PFQuery(className: "Feeding")
+        query.whereKey("date", greaterThanOrEqualTo: thisMorning)
+        query.whereKey("date", lessThan: tonight)
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [PFObject]?, error: NSError?) -> Void in
+            if let feedings = objects?.map({FeedingViewModel(feeding: $0)}) {
+                self.day = Day(feedings: feedings)
+                self.tableView.reloadData()
+            }
+        }
     }
     
     override func viewDidLoad() {
@@ -37,6 +54,18 @@ class FeedingsListViewController: UIViewController {
     }
 }
 
-extension FeedingsListViewController: UITableViewDelegate {
+extension FeedingsListViewController: UITableViewDelegate, UITableViewDataSource {
     
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.day.feedings.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("feedingcell") as! FeedingsCell
+        let feeding = day.feedings[indexPath.row]
+        cell.timeLabel.text = feeding.time
+        cell.mainLabel.text = feeding.summary
+        cell.notesLabel.text = feeding.notes
+        return cell
+    }
 }
