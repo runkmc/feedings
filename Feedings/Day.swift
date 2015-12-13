@@ -11,4 +11,13 @@ import Parse
 
 class Day {
     
+    var calories: String {
+        return "\(feedings.map({$0.calories}).reduce(0, combine: +))"
+    }
+    var feedings: [FeedingViewModel]
+    
+    init(feedings: [FeedingViewModel]) {
+        self.feedings = feedings
+    }
+    
 }

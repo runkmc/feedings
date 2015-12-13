@@ -27,6 +27,7 @@
 		0A28E0621C0BAA5100D75D04 /* AddFeedingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A28E0611C0BAA5100D75D04 /* AddFeedingViewController.swift */; };
 		0A33C4A11C08F0F1002BB5E9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A33C4A01C08F0F1002BB5E9 /* SettingsViewController.swift */; };
 		0A5555D91BF6F08700F1EA5A /* ParseStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5555D81BF6F08700F1EA5A /* ParseStuff.swift */; };
+		0AB7699A1C1CFD5B002AD40F /* DaySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB769991C1CFD5B002AD40F /* DaySpec.swift */; };
 		0AFE4F3E1C0AD14B0007C419 /* FeedingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFE4F3D1C0AD14B0007C419 /* FeedingsCell.swift */; };
 		941CA0AF32956C557E82E674 /* Pods_FeedingsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1056BE9E4DD9299A4A84641E /* Pods_FeedingsTests.framework */; };
 		EBC7C6A69AA5230F2266DED9 /* Pods_FeedingsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5922000925E75AF67F6E6114 /* Pods_FeedingsUITests.framework */; };
@@ -77,6 +78,7 @@
 		0A33C4A01C08F0F1002BB5E9 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0A5555D81BF6F08700F1EA5A /* ParseStuff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseStuff.swift; sourceTree = "<group>"; };
 		0A9D63E61BE48BC5000F4778 /* Feedings.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Feedings.entitlements; sourceTree = "<group>"; };
+		0AB769991C1CFD5B002AD40F /* DaySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaySpec.swift; sourceTree = "<group>"; };
 		0ABB7BEBCD52ED7D367A1756 /* Pods-FeedingsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedingsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeedingsUITests/Pods-FeedingsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0AFE4F3D1C0AD14B0007C419 /* FeedingsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedingsCell.swift; sourceTree = "<group>"; };
 		1056BE9E4DD9299A4A84641E /* Pods_FeedingsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeedingsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,6 +192,7 @@
 			children = (
 				0A28B11D1BE1B55600C4FDA5 /* Info.plist */,
 				0A03EE861C1BA84E000C9423 /* FeedingViewModelSpec.swift */,
+				0AB769991C1CFD5B002AD40F /* DaySpec.swift */,
 			);
 			path = FeedingsTests;
 			sourceTree = "<group>";
@@ -537,6 +540,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A03EE871C1BA84E000C9423 /* FeedingViewModelSpec.swift in Sources */,
+				0AB7699A1C1CFD5B002AD40F /* DaySpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
