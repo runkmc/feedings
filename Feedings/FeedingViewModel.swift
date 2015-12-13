@@ -11,8 +11,8 @@ import Parse
 
 class FeedingViewModel {
     
-    let calories: String
-    let volume: String
+    let calories: Int
+    let volume: Int
     let date: NSDate
     let time: String
     let notes: String
@@ -21,8 +21,8 @@ class FeedingViewModel {
     }
     
     init(feeding:PFObject) {
-        self.calories = "\(feeding["calories"])"
-        self.volume = "\(feeding["volume"])"
+        self.calories = feeding["calories"] as! Int
+        self.volume = feeding["volume"] as! Int
         self.date = feeding["date"] as! NSDate
         let formatter = NSDateFormatter()
         formatter.dateFormat = "h:mm a"

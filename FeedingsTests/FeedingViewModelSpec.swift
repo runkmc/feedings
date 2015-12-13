@@ -24,11 +24,11 @@ class FeedingViewModelSpec: QuickSpec {
             let model = FeedingViewModel(feeding: feeding)
             
             it("returns a string with calories") {
-                expect(model.calories) == "200"
+                expect(model.calories) == 200
             }
             
             it("returns a string with volume") {
-                expect(model.volume) == "240"
+                expect(model.volume) == 240
             }
             
             it("returns a summary string") {
