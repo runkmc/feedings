@@ -43,6 +43,11 @@ class DaySpec: QuickSpec {
             it("returns the day's volume amount") {
                 expect(day.volume) == "770"
             }
+            
+            it("returns 0 calories when there are no feedings yet") {
+                let emptyDay = Day(feedings: [])
+                expect(emptyDay.calories) == "0"
+            }
         }
     }
 }
