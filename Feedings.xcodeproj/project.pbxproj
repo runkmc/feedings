@@ -10,6 +10,7 @@
 		0340718519A485CDC93D5B48 /* Pods_Feedings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F89102230929853146E3140E /* Pods_Feedings.framework */; };
 		0A03EE851C1BA816000C9423 /* FeedingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A03EE841C1BA816000C9423 /* FeedingViewModel.swift */; };
 		0A03EE871C1BA84E000C9423 /* FeedingViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A03EE861C1BA84E000C9423 /* FeedingViewModelSpec.swift */; };
+		0A03EE891C1BC35A000C9423 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A03EE881C1BC35A000C9423 /* Day.swift */; };
 		0A0BAF911C0583F500933B9F /* FiraSans-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A0BAF901C0583F500933B9F /* FiraSans-Book.otf */; };
 		0A0BAF941C058E6300933B9F /* FeedingsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0BAF931C058E6300933B9F /* FeedingsListViewController.swift */; };
 		0A0BAF961C0662D100933B9F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0BAF951C0662D100933B9F /* LoginViewController.swift */; };
@@ -52,6 +53,7 @@
 		00E536E399109CEAD49BCFC4 /* Pods-FeedingsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedingsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeedingsTests/Pods-FeedingsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0A03EE841C1BA816000C9423 /* FeedingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedingViewModel.swift; sourceTree = "<group>"; };
 		0A03EE861C1BA84E000C9423 /* FeedingViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedingViewModelSpec.swift; sourceTree = "<group>"; };
+		0A03EE881C1BC35A000C9423 /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		0A0BAF901C0583F500933B9F /* FiraSans-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "FiraSans-Book.otf"; path = "Feedings/FiraSans-Book.otf"; sourceTree = "<group>"; };
 		0A0BAF931C058E6300933B9F /* FeedingsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedingsListViewController.swift; sourceTree = "<group>"; };
 		0A0BAF951C0662D100933B9F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				0A03EE841C1BA816000C9423 /* FeedingViewModel.swift */,
+				0A03EE881C1BC35A000C9423 /* Day.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -519,6 +522,7 @@
 				0A03EE851C1BA816000C9423 /* FeedingViewModel.swift in Sources */,
 				0A0BAF961C0662D100933B9F /* LoginViewController.swift in Sources */,
 				0A28E0621C0BAA5100D75D04 /* AddFeedingViewController.swift in Sources */,
+				0A03EE891C1BC35A000C9423 /* Day.swift in Sources */,
 				0A1417B31C17CBCC00D49CA1 /* UITextFieldWithDate.swift in Sources */,
 				0A5555D91BF6F08700F1EA5A /* ParseStuff.swift in Sources */,
 				0A0BAF941C058E6300933B9F /* FeedingsListViewController.swift in Sources */,
