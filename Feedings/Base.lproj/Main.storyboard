@@ -97,8 +97,8 @@
                                                     <color key="textColor" red="0.95686274510000002" green="0.30196078430000001" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMA-s3-1l8">
-                                                    <rect key="frame" x="20" y="40" width="33" height="16"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMA-s3-1l8">
+                                                    <rect key="frame" x="20" y="37" width="35" height="17"/>
                                                     <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
                                                     <color key="textColor" red="0.5725490196078431" green="0.5725490196078431" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -116,7 +116,7 @@
                                                 <constraint firstItem="9qo-yl-2JP" firstAttribute="leading" secondItem="Df9-MP-7dp" secondAttribute="leadingMargin" constant="12" id="Y9c-k2-9Nc"/>
                                                 <constraint firstItem="qMA-s3-1l8" firstAttribute="leading" secondItem="9qo-yl-2JP" secondAttribute="leading" id="bjx-Ja-64p"/>
                                                 <constraint firstAttribute="leadingMargin" secondItem="9qo-yl-2JP" secondAttribute="leading" constant="-8" id="dCv-hX-Hqg"/>
-                                                <constraint firstItem="qMA-s3-1l8" firstAttribute="top" secondItem="9qo-yl-2JP" secondAttribute="bottom" constant="3" id="pYA-XC-7t7"/>
+                                                <constraint firstItem="qMA-s3-1l8" firstAttribute="top" secondItem="9qo-yl-2JP" secondAttribute="bottom" id="pYA-XC-7t7"/>
                                                 <constraint firstAttribute="topMargin" secondItem="DHb-36-VT5" secondAttribute="top" constant="-5" id="rhI-LT-h44"/>
                                             </constraints>
                                             <variation key="default">
