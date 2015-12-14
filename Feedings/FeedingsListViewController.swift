@@ -15,7 +15,12 @@ class FeedingsListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var currentUser: PFUser?
     var day = Day(feedings: [])
-  
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "FiraSans-Medium", size: 20)!, NSForegroundColorAttributeName: UIColor.feedingsOrange]
+    }
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         tableView.delegate = self
@@ -25,12 +30,15 @@ class FeedingsListViewController: UIViewController {
             return
         }
         self.currentUser = user
-        
         let calendar = NSCalendar.currentCalendar()
         let thisMorning = calendar.startOfDayForDate(NSDate())
-        let tonight = calendar.dateByAddingUnit(.Day, value: 1, toDate: thisMorning, options: [])!
+        getFeedingsForDay(thisMorning, calendar: calendar)
+    }
+    
+    func getFeedingsForDay(startingPoint: NSDate, calendar: NSCalendar) {
+        let tonight = calendar.dateByAddingUnit(.Day, value: 1, toDate: startingPoint, options: [])!
         let query = PFQuery(className: "Feeding")
-        query.whereKey("date", greaterThanOrEqualTo: thisMorning)
+        query.whereKey("date", greaterThanOrEqualTo: startingPoint)
         query.whereKey("date", lessThan: tonight)
         query.findObjectsInBackgroundWithBlock {
             (objects: [PFObject]?, error: NSError?) -> Void in
@@ -41,10 +49,6 @@ class FeedingsListViewController: UIViewController {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "FiraSans-Medium", size: 20)!, NSForegroundColorAttributeName: UIColor.feedingsOrange]
-    }
     @IBAction func unwindFromAddingFeeding(sender: UIStoryboardSegue) {
         
     }
