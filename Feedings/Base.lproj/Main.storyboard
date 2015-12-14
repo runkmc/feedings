@@ -78,44 +78,44 @@
                                     <segue destination="m17-Ag-zXV" kind="show" id="aUt-4A-hJA"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h1s-hp-gMi">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h1s-hp-gMi">
                                 <rect key="frame" x="-4" y="175" width="383" height="444"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="feedingcell" rowHeight="64" id="l3B-4e-M77" customClass="FeedingsCell" customModule="Feedings" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="383" height="64"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="feedingcell" rowHeight="68" id="l3B-4e-M77" customClass="FeedingsCell" customModule="Feedings" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="383" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="l3B-4e-M77" id="Df9-MP-7dp">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="63"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="67"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qo-yl-2JP">
-                                                    <rect key="frame" x="16" y="8" width="50" height="24"/>
+                                                    <rect key="frame" x="20" y="13" width="50" height="24"/>
                                                     <fontDescription key="fontDescription" name="FiraSans-Medium" family="Fira Sans" pointSize="20"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.95686274510000002" green="0.30196078430000001" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMA-s3-1l8">
-                                                    <rect key="frame" x="16" y="37" width="33" height="16"/>
+                                                    <rect key="frame" x="20" y="40" width="33" height="16"/>
                                                     <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="13"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.5725490196078431" green="0.5725490196078431" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHb-36-VT5">
-                                                    <rect key="frame" x="317" y="8" width="50" height="24"/>
+                                                    <rect key="frame" x="317" y="13" width="50" height="24"/>
                                                     <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="20"/>
                                                     <color key="textColor" red="0.086274509799999996" green="0.68627450980000004" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="topMargin" secondItem="9qo-yl-2JP" secondAttribute="top" id="NwP-Ce-L5A"/>
+                                                <constraint firstAttribute="topMargin" secondItem="9qo-yl-2JP" secondAttribute="top" constant="-5" id="NwP-Ce-L5A"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="DHb-36-VT5" secondAttribute="trailing" constant="8" id="Qu3-D5-e7p"/>
-                                                <constraint firstItem="9qo-yl-2JP" firstAttribute="leading" secondItem="Df9-MP-7dp" secondAttribute="leadingMargin" constant="8" id="Y9c-k2-9Nc"/>
+                                                <constraint firstItem="9qo-yl-2JP" firstAttribute="leading" secondItem="Df9-MP-7dp" secondAttribute="leadingMargin" constant="12" id="Y9c-k2-9Nc"/>
                                                 <constraint firstItem="qMA-s3-1l8" firstAttribute="leading" secondItem="9qo-yl-2JP" secondAttribute="leading" id="bjx-Ja-64p"/>
                                                 <constraint firstAttribute="leadingMargin" secondItem="9qo-yl-2JP" secondAttribute="leading" constant="-8" id="dCv-hX-Hqg"/>
-                                                <constraint firstItem="qMA-s3-1l8" firstAttribute="top" secondItem="9qo-yl-2JP" secondAttribute="bottom" constant="5" id="pYA-XC-7t7"/>
-                                                <constraint firstAttribute="topMargin" secondItem="DHb-36-VT5" secondAttribute="top" id="rhI-LT-h44"/>
+                                                <constraint firstItem="qMA-s3-1l8" firstAttribute="top" secondItem="9qo-yl-2JP" secondAttribute="bottom" constant="3" id="pYA-XC-7t7"/>
+                                                <constraint firstAttribute="topMargin" secondItem="DHb-36-VT5" secondAttribute="top" constant="-5" id="rhI-LT-h44"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">

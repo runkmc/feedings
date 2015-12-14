@@ -66,6 +66,10 @@ extension FeedingsListViewController: UITableViewDelegate, UITableViewDataSource
         cell.timeLabel.text = feeding.time
         cell.mainLabel.text = feeding.summary
         cell.notesLabel.text = feeding.notes
+        
+        cell.mainLabel.setTextColor(UIColor(hex: 0x929292FF), string: "Cal /")
+        cell.mainLabel.setTextColor(UIColor(hex: 0x929292FF), string: "ml")
+        
         return cell
     }
 }
