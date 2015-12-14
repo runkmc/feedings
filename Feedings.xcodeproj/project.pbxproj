@@ -29,6 +29,7 @@
 		0A5555D91BF6F08700F1EA5A /* ParseStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5555D81BF6F08700F1EA5A /* ParseStuff.swift */; };
 		0A993F661C1E565A00785570 /* UILabel+FormattedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A993F651C1E565A00785570 /* UILabel+FormattedText.swift */; };
 		0AB7699A1C1CFD5B002AD40F /* DaySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB769991C1CFD5B002AD40F /* DaySpec.swift */; };
+		0AC8A5B11C1F409B004DDDED /* FiraSans-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0AC8A5B01C1F409B004DDDED /* FiraSans-SemiBold.otf */; };
 		0AFE4F3E1C0AD14B0007C419 /* FeedingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFE4F3D1C0AD14B0007C419 /* FeedingsCell.swift */; };
 		941CA0AF32956C557E82E674 /* Pods_FeedingsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1056BE9E4DD9299A4A84641E /* Pods_FeedingsTests.framework */; };
 		EBC7C6A69AA5230F2266DED9 /* Pods_FeedingsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5922000925E75AF67F6E6114 /* Pods_FeedingsUITests.framework */; };
@@ -82,6 +83,7 @@
 		0A9D63E61BE48BC5000F4778 /* Feedings.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Feedings.entitlements; sourceTree = "<group>"; };
 		0AB769991C1CFD5B002AD40F /* DaySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaySpec.swift; sourceTree = "<group>"; };
 		0ABB7BEBCD52ED7D367A1756 /* Pods-FeedingsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedingsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeedingsUITests/Pods-FeedingsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		0AC8A5B01C1F409B004DDDED /* FiraSans-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-SemiBold.otf"; sourceTree = "<group>"; };
 		0AFE4F3D1C0AD14B0007C419 /* FeedingsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedingsCell.swift; sourceTree = "<group>"; };
 		1056BE9E4DD9299A4A84641E /* Pods_FeedingsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeedingsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C56BB30152137C1D6C101D5 /* Pods-FeedingsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedingsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeedingsTests/Pods-FeedingsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 		0A0BAF921C0583FF00933B9F /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				0AC8A5B01C1F409B004DDDED /* FiraSans-SemiBold.otf */,
 				0A0BAF991C06679500933B9F /* FiraSans-Medium.otf */,
 				0A0BAF901C0583F500933B9F /* FiraSans-Book.otf */,
 			);
@@ -375,6 +378,7 @@
 				0A0BAF9A1C06679500933B9F /* FiraSans-Medium.otf in Resources */,
 				0A28B10C1BE1B55600C4FDA5 /* Main.storyboard in Resources */,
 				0A0BAF911C0583F500933B9F /* FiraSans-Book.otf in Resources */,
+				0AC8A5B11C1F409B004DDDED /* FiraSans-SemiBold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
