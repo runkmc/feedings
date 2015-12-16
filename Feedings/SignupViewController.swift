@@ -27,8 +27,6 @@ class SignupViewController: UIViewController {
         signupButton.enabled = false
         self.signupButton.backgroundColor = UIColor.darkGrayColor()
         
-        let underlineColor = UIColor.init(hex: 0xD5D5D5FF)
-
         signupButton.bnd_enabled.observe {enabled in
             if enabled {
                 self.signupButton.backgroundColor = UIColor.feedingsBlue
