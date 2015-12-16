@@ -9,16 +9,20 @@
 import UIKit
 import Parse
 import DZNEmptyDataSet
+import Bond
 
 class FeedingsListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     var currentUser: PFUser?
     var day = Day(feedings: [])
+    @IBOutlet weak var caloriesLabel: UILabel!
+    @IBOutlet weak var volumeLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "FiraSans-Medium", size: 20)!, NSForegroundColorAttributeName: UIColor.feedingsOrange]
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -44,6 +48,8 @@ class FeedingsListViewController: UIViewController {
             (objects: [PFObject]?, error: NSError?) -> Void in
             if let feedings = objects?.map({FeedingViewModel(feeding: $0)}) {
                 self.day = Day(feedings: feedings)
+                self.day.calories.bindTo(self.caloriesLabel.bnd_text)
+                self.day.volume.bindTo(self.volumeLabel.bnd_text)
                 self.tableView.reloadData()
             }
         }
