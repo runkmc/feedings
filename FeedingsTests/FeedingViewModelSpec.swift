@@ -32,7 +32,7 @@ class FeedingViewModelSpec: QuickSpec {
             }
             
             it("returns a summary string") {
-                expect(model.summary) == "200Cal / 240ml"
+                expect(model.summary) == "200Cal / 240mL"
             }
             
             it("returns a time string") {

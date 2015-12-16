@@ -17,7 +17,7 @@ class FeedingViewModel {
     let time: String
     let notes: String
     var summary: String {
-        return "\(self.calories)Cal / \(self.volume)ml"
+        return "\(self.calories)Cal / \(self.volume)mL"
     }
     
     init(feeding:PFObject) {
