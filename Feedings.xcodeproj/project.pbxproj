@@ -30,6 +30,7 @@
 		0A993F661C1E565A00785570 /* UILabel+FormattedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A993F651C1E565A00785570 /* UILabel+FormattedText.swift */; };
 		0AB7699A1C1CFD5B002AD40F /* DaySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB769991C1CFD5B002AD40F /* DaySpec.swift */; };
 		0AC8A5B11C1F409B004DDDED /* FiraSans-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0AC8A5B01C1F409B004DDDED /* FiraSans-SemiBold.otf */; };
+		0AF905731C21EF6D00202167 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF905721C21EF6D00202167 /* libsqlite3.tbd */; };
 		0AFE4F3E1C0AD14B0007C419 /* FeedingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFE4F3D1C0AD14B0007C419 /* FeedingsCell.swift */; };
 		941CA0AF32956C557E82E674 /* Pods_FeedingsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1056BE9E4DD9299A4A84641E /* Pods_FeedingsTests.framework */; };
 		EBC7C6A69AA5230F2266DED9 /* Pods_FeedingsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5922000925E75AF67F6E6114 /* Pods_FeedingsUITests.framework */; };
@@ -84,6 +85,7 @@
 		0AB769991C1CFD5B002AD40F /* DaySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaySpec.swift; sourceTree = "<group>"; };
 		0ABB7BEBCD52ED7D367A1756 /* Pods-FeedingsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedingsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeedingsUITests/Pods-FeedingsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0AC8A5B01C1F409B004DDDED /* FiraSans-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-SemiBold.otf"; sourceTree = "<group>"; };
+		0AF905721C21EF6D00202167 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		0AFE4F3D1C0AD14B0007C419 /* FeedingsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedingsCell.swift; sourceTree = "<group>"; };
 		1056BE9E4DD9299A4A84641E /* Pods_FeedingsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeedingsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C56BB30152137C1D6C101D5 /* Pods-FeedingsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedingsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeedingsTests/Pods-FeedingsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AF905731C21EF6D00202167 /* libsqlite3.tbd in Frameworks */,
 				0340718519A485CDC93D5B48 /* Pods_Feedings.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,6 +251,7 @@
 		AD6F0B6DF6C3B9AD02AB4CCA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0AF905721C21EF6D00202167 /* libsqlite3.tbd */,
 				F89102230929853146E3140E /* Pods_Feedings.framework */,
 				1056BE9E4DD9299A4A84641E /* Pods_FeedingsTests.framework */,
 				5922000925E75AF67F6E6114 /* Pods_FeedingsUITests.framework */,
