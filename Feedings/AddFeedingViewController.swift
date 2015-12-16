@@ -18,6 +18,7 @@ class AddFeedingViewController: UIViewController {
     @IBOutlet weak var timeField: UITextFieldWithDate!
     @IBOutlet weak var notesField: UITextView!
     @IBOutlet weak var addFeedingButton: HighlightedButton!
+    var feeding: PFObject?
     
     
     override func viewDidLoad() {
@@ -90,10 +91,8 @@ class AddFeedingViewController: UIViewController {
         feeding["calories"] = Int(caloriesField.text!)
         feeding["volume"] = Int(mlField.text!)
         feeding["notes"] = notesField.text
-        feeding.saveInBackgroundWithBlock {
-            (success: Bool, error: NSError?) -> Void in
-            
-        }
+        self.feeding = feeding
+        performSegueWithIdentifier("unwindFromAddingFeeding", sender: self)
     }
     
     func putTogetherDate(calendarDate: NSDate, timeDate: NSDate) -> NSDate {
