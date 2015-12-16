@@ -8,19 +8,18 @@
 
 import Foundation
 import Parse
+import Bond
 
 class Day {
     
-    var calories: String {
-        return "\(feedings.map({$0.calories}).reduce(0, combine: +))"
-    }
-    var volume: String {
-        return "\(feedings.map({$0.volume}).reduce(0, combine: +))"
-    }
+    let calories: Observable<String> 
+    let volume: Observable<String>
     var feedings: [FeedingViewModel]
     
     init(feedings: [FeedingViewModel]) {
         self.feedings = feedings
+        self.volume = Observable("\(feedings.map({$0.volume}).reduce(0, combine: +))")
+        self.calories = Observable("\(feedings.map({$0.calories}).reduce(0, combine: +))")
     }
     
 }
