@@ -31,7 +31,7 @@ class AddFeedingViewController: UIViewController {
         addFeedingButton.backgroundColor = UIColor.darkGrayColor()
         
         addPickerTo(timeField, mode: .Time, format: "h:mm a")
-        addPickerTo(dateField, mode: .Date, format: "dd-MM-yyyy")
+        addPickerTo(dateField, mode: .Date, format: "MM-dd-yyyy")
         addToolbarTo(caloriesField)
         addToolbarTo(mlField)
         
