@@ -35,6 +35,12 @@ class DaySpec: QuickSpec {
                 let emptyDay = Day(feedings: [])
                 expect(emptyDay.volume.value) == "0"
             }
+            
+            it("deletes a day when asked") {
+                day.feedings.removeAtIndex(1)
+                expect(day.calories.value) == "400"
+                expect(day.volume.value) == "480"
+            }
         }
     }
     

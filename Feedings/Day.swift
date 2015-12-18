@@ -12,12 +12,21 @@ import Bond
 
 class Day {
     
-    let calories: Observable<String> 
-    let volume: Observable<String>
-    var feedings: [FeedingViewModel]
+    var calories: Observable<String>
+    var volume: Observable<String>
+    var feedings: [FeedingViewModel] {
+        didSet {
+            updateTotals()
+        }
+    }
     
     init(feedings: [FeedingViewModel]) {
         self.feedings = feedings
+        self.volume = Observable("\(feedings.map({$0.volume}).reduce(0, combine: +))")
+        self.calories = Observable("\(feedings.map({$0.calories}).reduce(0, combine: +))")
+    }
+    
+    func updateTotals() {
         self.volume = Observable("\(feedings.map({$0.volume}).reduce(0, combine: +))")
         self.calories = Observable("\(feedings.map({$0.calories}).reduce(0, combine: +))")
     }
