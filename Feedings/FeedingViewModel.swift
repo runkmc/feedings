@@ -16,11 +16,13 @@ class FeedingViewModel {
     let date: NSDate
     let time: String
     let notes: String
+    let baseFeeding: PFObject
     var summary: String {
         return "\(self.calories)Cal / \(self.volume)mL"
     }
     
     init(feeding:PFObject) {
+        self.baseFeeding = feeding
         self.calories = feeding["calories"] as! Int
         self.volume = feeding["volume"] as! Int
         self.date = feeding["date"] as! NSDate

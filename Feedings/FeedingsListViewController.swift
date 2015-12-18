@@ -75,6 +75,20 @@ extension FeedingsListViewController: UITableViewDelegate, UITableViewDataSource
         return self.day.feedings.count
     }
     
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            let feeding = day.feedings[indexPath.row].baseFeeding
+            feeding.deleteInBackground()
+            day.feedings.removeAtIndex(indexPath.row)
+            day.updateTotals()
+            tableView.reloadData()
+        }
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("feedingcell") as! FeedingsCell
         let feeding = day.feedings[indexPath.row]
