@@ -9,7 +9,6 @@
 import Foundation
 import Quick
 import Nimble
-import Bond
 import Parse
 @testable import Feedings
 
@@ -19,27 +18,27 @@ class DaySpec: QuickSpec {
             let day = self.setupDay()
             
             it("returns the day's calorie count") {
-                expect(day.calories.value) == "645"
+                expect(day.calories) == "645"
             }
             
             it("returns the day's volume amount") {
-                expect(day.volume.value) == "770"
+                expect(day.volume) == "770"
             }
             
             it("returns 0 calories when there are no feedings yet") {
                 let emptyDay = Day(feedings: [])
-                expect(emptyDay.calories.value) == "0"
+                expect(emptyDay.calories) == "0"
             }
             
             it("returns 0 ml when there are no feedings yet") {
                 let emptyDay = Day(feedings: [])
-                expect(emptyDay.volume.value) == "0"
+                expect(emptyDay.volume) == "0"
             }
             
             it("deletes a day when asked") {
                 day.feedings.removeAtIndex(1)
-                expect(day.calories.value) == "400"
-                expect(day.volume.value) == "480"
+                expect(day.calories) == "400"
+                expect(day.volume) == "480"
             }
         }
     }

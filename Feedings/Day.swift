@@ -8,12 +8,11 @@
 
 import Foundation
 import Parse
-import Bond
 
 class Day {
     
-    var calories: Observable<String>
-    var volume: Observable<String>
+    var calories: String
+    var volume: String
     var feedings: [FeedingViewModel] {
         didSet {
             updateTotals()
@@ -22,13 +21,13 @@ class Day {
     
     init(feedings: [FeedingViewModel]) {
         self.feedings = feedings
-        self.volume = Observable("\(feedings.map({$0.volume}).reduce(0, combine: +))")
-        self.calories = Observable("\(feedings.map({$0.calories}).reduce(0, combine: +))")
+        self.volume = "\(feedings.map({$0.volume}).reduce(0, combine: +))"
+        self.calories = "\(feedings.map({$0.calories}).reduce(0, combine: +))"
     }
     
     func updateTotals() {
-        self.volume = Observable("\(feedings.map({$0.volume}).reduce(0, combine: +))")
-        self.calories = Observable("\(feedings.map({$0.calories}).reduce(0, combine: +))")
+        self.volume = "\(feedings.map({$0.volume}).reduce(0, combine: +))"
+        self.calories = "\(feedings.map({$0.calories}).reduce(0, combine: +))"
     }
     
 }
