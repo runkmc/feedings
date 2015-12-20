@@ -48,8 +48,8 @@ class FeedingsListViewController: UIViewController {
             (objects: [PFObject]?, error: NSError?) -> Void in
             if let feedings = objects?.map({FeedingViewModel(feeding: $0)}) {
                 self.day = Day(feedings: feedings)
-                self.day.calories.bindTo(self.caloriesLabel.bnd_text)
-                self.day.volume.bindTo(self.volumeLabel.bnd_text)
+                self.caloriesLabel.text = self.day.calories
+                self.volumeLabel.text = self.day.volume
                 self.tableView.reloadData()
             }
         }
@@ -84,8 +84,9 @@ extension FeedingsListViewController: UITableViewDelegate, UITableViewDataSource
             let feeding = day.feedings[indexPath.row].baseFeeding
             feeding.deleteInBackground()
             day.feedings.removeAtIndex(indexPath.row)
-            day.updateTotals()
             tableView.reloadData()
+            caloriesLabel.text = day.calories
+            volumeLabel.text = day.volume
         }
     }
     
