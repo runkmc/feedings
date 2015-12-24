@@ -41,6 +41,7 @@
             <string>FiraSans-Book</string>
             <string>FiraSans-Book</string>
             <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
         </mutableArray>
         <mutableArray key="FiraSans-Medium.otf">
             <string>FiraSans-Medium</string>
@@ -54,6 +55,8 @@
             <string>FiraSans-Medium</string>
         </mutableArray>
         <mutableArray key="FiraSans-SemiBold.otf">
+            <string>FiraSans-SemiBold</string>
+            <string>FiraSans-SemiBold</string>
             <string>FiraSans-SemiBold</string>
         </mutableArray>
     </customFonts>
@@ -72,10 +75,44 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9oj-qE-46z">
                                 <rect key="frame" x="-4" y="64" width="383" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dS-c0-ttu">
+                                        <rect key="frame" x="173" y="8" width="37" height="18"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="15"/>
+                                        <color key="textColor" red="0.38431372549019605" green="0.38431372549019605" blue="0.38431372549019605" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rh2-oX-ktk">
+                                        <rect key="frame" x="16" y="0.0" width="30" height="34"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-SemiBold" family="Fira Sans" pointSize="18"/>
+                                        <state key="normal" title="&lt;">
+                                            <color key="titleColor" red="0.086274509799999996" green="0.68627450980000004" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xhF-J6-8Ya">
+                                        <rect key="frame" x="337" y="0.0" width="30" height="34"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-SemiBold" family="Fira Sans" pointSize="18"/>
+                                        <state key="normal" title="&gt;">
+                                            <color key="titleColor" red="0.086274509799999996" green="0.68627450980000004" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="6dS-c0-ttu" firstAttribute="centerX" secondItem="9oj-qE-46z" secondAttribute="centerX" id="E4g-CL-8eR"/>
                                     <constraint firstAttribute="height" constant="34" id="EDb-HO-ase"/>
+                                    <constraint firstItem="Rh2-oX-ktk" firstAttribute="centerY" secondItem="9oj-qE-46z" secondAttribute="centerY" id="J2z-DC-Z8s"/>
+                                    <constraint firstAttribute="trailing" secondItem="xhF-J6-8Ya" secondAttribute="trailing" constant="16" id="PDW-ZK-iTG"/>
+                                    <constraint firstItem="6dS-c0-ttu" firstAttribute="centerY" secondItem="9oj-qE-46z" secondAttribute="centerY" id="j7C-aI-2K0"/>
+                                    <constraint firstItem="xhF-J6-8Ya" firstAttribute="centerY" secondItem="9oj-qE-46z" secondAttribute="centerY" id="lSM-Tq-5Z9"/>
+                                    <constraint firstItem="Rh2-oX-ktk" firstAttribute="centerX" secondItem="9oj-qE-46z" secondAttribute="centerX" id="n6G-Of-RtR"/>
+                                    <constraint firstItem="Rh2-oX-ktk" firstAttribute="leading" secondItem="9oj-qE-46z" secondAttribute="leading" constant="16" id="pMU-Ha-CWq"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="n6G-Of-RtR"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gr4-YO-vy8">
                                 <rect key="frame" x="-4" y="187" width="383" height="1"/>
