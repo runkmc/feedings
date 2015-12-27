@@ -18,6 +18,7 @@
 		0A0BAF9A1C06679500933B9F /* FiraSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A0BAF991C06679500933B9F /* FiraSans-Medium.otf */; };
 		0A0BAF9E1C066C2A00933B9F /* HighlightedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0BAF9D1C066C2A00933B9F /* HighlightedButton.swift */; };
 		0A0BAFA01C06874D00933B9F /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0BAF9F1C06874D00933B9F /* SignupViewController.swift */; };
+		0A1403E41C2FBCBE00AB7149 /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A1403E31C2FBCBE00AB7149 /* Localized.strings */; };
 		0A1417B31C17CBCC00D49CA1 /* UITextFieldWithDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1417B21C17CBCC00D49CA1 /* UITextFieldWithDate.swift */; };
 		0A28B1071BE1B55600C4FDA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A28B1061BE1B55600C4FDA5 /* AppDelegate.swift */; };
 		0A28B10C1BE1B55600C4FDA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A28B10A1BE1B55600C4FDA5 /* Main.storyboard */; };
@@ -65,6 +66,7 @@
 		0A0BAF991C06679500933B9F /* FiraSans-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-Medium.otf"; sourceTree = "<group>"; };
 		0A0BAF9D1C066C2A00933B9F /* HighlightedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighlightedButton.swift; sourceTree = "<group>"; };
 		0A0BAF9F1C06874D00933B9F /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		0A1403E31C2FBCBE00AB7149 /* Localized.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localized.strings; sourceTree = "<group>"; };
 		0A1417B21C17CBCC00D49CA1 /* UITextFieldWithDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldWithDate.swift; sourceTree = "<group>"; };
 		0A28B1031BE1B55600C4FDA5 /* Feedings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Feedings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A28B1061BE1B55600C4FDA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				0A28B1061BE1B55600C4FDA5 /* AppDelegate.swift */,
 				0A28B10D1BE1B55600C4FDA5 /* Assets.xcassets */,
 				0A28B1121BE1B55600C4FDA5 /* Info.plist */,
+				0A1403E31C2FBCBE00AB7149 /* Localized.strings */,
 			);
 			path = Feedings;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 				0A28B10E1BE1B55600C4FDA5 /* Assets.xcassets in Resources */,
 				0A0BAF9A1C06679500933B9F /* FiraSans-Medium.otf in Resources */,
 				0A28B10C1BE1B55600C4FDA5 /* Main.storyboard in Resources */,
+				0A1403E41C2FBCBE00AB7149 /* Localized.strings in Resources */,
 				0A0BAF911C0583F500933B9F /* FiraSans-Book.otf in Resources */,
 				0AC8A5B11C1F409B004DDDED /* FiraSans-SemiBold.otf in Resources */,
 			);
