@@ -21,6 +21,9 @@ class SignupViewController: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
+        usernameField.placeholder = NSLocalizedString("username", comment: "")
+        passwordField.placeholder = NSLocalizedString("password", comment: "")
+        emailField.placeholder = NSLocalizedString("email", comment: "")
       
         signupButton.layer.cornerRadius = 24
         cancelButton.layer.cornerRadius = 24
