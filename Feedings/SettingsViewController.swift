@@ -12,7 +12,10 @@ import Parse
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var logoutButton: HighlightedButton!
+    
     override func viewDidLoad() {
+        logoutButton.setTitle(NSLocalizedString("Logout", comment: ""), forState: .Normal)
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

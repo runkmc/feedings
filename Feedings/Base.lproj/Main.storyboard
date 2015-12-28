@@ -564,6 +564,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="eHl-4X-Y76" secondAttribute="trailing" constant="18" id="y8P-Sx-KVQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="logoutButton" destination="eHl-4X-Y76" id="0k9-cj-dal"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zfj-fw-Nmt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
