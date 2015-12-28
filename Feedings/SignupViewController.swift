@@ -24,6 +24,8 @@ class SignupViewController: UIViewController {
         usernameField.placeholder = NSLocalizedString("username", comment: "")
         passwordField.placeholder = NSLocalizedString("password", comment: "")
         emailField.placeholder = NSLocalizedString("email", comment: "")
+        signupButton.setTitle(NSLocalizedString("Sign up", comment: ""), forState: .Normal)
+        cancelButton.setTitle(NSLocalizedString("Cancel", comment: ""), forState: .Normal)
       
         signupButton.layer.cornerRadius = 24
         cancelButton.layer.cornerRadius = 24
