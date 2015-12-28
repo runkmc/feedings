@@ -497,10 +497,15 @@
                     <connections>
                         <outlet property="addFeedingButton" destination="5sr-Cd-f0B" id="28p-zr-vNq"/>
                         <outlet property="caloriesField" destination="Lu7-Ea-Nak" id="3vD-hl-aEZ"/>
+                        <outlet property="caloriesLabel" destination="lcv-Qi-bfz" id="pES-no-X4M"/>
                         <outlet property="dateField" destination="3Dp-LF-dXt" id="dh6-BG-EQ8"/>
+                        <outlet property="dateLabel" destination="yJw-yM-enn" id="L67-2r-4i4"/>
                         <outlet property="mlField" destination="bVs-aD-QQf" id="zAK-mX-2PM"/>
                         <outlet property="notesField" destination="TS9-lM-FeK" id="13c-B7-U5z"/>
+                        <outlet property="notesLabel" destination="RZm-Oc-uRV" id="sLq-7X-mjm"/>
                         <outlet property="timeField" destination="PxO-1H-fN6" id="h4F-vH-dsW"/>
+                        <outlet property="timeLabel" destination="Thl-4C-VTy" id="qmV-Xo-eAE"/>
+                        <outlet property="volumeLabel" destination="cKe-AS-zuP" id="XUG-Oq-0vl"/>
                         <segue destination="m6Y-Dq-gNg" kind="unwind" identifier="unwindFromAddingFeeding" unwindAction="unwindFromAddingFeeding:" id="hVl-6x-gCv"/>
                     </connections>
                 </viewController>

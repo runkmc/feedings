@@ -12,6 +12,11 @@ import Parse
 
 class AddFeedingViewController: UIViewController {
 
+    @IBOutlet weak var notesLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var volumeLabel: UILabel!
+    @IBOutlet weak var caloriesLabel: UILabel!
     @IBOutlet weak var dateField: UITextFieldWithDate!
     @IBOutlet weak var mlField: UITextField!
     @IBOutlet weak var caloriesField: UITextField!
@@ -23,6 +28,12 @@ class AddFeedingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        caloriesLabel.text = NSLocalizedString("calories", comment: "")
+        volumeLabel.text = NSLocalizedString("mililiters", comment: "")
+        dateLabel.text = NSLocalizedString("date", comment: "")
+        timeLabel.text = NSLocalizedString("time", comment: "")
+        notesLabel.text = NSLocalizedString("notes", comment: "")
+        addFeedingButton.setTitle(NSLocalizedString("Add Feeding", comment: ""), forState: .Normal)
         let underlineColor = UIColor.init(hex: 0xD5D5D5FF)
         notesField.layer.borderColor = underlineColor.CGColor
         notesField.layer.borderWidth = 1.0
