@@ -82,14 +82,14 @@
                                         <color key="textColor" red="0.38431372549019605" green="0.38431372549019605" blue="0.38431372549019605" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rh2-oX-ktk">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rh2-oX-ktk">
                                         <rect key="frame" x="16" y="0.0" width="30" height="34"/>
                                         <fontDescription key="fontDescription" name="FiraSans-SemiBold" family="Fira Sans" pointSize="18"/>
                                         <state key="normal" title="&lt;">
                                             <color key="titleColor" red="0.086274509799999996" green="0.68627450980000004" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xhF-J6-8Ya">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xhF-J6-8Ya">
                                         <rect key="frame" x="337" y="0.0" width="30" height="34"/>
                                         <fontDescription key="fontDescription" name="FiraSans-SemiBold" family="Fira Sans" pointSize="18"/>
                                         <state key="normal" title="&gt;">
@@ -146,7 +146,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="67"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qo-yl-2JP">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qo-yl-2JP">
                                                     <rect key="frame" x="20" y="12" width="51" height="24"/>
                                                     <fontDescription key="fontDescription" name="FiraSans-SemiBold" family="Fira Sans" pointSize="20"/>
                                                     <color key="textColor" red="0.95686274510000002" green="0.30196078430000001" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -158,7 +158,7 @@
                                                     <color key="textColor" red="0.5725490196078431" green="0.5725490196078431" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHb-36-VT5">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHb-36-VT5">
                                                     <rect key="frame" x="317" y="12" width="50" height="24"/>
                                                     <fontDescription key="fontDescription" name="FiraSans-Medium" family="Fira Sans" pointSize="20"/>
                                                     <color key="textColor" red="0.086274509799999996" green="0.68627450980000004" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -195,13 +195,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ICG-Cq-nOO">
                                         <rect key="frame" x="0.0" y="0.0" width="192" height="89"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="calories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCE-v7-lx6">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="calories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCE-v7-lx6">
                                                 <rect key="frame" x="86" y="19" width="50" height="17"/>
                                                 <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
                                                 <color key="textColor" red="0.50588235294117645" green="0.50588235294117645" blue="0.50588235294117645" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxz-Qq-ZGL">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxz-Qq-ZGL">
                                                 <rect key="frame" x="86" y="34" width="20" height="41"/>
                                                 <fontDescription key="fontDescription" name="FiraSans-Medium" family="Fira Sans" pointSize="34"/>
                                                 <color key="textColor" red="0.95686274510000002" green="0.30196078430000001" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -219,13 +219,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qhC-za-Ld6">
                                         <rect key="frame" x="192" y="0.0" width="191" height="89"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="mililiters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRA-en-FCT">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mililiters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRA-en-FCT">
                                                 <rect key="frame" x="85" y="19" width="57" height="17"/>
                                                 <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
                                                 <color key="textColor" red="0.50588235290000005" green="0.50588235290000005" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1q-bc-6SS">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1q-bc-6SS">
                                                 <rect key="frame" x="85" y="34" width="20" height="41"/>
                                                 <fontDescription key="fontDescription" name="FiraSans-Medium" family="Fira Sans" pointSize="34"/>
                                                 <color key="textColor" red="0.95686274510000002" green="0.30196078430000001" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -300,8 +300,10 @@
                     </navigationItem>
                     <connections>
                         <outlet property="caloriesLabel" destination="rxz-Qq-ZGL" id="fvg-d4-GvF"/>
+                        <outlet property="caloriesTitle" destination="CCE-v7-lx6" id="Gl2-tX-vNT"/>
                         <outlet property="tableView" destination="h1s-hp-gMi" id="8Y3-ld-0d2"/>
                         <outlet property="volumeLabel" destination="V1q-bc-6SS" id="mfr-Hh-gst"/>
+                        <outlet property="volumeTitle" destination="JRA-en-FCT" id="Tkg-WR-gld"/>
                         <segue destination="Px8-2o-VlV" kind="presentation" identifier="showLoginController" id="Ih8-yB-dr9"/>
                     </connections>
                 </viewController>
@@ -348,25 +350,25 @@
                                 <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="calories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcv-Qi-bfz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="calories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcv-Qi-bfz">
                                 <rect key="frame" x="127" y="131" width="50" height="17"/>
                                 <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
                                 <color key="textColor" red="0.54940846530920062" green="0.54940846530920062" blue="0.54940846530920062" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Thl-4C-VTy">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Thl-4C-VTy">
                                 <rect key="frame" x="330" y="206" width="29" height="17"/>
                                 <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
                                 <color key="textColor" red="0.54940846530920062" green="0.54940846530920062" blue="0.54940846530920062" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="mililiters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKe-AS-zuP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mililiters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKe-AS-zuP">
                                 <rect key="frame" x="302" y="131" width="57" height="17"/>
                                 <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
                                 <color key="textColor" red="0.54940846530920062" green="0.54940846530920062" blue="0.54940846530920062" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJw-yM-enn">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJw-yM-enn">
                                 <rect key="frame" x="148" y="206" width="29" height="17"/>
                                 <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
                                 <color key="textColor" red="0.54940846530920062" green="0.54940846530920062" blue="0.54940846530920062" alpha="1" colorSpace="calibratedRGB"/>
@@ -393,7 +395,7 @@
                                     <action selector="tappedAdd:" destination="m17-Ag-zXV" eventType="touchUpInside" id="vOk-Bj-89q"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZm-Oc-uRV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZm-Oc-uRV">
                                 <rect key="frame" x="323" y="418" width="36" height="17"/>
                                 <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
                                 <color key="textColor" red="0.54940846529999998" green="0.54940846529999998" blue="0.54940846529999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -574,23 +576,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Feedings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYu-k2-gMk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feedings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYu-k2-gMk">
                                 <rect key="frame" x="16" y="39" width="343" height="32"/>
                                 <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="26"/>
                                 <color key="textColor" red="0.95686274509803926" green="0.30196078431372547" blue="0.027450980392156862" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xPr-kY-A7I">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xPr-kY-A7I">
                                 <rect key="frame" x="34" y="138" width="307" height="23"/>
                                 <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TIN-Sk-3Q4">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TIN-Sk-3Q4">
                                 <rect key="frame" x="34" y="176" width="307" height="23"/>
                                 <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4AB-H8-hpw" customClass="HighlightedButton" customModule="Feedings" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4AB-H8-hpw" customClass="HighlightedButton" customModule="Feedings" customModuleProvider="target">
                                 <rect key="frame" x="34" y="354" width="307" height="48"/>
                                 <color key="backgroundColor" red="0.086274509803921567" green="0.68627450980392157" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -617,13 +619,13 @@
                                     <segue destination="RWQ-Ek-mmZ" kind="presentation" id="gZd-rK-tzv"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Not registered?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFv-mn-ADH">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not registered?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFv-mn-ADH">
                                 <rect key="frame" x="34" y="328" width="307" height="20"/>
                                 <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhE-MJ-RR2" customClass="HighlightedButton" customModule="Feedings" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhE-MJ-RR2" customClass="HighlightedButton" customModule="Feedings" customModuleProvider="target">
                                 <rect key="frame" x="34" y="227" width="307" height="48"/>
                                 <color key="backgroundColor" red="0.086274509799999996" green="0.68627450980000004" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -652,18 +654,18 @@
                                     <action selector="loginTapped:" destination="Px8-2o-VlV" eventType="touchUpInside" id="PVA-4L-xvE"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="a8V-5S-rDn">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="a8V-5S-rDn">
                                 <rect key="frame" x="177" y="87" width="20" height="20"/>
                                 <color key="color" red="0.95686274510000002" green="0.30196078430000001" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dEE-0G-XS7">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEE-0G-XS7">
                                 <rect key="frame" x="34" y="161" width="307" height="1"/>
                                 <color key="backgroundColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="LJr-tF-0aU"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eUf-rQ-fWh">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eUf-rQ-fWh">
                                 <rect key="frame" x="34" y="199" width="307" height="1"/>
                                 <color key="backgroundColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -727,23 +729,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Feedings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cZ-99-pht">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feedings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cZ-99-pht">
                                 <rect key="frame" x="34" y="39" width="307" height="32"/>
                                 <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="26"/>
                                 <color key="textColor" red="0.95686274510000002" green="0.30196078430000001" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LNZ-qT-h51">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LNZ-qT-h51">
                                 <rect key="frame" x="34" y="138" width="307" height="23"/>
                                 <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2gp-UB-kac">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2gp-UB-kac">
                                 <rect key="frame" x="34" y="176" width="307" height="23"/>
                                 <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jVD-bl-p7I" customClass="HighlightedButton" customModule="Feedings" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jVD-bl-p7I" customClass="HighlightedButton" customModule="Feedings" customModuleProvider="target">
                                 <rect key="frame" x="34" y="265" width="307" height="48"/>
                                 <color key="backgroundColor" red="0.086274509799999996" green="0.68627450980000004" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -768,16 +770,16 @@
                                     <action selector="signupUser:" destination="RWQ-Ek-mmZ" eventType="touchUpInside" id="Upu-Yx-knV"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Kxg-Vb-HKH">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Kxg-Vb-HKH">
                                 <rect key="frame" x="177" y="87" width="20" height="20"/>
                                 <color key="color" red="0.95686274510000002" green="0.30196078430000001" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eJf-JI-dDT">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eJf-JI-dDT">
                                 <rect key="frame" x="34" y="214" width="307" height="23"/>
                                 <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLy-pO-bVY" customClass="HighlightedButton" customModule="Feedings" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLy-pO-bVY" customClass="HighlightedButton" customModule="Feedings" customModuleProvider="target">
                                 <rect key="frame" x="34" y="321" width="307" height="48"/>
                                 <color key="backgroundColor" red="0.97254901959999995" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -804,21 +806,21 @@
                                     <action selector="signupUser:" destination="RWQ-Ek-mmZ" eventType="touchUpInside" id="bGt-lZ-hCp"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kRI-2U-pEE">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kRI-2U-pEE">
                                 <rect key="frame" x="34" y="161" width="307" height="1"/>
                                 <color key="backgroundColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="fwU-Oo-vaX"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ayX-QF-R09">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ayX-QF-R09">
                                 <rect key="frame" x="34" y="199" width="307" height="1"/>
                                 <color key="backgroundColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="UAh-Nb-prv"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gve-YC-E7R">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gve-YC-E7R">
                                 <rect key="frame" x="34" y="237" width="307" height="1"/>
                                 <color key="backgroundColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -948,25 +950,25 @@
                                 <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="calories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqk-R3-KL9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="calories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqk-R3-KL9">
                                 <rect key="frame" x="127" y="131" width="50" height="17"/>
                                 <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
                                 <color key="textColor" red="0.54940846529999998" green="0.54940846529999998" blue="0.54940846529999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxJ-ED-EK7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxJ-ED-EK7">
                                 <rect key="frame" x="330" y="206" width="29" height="17"/>
                                 <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
                                 <color key="textColor" red="0.54940846529999998" green="0.54940846529999998" blue="0.54940846529999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="mililiters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHi-kU-PoX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mililiters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHi-kU-PoX">
                                 <rect key="frame" x="302" y="131" width="57" height="17"/>
                                 <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
                                 <color key="textColor" red="0.54940846529999998" green="0.54940846529999998" blue="0.54940846529999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYr-Uo-IZr">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYr-Uo-IZr">
                                 <rect key="frame" x="148" y="206" width="29" height="17"/>
                                 <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
                                 <color key="textColor" red="0.54940846529999998" green="0.54940846529999998" blue="0.54940846529999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -993,7 +995,7 @@
                                     <action selector="tappedAdd:" destination="pZI-BW-Zzw" eventType="touchUpInside" id="zzp-zv-UcP"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBa-SL-fSs">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBa-SL-fSs">
                                 <rect key="frame" x="323" y="418" width="36" height="17"/>
                                 <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
                                 <color key="textColor" red="0.54940846529999998" green="0.54940846529999998" blue="0.54940846529999998" alpha="1" colorSpace="calibratedRGB"/>

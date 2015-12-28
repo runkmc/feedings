@@ -18,11 +18,14 @@ class FeedingsListViewController: UIViewController {
     var day = Day(feedings: [])
     @IBOutlet weak var caloriesLabel: UILabel!
     @IBOutlet weak var volumeLabel: UILabel!
+    @IBOutlet weak var caloriesTitle: UILabel!
+    @IBOutlet weak var volumeTitle: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "FiraSans-Medium", size: 20)!, NSForegroundColorAttributeName: UIColor.feedingsOrange]
-        
+        caloriesTitle.text = NSLocalizedString("calories", comment: "")
+        volumeTitle.text = NSLocalizedString("mililiters", comment: "")
     }
     
     override func viewWillAppear(animated: Bool) {
