@@ -25,7 +25,6 @@ class LoginViewController: UIViewController {
         loginButton.layer.cornerRadius = 24
         signupButton.layer.cornerRadius = 24
         
-        
         combineLatest(usernameField.bnd_text, passwordField.bnd_text).map {
             name, pass in
             return name?.characters.count > 0 && pass?.characters.count > 0
@@ -48,12 +47,11 @@ class LoginViewController: UIViewController {
             }
             if let loginError = error {
                 let errorString = loginError.userInfo["error"] as? String
-                let alert = UIAlertController.init(title: "Problem with Login", message: errorString, preferredStyle: .Alert)
+                let alert = UIAlertController.init(title: NSLocalizedString("Problem with Login", comment: ""), message: errorString, preferredStyle: .Alert)
                 let action = UIAlertAction.init(title: "Ok", style: .Default, handler:nil)
                 alert.addAction(action)
                 self.presentViewController(alert, animated: true, completion: nil)
             }
-                
         }
     }
 }
