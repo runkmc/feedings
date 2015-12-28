@@ -27,6 +27,9 @@ class LoginViewController: UIViewController {
         signupButton.setTitle(NSLocalizedString("Sign up", comment: ""), forState: .Normal)
         signupButton.layer.cornerRadius = 24
         
+        usernameField.placeholder = NSLocalizedString("username", comment: "")
+        passwordField.placeholder = NSLocalizedString("password", comment: "")
+        
         combineLatest(usernameField.bnd_text, passwordField.bnd_text).map {
             name, pass in
             return name?.characters.count > 0 && pass?.characters.count > 0
