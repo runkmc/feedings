@@ -18,9 +18,11 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signupButton: UIButton!
     @IBOutlet weak var indicator: UIActivityIndicatorView!
+    @IBOutlet weak var notRegisteredLabel: UILabel!
   
     override func viewDidLoad() {
         super.viewDidLoad()
+        notRegisteredLabel.text = NSLocalizedString("Not registered?", comment: "")
         loginButton.setTitle(NSLocalizedString("Log in", comment: ""), forState: .Normal)
         loginButton.backgroundColor = UIColor.darkGrayColor()
         loginButton.layer.cornerRadius = 24
