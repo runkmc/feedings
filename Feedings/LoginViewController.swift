@@ -21,8 +21,10 @@ class LoginViewController: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
+        loginButton.setTitle(NSLocalizedString("Log in", comment: ""), forState: .Normal)
         loginButton.backgroundColor = UIColor.darkGrayColor()
         loginButton.layer.cornerRadius = 24
+        signupButton.setTitle(NSLocalizedString("Sign up", comment: ""), forState: .Normal)
         signupButton.layer.cornerRadius = 24
         
         combineLatest(usernameField.bnd_text, passwordField.bnd_text).map {
