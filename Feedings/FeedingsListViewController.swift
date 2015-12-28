@@ -15,7 +15,7 @@ class FeedingsListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     var currentUser: PFUser?
-    var day = Day(feedings: [])
+    var day = Day(date: NSDate(), feedings: [])
     @IBOutlet weak var caloriesLabel: UILabel!
     @IBOutlet weak var volumeLabel: UILabel!
     @IBOutlet weak var caloriesTitle: UILabel!
@@ -50,7 +50,7 @@ class FeedingsListViewController: UIViewController {
         query.findObjectsInBackgroundWithBlock {
             (objects: [PFObject]?, error: NSError?) -> Void in
             if let feedings = objects?.map({FeedingViewModel(feeding: $0)}) {
-                self.day = Day(feedings: feedings)
+                self.day = Day(date: NSDate(), feedings: feedings)
                 self.caloriesLabel.text = self.day.calories
                 self.volumeLabel.text = self.day.volume
                 self.tableView.reloadData()

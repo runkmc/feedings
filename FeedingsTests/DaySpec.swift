@@ -17,6 +17,13 @@ class DaySpec: QuickSpec {
         describe("The Day Viewmodel") {
             let day = self.setupDay()
             
+            it("returns the saved date as a string") {
+                let formatter = NSDateFormatter()
+                formatter.dateFormat = "MM-dd-yyyy"
+                let today = formatter.stringFromDate(NSDate())
+                expect(day.date) == today
+            }
+            
             it("returns the day's calorie count") {
                 expect(day.calories) == "645"
             }
@@ -26,12 +33,12 @@ class DaySpec: QuickSpec {
             }
             
             it("returns 0 calories when there are no feedings yet") {
-                let emptyDay = Day(feedings: [])
+                let emptyDay = Day(date: NSDate(), feedings: [])
                 expect(emptyDay.calories) == "0"
             }
             
             it("returns 0 ml when there are no feedings yet") {
-                let emptyDay = Day(feedings: [])
+                let emptyDay = Day(date: NSDate(), feedings: [])
                 expect(emptyDay.volume) == "0"
             }
             
@@ -63,6 +70,7 @@ class DaySpec: QuickSpec {
         feeding3["volume"] = 240
         feeding3["notes"] = "I mixed in some chili powder. This turned out to be a mistake."
         let model3 = FeedingViewModel(feeding: feeding3)
-        return Day(feedings: [model1, model2, model3])
+        let date = NSDate()
+        return Day(date: date, feedings: [model1, model2, model3])
     }
 }

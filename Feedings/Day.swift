@@ -13,16 +13,20 @@ class Day {
     
     var calories: String
     var volume: String
+    let date: String
     var feedings: [FeedingViewModel] {
         didSet {
             updateTotals()
         }
     }
     
-    init(feedings: [FeedingViewModel]) {
+    init(date: NSDate, feedings: [FeedingViewModel]) {
         self.feedings = feedings
         self.volume = "\(feedings.map({$0.volume}).reduce(0, combine: +))"
         self.calories = "\(feedings.map({$0.calories}).reduce(0, combine: +))"
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "MM-dd-yyyy"
+        self.date = formatter.stringFromDate(date)
     }
     
     func updateTotals() {
