@@ -57,7 +57,7 @@ class SignupViewController: UIViewController {
             self.indicator.stopAnimating()
             if let signupError = error {
                 let errorString = signupError.userInfo["error"] as? String
-                let alert = UIAlertController.init(title: "Problem with Signup", message: errorString, preferredStyle: .Alert)
+                let alert = UIAlertController.init(title: NSLocalizedString("Problem with Signup", comment: ""), message: errorString, preferredStyle: .Alert)
                 let action = UIAlertAction.init(title: "Ok", style: .Default, handler:nil)
                 alert.addAction(action)
                 self.presentViewController(alert, animated: true, completion: nil)
