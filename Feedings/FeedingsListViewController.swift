@@ -20,6 +20,7 @@ class FeedingsListViewController: UIViewController {
     @IBOutlet weak var volumeLabel: UILabel!
     @IBOutlet weak var caloriesTitle: UILabel!
     @IBOutlet weak var volumeTitle: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,12 +51,16 @@ class FeedingsListViewController: UIViewController {
         query.findObjectsInBackgroundWithBlock {
             (objects: [PFObject]?, error: NSError?) -> Void in
             if let feedings = objects?.map({FeedingViewModel(feeding: $0)}) {
-                self.day = Day(date: NSDate(), feedings: feedings)
+                self.day = Day(date: thisMorning, feedings: feedings)
                 self.caloriesLabel.text = self.day.calories
                 self.volumeLabel.text = self.day.volume
+                self.dateLabel.text = self.day.date
                 self.tableView.reloadData()
             }
         }
+    }
+    
+    @IBAction func previousDayTapped(sender: AnyObject) {
     }
     
     @IBAction func unwindFromAddingFeeding(sender: UIStoryboardSegue) {

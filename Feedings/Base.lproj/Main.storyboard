@@ -88,6 +88,9 @@
                                         <state key="normal" title="&lt;">
                                             <color key="titleColor" red="0.086274509799999996" green="0.68627450980000004" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="previousDayTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r2D-1M-Jj3"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xhF-J6-8Ya">
                                         <rect key="frame" x="337" y="0.0" width="30" height="34"/>
@@ -301,6 +304,7 @@
                     <connections>
                         <outlet property="caloriesLabel" destination="rxz-Qq-ZGL" id="fvg-d4-GvF"/>
                         <outlet property="caloriesTitle" destination="CCE-v7-lx6" id="Gl2-tX-vNT"/>
+                        <outlet property="dateLabel" destination="6dS-c0-ttu" id="xR0-kD-rG6"/>
                         <outlet property="tableView" destination="h1s-hp-gMi" id="8Y3-ld-0d2"/>
                         <outlet property="volumeLabel" destination="V1q-bc-6SS" id="mfr-Hh-gst"/>
                         <outlet property="volumeTitle" destination="JRA-en-FCT" id="Tkg-WR-gld"/>
