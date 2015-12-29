@@ -15,13 +15,18 @@ import Parse
 class DaySpec: QuickSpec {
     override func spec() {
         describe("The Day Viewmodel") {
-            let day = self.setupDay()
+            let testDate = NSDate()
+            let day = self.setupDay(testDate)
             
             it("returns the saved date as a string") {
                 let formatter = NSDateFormatter()
                 formatter.dateFormat = "MM-dd-yyyy"
                 let today = formatter.stringFromDate(NSDate())
                 expect(day.date) == today
+            }
+            
+            it("returns its NSDate") {
+                expect(day.dateObject) == testDate
             }
             
             it("returns the day's calorie count") {
@@ -50,7 +55,7 @@ class DaySpec: QuickSpec {
         }
     }
     
-    func setupDay() -> Day {
+    func setupDay(date: NSDate) -> Day {
         let calendar = NSCalendar.currentCalendar()
         let feeding1 = PFObject(className: "Feeding")
         feeding1["date"] = calendar.dateBySettingHour(9, minute: 30, second: 0, ofDate: NSDate(), options: [])
@@ -70,7 +75,6 @@ class DaySpec: QuickSpec {
         feeding3["volume"] = 240
         feeding3["notes"] = "I mixed in some chili powder. This turned out to be a mistake."
         let model3 = FeedingViewModel(feeding: feeding3)
-        let date = NSDate()
         return Day(date: date, feedings: [model1, model2, model3])
     }
 }

@@ -14,6 +14,7 @@ class Day {
     var calories: String
     var volume: String
     let date: String
+    let dateObject: NSDate
     var feedings: [FeedingViewModel] {
         didSet {
             updateTotals()
@@ -24,6 +25,7 @@ class Day {
         self.feedings = feedings
         self.volume = "\(feedings.map({$0.volume}).reduce(0, combine: +))"
         self.calories = "\(feedings.map({$0.calories}).reduce(0, combine: +))"
+        self.dateObject = date
         let formatter = NSDateFormatter()
         formatter.dateFormat = "MM-dd-yyyy"
         self.date = formatter.stringFromDate(date)
