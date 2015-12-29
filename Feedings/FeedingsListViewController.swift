@@ -38,7 +38,7 @@ class FeedingsListViewController: UIViewController {
             return
         }
         self.currentUser = user
-        getFeedingsForDay(NSDate())
+        getFeedingsForDay(day.dateObject)
     }
     
     func getFeedingsForDay(startingPoint: NSDate) {
@@ -61,6 +61,15 @@ class FeedingsListViewController: UIViewController {
     }
     
     @IBAction func previousDayTapped(sender: AnyObject) {
+        let shownDate = day.dateObject
+        let previousDay = NSCalendar.currentCalendar().dateByAddingUnit(.Day, value: -1, toDate: shownDate, options: [])!
+        getFeedingsForDay(previousDay)
+    }
+    
+    @IBAction func nextDayTapped(sender: AnyObject) {
+        let shownDate = day.dateObject
+        let previousDay = NSCalendar.currentCalendar().dateByAddingUnit(.Day, value: 1, toDate: shownDate, options: [])!
+        getFeedingsForDay(previousDay)
     }
     
     @IBAction func unwindFromAddingFeeding(sender: UIStoryboardSegue) {
