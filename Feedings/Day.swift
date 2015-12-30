@@ -22,7 +22,7 @@ class Day {
     }
     
     init(date: NSDate, feedings: [FeedingViewModel]) {
-        self.feedings = feedings
+        self.feedings = feedings.sort()
         self.volume = "\(feedings.map({$0.volume}).reduce(0, combine: +))"
         self.calories = "\(feedings.map({$0.calories}).reduce(0, combine: +))"
         self.dateObject = date
