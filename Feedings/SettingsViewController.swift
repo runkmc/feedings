@@ -28,6 +28,8 @@ class SettingsViewController: UIViewController {
     
     @IBAction func logoutTapped(sender: AnyObject) {
         let query = PFQuery(className: "Feeding")
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(NSDate.distantPast(), forKey: "lastUpdated")
         query.fromLocalDatastore()
         query.findObjectsInBackgroundWithBlock {
             (objects: [PFObject]?, error:NSError?) -> Void in
