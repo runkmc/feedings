@@ -57,8 +57,23 @@ class FeedingsListViewController: UIViewController {
                 self.volumeLabel.text = self.day.volume
                 self.dateLabel.text = self.day.date
                 self.tableView.reloadData()
+                self.pullRemoteChanges()
             }
         }
+    }
+    
+    func pullRemoteChanges() {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let rightNow = NSDate()
+        let lastUpdated = defaults.objectForKey("lastUpdated") as? NSDate ?? NSDate.distantPast()
+        let query = PFQuery(className: "Feeding")
+        query.whereKey("updatedAt", greaterThanOrEqualTo: lastUpdated)
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [PFObject]?, error: NSError?) -> Void in
+            PFObject.pinAllInBackground(objects)
+        }
+        defaults.setObject(rightNow, forKey: "lastUpdated")
+        tableView.reloadData()
     }
     
     @IBAction func previousDayTapped(sender: AnyObject) {
@@ -76,6 +91,7 @@ class FeedingsListViewController: UIViewController {
     @IBAction func unwindFromAddingFeeding(sender: UIStoryboardSegue) {
         let vc = sender.sourceViewController as! AddFeedingViewController
         let feeding = vc.feeding!
+        feeding.saveEventually()
         feeding.pinInBackgroundWithBlock {
             (success: Bool, error: NSError?) -> Void in
             self.getFeedingsForDay(NSDate())
