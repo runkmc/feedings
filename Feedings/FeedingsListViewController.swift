@@ -11,7 +11,7 @@ import Parse
 import DZNEmptyDataSet
 import Bond
 
-class FeedingsListViewController: UIViewController {
+class FeedingsListViewController: UIViewController, DZNEmptyDataSetDelegate, DZNEmptyDataSetSource {
     
     @IBOutlet weak var tableView: UITableView!
     var currentUser: PFUser?
@@ -24,6 +24,9 @@ class FeedingsListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.emptyDataSetDelegate = self
+        tableView.emptyDataSetSource = self
+        tableView.tableFooterView = UIView()
         navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "FiraSans-Medium", size: 20)!, NSForegroundColorAttributeName: UIColor.feedingsOrange]
         caloriesTitle.text = NSLocalizedString("calories", comment: "")
         volumeTitle.text = NSLocalizedString("mililiters", comment: "")
@@ -99,7 +102,6 @@ class FeedingsListViewController: UIViewController {
     }
     
     @IBAction func unwindFromSignup(sender: UIStoryboardSegue) {
-        
     }
 }
 
@@ -135,5 +137,31 @@ extension FeedingsListViewController: UITableViewDelegate, UITableViewDataSource
         cell.mainLabel.setTextColor(UIColor(hex: 0x929292FF), string: "mL")
         
         return cell
+    }
+}
+
+extension FeedingsListViewController {
+    
+    func titleForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
+        let text = NSLocalizedString("No Feedings for Today", comment: "")
+        let attribs = [NSFontAttributeName: UIFont(name: "FiraSans-Medium", size: 18)!,
+            NSForegroundColorAttributeName: UIColor.darkGrayColor()]
+        return NSAttributedString(string: text, attributes: attribs)
+    }
+    
+    func descriptionForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
+        let text = NSLocalizedString("Add a feeding using the \"Add Feeding\" button below", comment: "")
+        let lightGrey = UIColor.darkGrayColor().lighten(0.2)!
+        let attribs = [NSFontAttributeName: UIFont(name: "FiraSans-Book", size: 14)!,
+            NSForegroundColorAttributeName: lightGrey]
+        return NSAttributedString(string: text, attributes: attribs)
+    }
+    
+    func verticalOffsetForEmptyDataSet(scrollView: UIScrollView!) -> CGFloat {
+        return -70.0
+    }
+    
+    func emptyDataSetShouldAllowScroll(scrollView: UIScrollView!) -> Bool {
+        return true
     }
 }
