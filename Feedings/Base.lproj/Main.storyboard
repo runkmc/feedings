@@ -933,10 +933,10 @@
             </objects>
             <point key="canvasLocation" x="572" y="1289"/>
         </scene>
-        <!--Add Feeding View Controller-->
+        <!--Edit Feeding View Controller-->
         <scene sceneID="bu1-kI-5Xa">
             <objects>
-                <viewController id="pZI-BW-Zzw" customClass="AddFeedingViewController" customModule="Feedings" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pZI-BW-Zzw" customClass="EditFeedingViewController" customModule="Feedings" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uz7-78-Spp"/>
                         <viewControllerLayoutGuide type="bottom" id="a8M-Xc-4ZV"/>
@@ -1118,11 +1118,18 @@
                     </view>
                     <connections>
                         <outlet property="addFeedingButton" destination="CRS-db-77k" id="EVq-yE-kSb"/>
-                        <outlet property="caloriesField" destination="QUr-c1-lLN" id="JaO-Wf-rbE"/>
-                        <outlet property="dateField" destination="Eu5-nM-dFn" id="kmz-P2-Ez0"/>
-                        <outlet property="mlField" destination="TlM-kp-cgr" id="Mwy-8N-sJ8"/>
-                        <outlet property="notesField" destination="PkP-US-BrR" id="RUT-wx-b8V"/>
-                        <outlet property="timeField" destination="RiO-hN-Sd4" id="1eJ-Iv-1p9"/>
+                        <outlet property="caloriesField" destination="QUr-c1-lLN" id="N9z-2X-PV5"/>
+                        <outlet property="caloriesLabel" destination="kqk-R3-KL9" id="tfN-D0-gB7"/>
+                        <outlet property="dateField" destination="Eu5-nM-dFn" id="4id-17-6Rb"/>
+                        <outlet property="dateLabel" destination="yYr-Uo-IZr" id="gdd-Lv-oi6"/>
+                        <outlet property="mlField" destination="TlM-kp-cgr" id="uYU-tz-22h"/>
+                        <outlet property="notesField" destination="PkP-US-BrR" id="pKi-58-nlA"/>
+                        <outlet property="notesLabel" destination="uBa-SL-fSs" id="lvn-7w-Ix8"/>
+                        <outlet property="saveFeeding" destination="CRS-db-77k" id="cmf-Ki-dZO"/>
+                        <outlet property="timeField" destination="RiO-hN-Sd4" id="PFD-Cc-Qb0"/>
+                        <outlet property="timeLabel" destination="wxJ-ED-EK7" id="x7t-sU-4pc"/>
+                        <outlet property="volumeField" destination="TlM-kp-cgr" id="jyO-9z-kDo"/>
+                        <outlet property="volumeLabel" destination="JHi-kU-PoX" id="UIB-rJ-3In"/>
                         <segue destination="Fzr-E0-qzT" kind="unwind" identifier="unwindFromAddingFeeding" unwindAction="unwindFromAddingFeeding:" id="Ifo-qT-u5h"/>
                     </connections>
                 </viewController>
