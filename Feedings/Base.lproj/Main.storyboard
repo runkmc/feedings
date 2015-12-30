@@ -196,7 +196,7 @@
                                             <outlet property="mainLabel" destination="9qo-yl-2JP" id="lWN-oh-WeQ"/>
                                             <outlet property="notesLabel" destination="qMA-s3-1l8" id="187-w5-dI9"/>
                                             <outlet property="timeLabel" destination="DHb-36-VT5" id="doz-N1-I96"/>
-                                            <segue destination="pZI-BW-Zzw" kind="show" id="ngf-fF-T7b"/>
+                                            <segue destination="pZI-BW-Zzw" kind="show" id="enI-zG-Paw"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1013,9 +1013,6 @@
                                 <state key="normal" title="Save Feeding">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <connections>
-                                    <action selector="tappedAdd:" destination="pZI-BW-Zzw" eventType="touchUpInside" id="zzp-zv-UcP"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBa-SL-fSs">
                                 <rect key="frame" x="323" y="418" width="36" height="17"/>
@@ -1117,7 +1114,6 @@
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="addFeedingButton" destination="CRS-db-77k" id="EVq-yE-kSb"/>
                         <outlet property="caloriesField" destination="QUr-c1-lLN" id="N9z-2X-PV5"/>
                         <outlet property="caloriesLabel" destination="kqk-R3-KL9" id="tfN-D0-gB7"/>
                         <outlet property="dateField" destination="Eu5-nM-dFn" id="4id-17-6Rb"/>

@@ -23,22 +23,11 @@ class EditFeedingViewController: UIViewController {
     @IBOutlet weak var caloriesField: UITextField!
     @IBOutlet weak var notesField: UITextView!
     @IBOutlet weak var mlField: UITextField!
+    let feeding: FeedingViewModel? = nil
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        caloriesLabel.text = NSLocalizedString("calories", comment: "")
-        volumeLabel.text = NSLocalizedString("mililiters", comment: "")
-        dateLabel.text = NSLocalizedString("date", comment: "")
-        timeLabel.text = NSLocalizedString("time", comment: "")
-        notesLabel.text = NSLocalizedString("notes", comment: "")
-        saveFeeding.setTitle(NSLocalizedString("Save Feeding", comment: ""), forState: .Normal)
-        let underlineColor = UIColor.init(hex: 0xD5D5D5FF)
-        notesField.layer.borderColor = underlineColor.CGColor
-        notesField.layer.borderWidth = 1.0
-        notesField.layer.cornerRadius = 3.0
-        
-        saveFeeding.backgroundColor = UIColor.darkGrayColor()
-        
+    override func viewWillAppear(animated: Bool) {
+        caloriesField.text = String(feeding!.calories)
+        mlField.text = String(feeding!.volume)
         addPickerTo(timeField, mode: .Time, format: "h:mm a")
         addPickerTo(dateField, mode: .Date, format: "MM-dd-yyyy")
         addToolbarTo(caloriesField)
@@ -57,6 +46,23 @@ class EditFeedingViewController: UIViewController {
             }.bindTo(saveFeeding.bnd_enabled)
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        caloriesLabel.text = NSLocalizedString("calories", comment: "")
+        volumeLabel.text = NSLocalizedString("mililiters", comment: "")
+        dateLabel.text = NSLocalizedString("date", comment: "")
+        timeLabel.text = NSLocalizedString("time", comment: "")
+        notesLabel.text = NSLocalizedString("notes", comment: "")
+        saveFeeding.setTitle(NSLocalizedString("Save Feeding", comment: ""), forState: .Normal)
+        let underlineColor = UIColor.init(hex: 0xD5D5D5FF)
+        notesField.layer.borderColor = underlineColor.CGColor
+        notesField.layer.borderWidth = 1.0
+        notesField.layer.cornerRadius = 3.0
+        
+        saveFeeding.backgroundColor = UIColor.darkGrayColor()
+        
+    }
+    
     func addPickerTo(field:UITextFieldWithDate, mode:UIDatePickerMode, format:String) {
         let picker = UIDatePicker()
         picker.datePickerMode = mode
@@ -64,6 +70,7 @@ class EditFeedingViewController: UIViewController {
         picker.tintColor = UIColor.feedingsOrange
         let formatter = NSDateFormatter()
         formatter.dateFormat = format
+        picker.date = feeding!.date
         field.inputView = picker
         addToolbarTo(field)
         
