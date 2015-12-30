@@ -196,7 +196,7 @@
                                             <outlet property="mainLabel" destination="9qo-yl-2JP" id="lWN-oh-WeQ"/>
                                             <outlet property="notesLabel" destination="qMA-s3-1l8" id="187-w5-dI9"/>
                                             <outlet property="timeLabel" destination="DHb-36-VT5" id="doz-N1-I96"/>
-                                            <segue destination="pZI-BW-Zzw" kind="show" id="enI-zG-Paw"/>
+                                            <segue destination="pZI-BW-Zzw" kind="show" identifier="showEditViewController" id="enI-zG-Paw"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1013,6 +1013,9 @@
                                 <state key="normal" title="Save Feeding">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveFeedingTapped:" destination="pZI-BW-Zzw" eventType="touchUpInside" id="QQf-pP-5aB"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBa-SL-fSs">
                                 <rect key="frame" x="323" y="418" width="36" height="17"/>
@@ -1124,9 +1127,8 @@
                         <outlet property="saveFeeding" destination="CRS-db-77k" id="cmf-Ki-dZO"/>
                         <outlet property="timeField" destination="RiO-hN-Sd4" id="PFD-Cc-Qb0"/>
                         <outlet property="timeLabel" destination="wxJ-ED-EK7" id="x7t-sU-4pc"/>
-                        <outlet property="volumeField" destination="TlM-kp-cgr" id="jyO-9z-kDo"/>
                         <outlet property="volumeLabel" destination="JHi-kU-PoX" id="UIB-rJ-3In"/>
-                        <segue destination="Fzr-E0-qzT" kind="unwind" identifier="unwindFromAddingFeeding" unwindAction="unwindFromAddingFeeding:" id="Ifo-qT-u5h"/>
+                        <segue destination="Fzr-E0-qzT" kind="unwind" identifier="unwindFromEditingFeeding" unwindAction="unwindFromEditingFeeding:" id="WWL-g2-ByI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lXh-0x-zAF" userLabel="First Responder" sceneMemberID="firstResponder"/>

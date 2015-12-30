@@ -23,11 +23,13 @@ class EditFeedingViewController: UIViewController {
     @IBOutlet weak var caloriesField: UITextField!
     @IBOutlet weak var notesField: UITextView!
     @IBOutlet weak var mlField: UITextField!
-    let feeding: FeedingViewModel? = nil
+    var feeding: FeedingViewModel? = nil
+    var baseFeeding: PFObject? = nil
     
     override func viewWillAppear(animated: Bool) {
         caloriesField.text = String(feeding!.calories)
         mlField.text = String(feeding!.volume)
+        notesField.text = feeding!.notes
         addPickerTo(timeField, mode: .Time, format: "h:mm a")
         addPickerTo(dateField, mode: .Date, format: "MM-dd-yyyy")
         addToolbarTo(caloriesField)
@@ -92,11 +94,43 @@ class EditFeedingViewController: UIViewController {
         field.inputAccessoryView = toolbar
     }
 
+    func tappedDone() {
+        view.endEditing(true)
+    }
+    
+    @IBAction func tappedBackground(sender: AnyObject) {
+        view.endEditing(true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func saveFeedingTapped(sender: AnyObject) {
+        let date = putTogetherDate(dateField.date!, timeDate: timeField.date!)
+        let updatedFeeding = feeding!.baseFeeding
+        updatedFeeding["date"] = date
+        updatedFeeding["calories"] = Int(caloriesField.text!)
+        updatedFeeding["volume"] = Int(mlField.text!)
+        updatedFeeding["notes"] = notesField.text
+        self.baseFeeding = updatedFeeding
+        performSegueWithIdentifier("unwindFromEditingFeeding", sender: self)
+    }
+    
+    func putTogetherDate(calendarDate: NSDate, timeDate: NSDate) -> NSDate {
+        let calendar = NSCalendar.currentCalendar()
+        let calendarComponents = calendar.components([.Month, .Day, .Year], fromDate: calendarDate)
+        let timeComponents = calendar.components([.Hour, .Minute], fromDate: timeDate)
+        let components = NSDateComponents()
+        components.year = calendarComponents.year
+        components.month = calendarComponents.month
+        components.day = calendarComponents.day
+        components.hour = timeComponents.hour
+        components.minute = timeComponents.minute
+        
+        return calendar.dateFromComponents(components)!
+    }
 
     /*
     // MARK: - Navigation

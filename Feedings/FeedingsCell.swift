@@ -13,6 +13,8 @@ class FeedingsCell: UITableViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var notesLabel: UILabel!
     @IBOutlet weak var mainLabel: UILabel!
+    var feeding: FeedingViewModel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -110,7 +110,27 @@ class FeedingsListViewController: UIViewController, DZNEmptyDataSetDelegate, DZN
         }
     }
     
+    @IBAction func unwindFromEditingFeeding(sender: UIStoryboardSegue) {
+        let vc = sender.sourceViewController as! EditFeedingViewController
+        let feeding = vc.baseFeeding!
+        feeding.saveEventually()
+        feeding.pinInBackgroundWithBlock {
+            (success: Bool, error: NSError?) -> Void in
+            self.getFeedingsForDay(NSDate())
+        }
+    }
+    
     @IBAction func unwindFromSignup(sender: UIStoryboardSegue) {
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showEditViewController" {
+            guard let cell = sender as? FeedingsCell! else {
+                return
+            }
+            let vc = segue.destinationViewController as! EditFeedingViewController
+            vc.feeding = cell.feeding
+        }
     }
 }
 
@@ -141,6 +161,7 @@ extension FeedingsListViewController: UITableViewDelegate, UITableViewDataSource
         cell.timeLabel.text = feeding.time
         cell.mainLabel.text = feeding.summary
         cell.notesLabel.text = feeding.notes
+        cell.feeding = feeding
         
         cell.mainLabel.setTextColor(UIColor(hex: 0x929292FF), string: "Cal /")
         cell.mainLabel.setTextColor(UIColor(hex: 0x929292FF), string: "mL")
