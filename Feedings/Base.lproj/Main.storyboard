@@ -74,18 +74,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9oj-qE-46z">
-                                <rect key="frame" x="-4" y="64" width="383" height="34"/>
+                                <rect key="frame" x="-4" y="64" width="383" height="54"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dS-c0-ttu">
-                                        <rect key="frame" x="173" y="8" width="37" height="18"/>
-                                        <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="15"/>
+                                        <rect key="frame" x="163" y="13" width="57" height="28"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="23"/>
                                         <color key="textColor" red="0.38431372549019605" green="0.38431372549019605" blue="0.38431372549019605" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rh2-oX-ktk">
-                                        <rect key="frame" x="16" y="0.0" width="30" height="34"/>
-                                        <fontDescription key="fontDescription" name="FiraSans-SemiBold" family="Fira Sans" pointSize="18"/>
-                                        <state key="normal" title="&lt;">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rh2-oX-ktk">
+                                        <rect key="frame" x="16" y="0.0" width="50" height="54"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="Gdd-rm-4Aa"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="FiraSans-SemiBold" family="Fira Sans" pointSize="20"/>
+                                        <state key="normal" title="←">
                                             <color key="titleColor" red="0.086274509799999996" green="0.68627450980000004" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
@@ -93,9 +96,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xhF-J6-8Ya">
-                                        <rect key="frame" x="337" y="0.0" width="30" height="34"/>
-                                        <fontDescription key="fontDescription" name="FiraSans-SemiBold" family="Fira Sans" pointSize="18"/>
-                                        <state key="normal" title="&gt;">
+                                        <rect key="frame" x="317" y="0.0" width="50" height="54"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-SemiBold" family="Fira Sans" pointSize="20"/>
+                                        <state key="normal" title="→">
                                             <color key="titleColor" red="0.086274509799999996" green="0.68627450980000004" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
@@ -105,14 +108,17 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="Rh2-oX-ktk" firstAttribute="height" secondItem="9oj-qE-46z" secondAttribute="height" id="CWM-xf-kkn"/>
                                     <constraint firstItem="6dS-c0-ttu" firstAttribute="centerX" secondItem="9oj-qE-46z" secondAttribute="centerX" id="E4g-CL-8eR"/>
-                                    <constraint firstAttribute="height" constant="34" id="EDb-HO-ase"/>
+                                    <constraint firstAttribute="height" constant="54" id="EDb-HO-ase"/>
                                     <constraint firstItem="Rh2-oX-ktk" firstAttribute="centerY" secondItem="9oj-qE-46z" secondAttribute="centerY" id="J2z-DC-Z8s"/>
+                                    <constraint firstItem="xhF-J6-8Ya" firstAttribute="width" secondItem="Rh2-oX-ktk" secondAttribute="width" id="LvA-fQ-wEk"/>
                                     <constraint firstAttribute="trailing" secondItem="xhF-J6-8Ya" secondAttribute="trailing" constant="16" id="PDW-ZK-iTG"/>
                                     <constraint firstItem="6dS-c0-ttu" firstAttribute="centerY" secondItem="9oj-qE-46z" secondAttribute="centerY" id="j7C-aI-2K0"/>
                                     <constraint firstItem="xhF-J6-8Ya" firstAttribute="centerY" secondItem="9oj-qE-46z" secondAttribute="centerY" id="lSM-Tq-5Z9"/>
                                     <constraint firstItem="Rh2-oX-ktk" firstAttribute="centerX" secondItem="9oj-qE-46z" secondAttribute="centerX" id="n6G-Of-RtR"/>
                                     <constraint firstItem="Rh2-oX-ktk" firstAttribute="leading" secondItem="9oj-qE-46z" secondAttribute="leading" constant="16" id="pMU-Ha-CWq"/>
+                                    <constraint firstItem="xhF-J6-8Ya" firstAttribute="height" secondItem="9oj-qE-46z" secondAttribute="height" id="sjx-ZD-T1i"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -121,7 +127,7 @@
                                 </variation>
                             </view>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gr4-YO-vy8">
-                                <rect key="frame" x="-4" y="187" width="383" height="1"/>
+                                <rect key="frame" x="-4" y="207" width="383" height="1"/>
                                 <color key="backgroundColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="z27-zR-hLU"/>
@@ -142,7 +148,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h1s-hp-gMi">
-                                <rect key="frame" x="-4" y="188" width="383" height="431"/>
+                                <rect key="frame" x="-4" y="208" width="383" height="411"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="feedingcell" rowHeight="68" id="l3B-4e-M77" customClass="FeedingsCell" customModule="Feedings" customModuleProvider="target">
@@ -196,7 +202,7 @@
                                 </prototypes>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vNd-fQ-gwX">
-                                <rect key="frame" x="-4" y="98" width="383" height="89"/>
+                                <rect key="frame" x="-4" y="118" width="383" height="89"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ICG-Cq-nOO">
                                         <rect key="frame" x="0.0" y="0.0" width="192" height="89"/>
@@ -253,7 +259,7 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NWG-ba-KPS">
-                                <rect key="frame" x="187" y="107" width="1" height="71"/>
+                                <rect key="frame" x="187" y="127" width="1" height="71"/>
                                 <color key="backgroundColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="1" id="jfC-9X-f0A"/>
