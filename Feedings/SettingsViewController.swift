@@ -27,7 +27,13 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func logoutTapped(sender: AnyObject) {
-        PFUser.logOutInBackground()
+        let query = PFQuery(className: "Feeding")
+        query.fromLocalDatastore()
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [PFObject]?, error:NSError?) -> Void in
+            PFObject.unpinAllInBackground(objects)
+            PFUser.logOutInBackground()
+        }
     }
 
     /*
