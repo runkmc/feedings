@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Override point for customization after application launch.
     Parse.enableLocalDatastore()
     Parse.setApplicationId(ParseStuff.appId.rawValue, clientKey: ParseStuff.clientKey.rawValue)
+    PFACL.setDefaultACL(PFACL(), withAccessForCurrentUser: true)
         UINavigationBar.appearance().tintColor = UIColor.feedingsOrange
         let font = [NSFontAttributeName: UIFont(name: "FiraSans-Book", size: 17)!, NSForegroundColorAttributeName: UIColor.feedingsOrange]
         UIBarButtonItem.appearance().setTitleTextAttributes(font, forState: .Normal)

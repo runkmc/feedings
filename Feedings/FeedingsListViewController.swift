@@ -43,7 +43,9 @@ class FeedingsListViewController: UIViewController, DZNEmptyDataSetDelegate, DZN
             performSegueWithIdentifier("showLoginController", sender: self)
             return
         }
+        user.ACL = PFACL(user: user)
         self.currentUser = user
+        
         getFeedingsForDay(day.dateObject)
     }
     
