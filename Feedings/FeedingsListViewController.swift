@@ -16,6 +16,7 @@ class FeedingsListViewController: UIViewController, DZNEmptyDataSetDelegate, DZN
     @IBOutlet weak var tableView: UITableView!
     var currentUser: PFUser?
     var day = Day(date: NSDate(), feedings: [])
+    let refresh = UIRefreshControl()
     @IBOutlet weak var caloriesLabel: UILabel!
     @IBOutlet weak var volumeLabel: UILabel!
     @IBOutlet weak var caloriesTitle: UILabel!
@@ -30,6 +31,8 @@ class FeedingsListViewController: UIViewController, DZNEmptyDataSetDelegate, DZN
         navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "FiraSans-Medium", size: 20)!, NSForegroundColorAttributeName: UIColor.feedingsOrange]
         caloriesTitle.text = NSLocalizedString("calories", comment: "")
         volumeTitle.text = NSLocalizedString("mililiters", comment: "")
+        tableView.addSubview(refresh)
+        refresh.addTarget(self, action: "refreshPulled", forControlEvents: .ValueChanged)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -76,7 +79,13 @@ class FeedingsListViewController: UIViewController, DZNEmptyDataSetDelegate, DZN
             PFObject.pinAllInBackground(objects)
         }
         defaults.setObject(rightNow, forKey: "lastUpdated")
+        self.refresh.endRefreshing()
         tableView.reloadData()
+    }
+    
+    func refreshPulled() {
+        refresh.beginRefreshing()
+        getFeedingsForDay(day.dateObject)
     }
     
     @IBAction func previousDayTapped(sender: AnyObject) {
