@@ -46,6 +46,7 @@ class FeedingsListViewController: UIViewController {
         let thisMorning = calendar.startOfDayForDate(startingPoint)
         let tonight = calendar.dateByAddingUnit(.Day, value: 1, toDate: thisMorning, options: [])!
         let query = PFQuery(className: "Feeding")
+        query.fromLocalDatastore()
         query.whereKey("date", greaterThanOrEqualTo: thisMorning)
         query.whereKey("date", lessThan: tonight)
         query.findObjectsInBackgroundWithBlock {
@@ -75,7 +76,7 @@ class FeedingsListViewController: UIViewController {
     @IBAction func unwindFromAddingFeeding(sender: UIStoryboardSegue) {
         let vc = sender.sourceViewController as! AddFeedingViewController
         let feeding = vc.feeding!
-        feeding.saveInBackgroundWithBlock {
+        feeding.pinInBackgroundWithBlock {
             (success: Bool, error: NSError?) -> Void in
             self.getFeedingsForDay(NSDate())
         }
