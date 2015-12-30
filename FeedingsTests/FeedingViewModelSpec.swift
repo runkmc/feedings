@@ -42,6 +42,27 @@ class FeedingViewModelSpec: QuickSpec {
             it("returns a feeding's notes") {
                 expect(model.notes) == "I mixed in some crunchberries. This turned out to be a mistake."
             }
+            
+            it("is comparable") {
+                let feeding2 = PFObject(className: "Feeding")
+                feeding2["calories"] = 200
+                feeding2["volume"] = 240
+                feeding2["notes"] = "I mixed in some crunchberries. This turned out to be a mistake."
+                feeding2["date"] = NSDate.distantPast()
+                let pastFeeding = FeedingViewModel(feeding: feeding2)
+                let feeding3 = PFObject(className: "Feeding")
+                feeding3["calories"] = 200
+                feeding3["volume"] = 240
+                feeding3["notes"] = "I mixed in some crunchberries. This turned out to be a mistake."
+                feeding3["date"] = NSDate.distantFuture()
+                let futureFeeding = FeedingViewModel(feeding: feeding3)
+                
+                expect(model > pastFeeding) == true
+                expect(model < futureFeeding) == true
+                expect(model == model) == true
+                expect(futureFeeding < pastFeeding) == false
+                
+            }
         }
     }
 }
