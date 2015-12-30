@@ -9,7 +9,7 @@
 import Foundation
 import Parse
 
-class FeedingViewModel {
+class FeedingViewModel: Comparable {
     
     let calories: Int
     let volume: Int
@@ -31,4 +31,16 @@ class FeedingViewModel {
         self.time = formatter.stringFromDate(self.date)
         self.notes = feeding["notes"] as! String
     }
+}
+
+func ==(x:FeedingViewModel, y:FeedingViewModel) -> Bool {
+    return x.date.isEqualToDate(y.date)
+}
+
+func <(x:FeedingViewModel, y:FeedingViewModel) -> Bool {
+    let earlier = x.date.earlierDate(y.date)
+    if earlier == x.date {
+        return true
+    }
+    return false
 }
