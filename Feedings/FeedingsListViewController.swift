@@ -129,6 +129,7 @@ class FeedingsListViewController: UIViewController, DZNEmptyDataSetDelegate, DZN
     }
     
     @IBAction func unwindFromSignup(sender: UIStoryboardSegue) {
+        self.getFeedingsForDay(day.dateObject)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

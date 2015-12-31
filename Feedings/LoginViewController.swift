@@ -50,7 +50,7 @@ class LoginViewController: UIViewController {
         PFUser.logInWithUsernameInBackground(usernameField.text!, password: passwordField.text!) {
             (user: PFUser?, error: NSError?) -> Void in
             if let _ = user {
-                self.dismissViewControllerAnimated(true, completion: nil)
+                self.performSegueWithIdentifier("unwindFromSignup", sender: self)
             }
             if let loginError = error {
                 let errorString = loginError.userInfo["error"] as? String
