@@ -37,6 +37,8 @@ class FeedingsListViewController: UIViewController, DZNEmptyDataSetDelegate, DZN
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "getFeedingsOnLaunch",
+            name: UIApplicationDidBecomeActiveNotification, object: UIApplication.sharedApplication())
         tableView.delegate = self
         tableView.dataSource = self
         guard let user = PFUser.currentUser() else {
@@ -46,6 +48,10 @@ class FeedingsListViewController: UIViewController, DZNEmptyDataSetDelegate, DZN
         user.ACL = PFACL(user: user)
         self.currentUser = user
         
+        getFeedingsForDay(day.dateObject)
+    }
+    
+    func getFeedingsOnLaunch() {
         getFeedingsForDay(day.dateObject)
     }
     
