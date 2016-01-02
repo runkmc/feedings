@@ -147,60 +147,6 @@
                                     <segue destination="m17-Ag-zXV" kind="show" id="aUt-4A-hJA"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h1s-hp-gMi">
-                                <rect key="frame" x="-4" y="208" width="383" height="411"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="feedingcell" rowHeight="68" id="l3B-4e-M77" customClass="FeedingsCell" customModule="Feedings" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="383" height="68"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="l3B-4e-M77" id="Df9-MP-7dp">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="67"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qo-yl-2JP">
-                                                    <rect key="frame" x="20" y="12" width="51" height="24"/>
-                                                    <fontDescription key="fontDescription" name="FiraSans-SemiBold" family="Fira Sans" pointSize="20"/>
-                                                    <color key="textColor" red="0.95686274510000002" green="0.30196078430000001" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMA-s3-1l8">
-                                                    <rect key="frame" x="20" y="37" width="35" height="17"/>
-                                                    <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
-                                                    <color key="textColor" red="0.5725490196078431" green="0.5725490196078431" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHb-36-VT5">
-                                                    <rect key="frame" x="317" y="12" width="50" height="24"/>
-                                                    <fontDescription key="fontDescription" name="FiraSans-Medium" family="Fira Sans" pointSize="20"/>
-                                                    <color key="textColor" red="0.086274509799999996" green="0.68627450980000004" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="topMargin" secondItem="9qo-yl-2JP" secondAttribute="top" constant="-4" id="NwP-Ce-L5A"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="DHb-36-VT5" secondAttribute="trailing" constant="8" id="Qu3-D5-e7p"/>
-                                                <constraint firstItem="9qo-yl-2JP" firstAttribute="leading" secondItem="Df9-MP-7dp" secondAttribute="leadingMargin" constant="12" id="Y9c-k2-9Nc"/>
-                                                <constraint firstItem="qMA-s3-1l8" firstAttribute="leading" secondItem="9qo-yl-2JP" secondAttribute="leading" id="bjx-Ja-64p"/>
-                                                <constraint firstAttribute="leadingMargin" secondItem="9qo-yl-2JP" secondAttribute="leading" constant="-8" id="dCv-hX-Hqg"/>
-                                                <constraint firstItem="qMA-s3-1l8" firstAttribute="top" secondItem="9qo-yl-2JP" secondAttribute="bottom" constant="1" id="pYA-XC-7t7"/>
-                                                <constraint firstAttribute="topMargin" secondItem="DHb-36-VT5" secondAttribute="top" constant="-4" id="rhI-LT-h44"/>
-                                            </constraints>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="dCv-hX-Hqg"/>
-                                                </mask>
-                                            </variation>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="mainLabel" destination="9qo-yl-2JP" id="lWN-oh-WeQ"/>
-                                            <outlet property="notesLabel" destination="qMA-s3-1l8" id="187-w5-dI9"/>
-                                            <outlet property="timeLabel" destination="DHb-36-VT5" id="doz-N1-I96"/>
-                                            <segue destination="pZI-BW-Zzw" kind="show" identifier="showEditViewController" id="enI-zG-Paw"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vNd-fQ-gwX">
                                 <rect key="frame" x="-4" y="118" width="383" height="89"/>
                                 <subviews>
@@ -265,6 +211,60 @@
                                     <constraint firstAttribute="width" constant="1" id="jfC-9X-f0A"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h1s-hp-gMi">
+                                <rect key="frame" x="-4" y="207" width="383" height="411"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="feedingcell" rowHeight="68" id="l3B-4e-M77" customClass="FeedingsCell" customModule="Feedings" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="383" height="68"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="l3B-4e-M77" id="Df9-MP-7dp">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="67"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qo-yl-2JP">
+                                                    <rect key="frame" x="20" y="12" width="51" height="24"/>
+                                                    <fontDescription key="fontDescription" name="FiraSans-SemiBold" family="Fira Sans" pointSize="20"/>
+                                                    <color key="textColor" red="0.95686274510000002" green="0.30196078430000001" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMA-s3-1l8">
+                                                    <rect key="frame" x="20" y="37" width="35" height="17"/>
+                                                    <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
+                                                    <color key="textColor" red="0.5725490196078431" green="0.5725490196078431" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHb-36-VT5">
+                                                    <rect key="frame" x="317" y="12" width="50" height="24"/>
+                                                    <fontDescription key="fontDescription" name="FiraSans-Medium" family="Fira Sans" pointSize="20"/>
+                                                    <color key="textColor" red="0.086274509799999996" green="0.68627450980000004" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="topMargin" secondItem="9qo-yl-2JP" secondAttribute="top" constant="-4" id="NwP-Ce-L5A"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="DHb-36-VT5" secondAttribute="trailing" constant="8" id="Qu3-D5-e7p"/>
+                                                <constraint firstItem="9qo-yl-2JP" firstAttribute="leading" secondItem="Df9-MP-7dp" secondAttribute="leadingMargin" constant="12" id="Y9c-k2-9Nc"/>
+                                                <constraint firstItem="qMA-s3-1l8" firstAttribute="leading" secondItem="9qo-yl-2JP" secondAttribute="leading" id="bjx-Ja-64p"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="9qo-yl-2JP" secondAttribute="leading" constant="-8" id="dCv-hX-Hqg"/>
+                                                <constraint firstItem="qMA-s3-1l8" firstAttribute="top" secondItem="9qo-yl-2JP" secondAttribute="bottom" constant="1" id="pYA-XC-7t7"/>
+                                                <constraint firstAttribute="topMargin" secondItem="DHb-36-VT5" secondAttribute="top" constant="-4" id="rhI-LT-h44"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="dCv-hX-Hqg"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="mainLabel" destination="9qo-yl-2JP" id="lWN-oh-WeQ"/>
+                                            <outlet property="notesLabel" destination="qMA-s3-1l8" id="187-w5-dI9"/>
+                                            <outlet property="timeLabel" destination="DHb-36-VT5" id="doz-N1-I96"/>
+                                            <segue destination="pZI-BW-Zzw" kind="show" identifier="showEditViewController" id="enI-zG-Paw"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -304,6 +304,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Feedings" id="EDN-8i-cLW">
+                        <barButtonItem key="backBarButtonItem" title="Cancel" id="FXl-PG-fAD"/>
                         <barButtonItem key="leftBarButtonItem" title="Settings" style="plain" id="g9E-k4-AbO">
                             <connections>
                                 <segue destination="l8K-rm-sO5" kind="show" id="mMC-Ro-bFk"/>
