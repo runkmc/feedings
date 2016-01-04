@@ -42,6 +42,7 @@
             <string>FiraSans-Book</string>
             <string>FiraSans-Book</string>
             <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
         </mutableArray>
         <mutableArray key="FiraSans-Medium.otf">
             <string>FiraSans-Medium</string>
@@ -694,6 +695,16 @@
                                     <constraint firstAttribute="height" constant="1" id="5on-i2-PF8"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2Z-8h-dRD">
+                                <rect key="frame" x="125" y="605" width="126" height="32"/>
+                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="16"/>
+                                <state key="normal" title="Forgot Password?">
+                                    <color key="titleColor" red="0.086274509799999996" green="0.68627450980000004" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="forgotPassword:" destination="Px8-2o-VlV" eventType="touchUpInside" id="YRr-Mv-ffe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -724,6 +735,8 @@
                             <constraint firstItem="a8V-5S-rDn" firstAttribute="top" secondItem="SYu-k2-gMk" secondAttribute="bottom" constant="16" id="rPX-C8-jbc"/>
                             <constraint firstItem="SYu-k2-gMk" firstAttribute="leading" secondItem="SHZ-0V-nNk" secondAttribute="leadingMargin" id="t74-GG-MAj"/>
                             <constraint firstItem="eUf-rQ-fWh" firstAttribute="centerX" secondItem="TIN-Sk-3Q4" secondAttribute="centerX" id="uL3-eZ-OCV"/>
+                            <constraint firstItem="uBH-9Z-zfv" firstAttribute="top" secondItem="R2Z-8h-dRD" secondAttribute="bottom" constant="30" id="wdY-PN-7qa"/>
+                            <constraint firstItem="R2Z-8h-dRD" firstAttribute="centerX" secondItem="SHZ-0V-nNk" secondAttribute="centerX" id="wrk-v2-RIu"/>
                             <constraint firstItem="TIN-Sk-3Q4" firstAttribute="width" secondItem="xPr-kY-A7I" secondAttribute="width" id="yqi-8D-sgm"/>
                         </constraints>
                     </view>

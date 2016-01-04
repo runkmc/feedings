@@ -61,4 +61,21 @@ class LoginViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func forgotPassword(sender: AnyObject) {
+        let alert = UIAlertController.init(title: NSLocalizedString("Forgot password?", comment: ""), message: "Enter your email to recieve a password reset link", preferredStyle: .Alert)
+        alert.addTextFieldWithConfigurationHandler {
+            textField in
+        }
+        let cancel = UIAlertAction.init(title: "Cancel", style: .Cancel, handler:nil)
+        alert.addAction(cancel)
+        let send = UIAlertAction.init(title: "Reset Password", style: .Default, handler: {
+            action in
+            if let email = alert.textFields?[0].text {
+                PFUser.requestPasswordResetForEmailInBackground(email)
+            }
+        })
+        alert.addAction(send)
+        self.presentViewController(alert, animated: true, completion:nil)
+    }
 }
