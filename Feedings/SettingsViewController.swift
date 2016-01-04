@@ -41,7 +41,7 @@ class SettingsViewController: UIViewController {
             }
         }
         let alert = UIAlertController.init(title: NSLocalizedString("Logout?", comment: ""), message: "Are you sure?", preferredStyle: .Alert)
-        let cancel = UIAlertAction.init(title: "Cancel", style: .Default, handler:nil)
+        let cancel = UIAlertAction.init(title: "Cancel", style: .Cancel, handler:nil)
         let logout = UIAlertAction.init(title: "Logout", style: .Destructive, handler:logoutClosure)
         alert.addAction(cancel)
         alert.addAction(logout)
