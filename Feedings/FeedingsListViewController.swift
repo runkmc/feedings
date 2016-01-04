@@ -143,6 +143,9 @@ class FeedingsListViewController: UIViewController, DZNEmptyDataSetDelegate, DZN
             }
             let vc = segue.destinationViewController as! EditFeedingViewController
             vc.feeding = cell.feeding
+        } else if segue.identifier == "showAddViewController" {
+            let vc = segue.destinationViewController as! AddFeedingViewController
+            vc.date = day.dateObject
         }
     }
 }

@@ -24,7 +24,7 @@ class AddFeedingViewController: UIViewController {
     @IBOutlet weak var notesField: UITextView!
     @IBOutlet weak var addFeedingButton: HighlightedButton!
     var feeding: PFObject?
-    
+    var date: NSDate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,8 +41,9 @@ class AddFeedingViewController: UIViewController {
 
         addFeedingButton.backgroundColor = UIColor.darkGrayColor()
         
-        addPickerTo(timeField, mode: .Time, format: "h:mm a")
-        addPickerTo(dateField, mode: .Date, format: "MM-dd-yyyy")
+        addPickerTo(timeField, mode: .Time, format: "h:mm a", withDate: NSDate())
+        let dateToUse = self.date ?? NSDate()
+        addPickerTo(dateField, mode: .Date, format: "MM-dd-yyyy", withDate: dateToUse)
         addToolbarTo(caloriesField)
         addToolbarTo(mlField)
         
@@ -59,13 +60,14 @@ class AddFeedingViewController: UIViewController {
         }.bindTo(addFeedingButton.bnd_enabled)
     }
     
-    func addPickerTo(field:UITextFieldWithDate, mode:UIDatePickerMode, format:String) {
+    func addPickerTo(field:UITextFieldWithDate, mode:UIDatePickerMode, format:String, withDate:NSDate) {
         let picker = UIDatePicker()
         picker.datePickerMode = mode
         picker.backgroundColor = UIColor.whiteColor()
         picker.tintColor = UIColor.feedingsOrange
         let formatter = NSDateFormatter()
         formatter.dateFormat = format
+        picker.date = withDate
         field.inputView = picker
         addToolbarTo(field)
         

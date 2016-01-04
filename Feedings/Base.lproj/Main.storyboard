@@ -145,7 +145,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="m17-Ag-zXV" kind="show" id="aUt-4A-hJA"/>
+                                    <segue destination="m17-Ag-zXV" kind="show" identifier="showAddViewController" id="aUt-4A-hJA"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vNd-fQ-gwX">
