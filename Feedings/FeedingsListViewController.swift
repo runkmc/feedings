@@ -33,12 +33,12 @@ class FeedingsListViewController: UIViewController, DZNEmptyDataSetDelegate, DZN
         volumeTitle.text = NSLocalizedString("mililiters", comment: "")
         tableView.addSubview(refresh)
         refresh.addTarget(self, action: "refreshPulled", forControlEvents: .ValueChanged)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "getFeedingsOnLaunch",
+            name: UIApplicationDidBecomeActiveNotification, object: nil)
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "getFeedingsOnLaunch",
-            name: UIApplicationDidBecomeActiveNotification, object: UIApplication.sharedApplication())
         tableView.delegate = self
         tableView.dataSource = self
         guard let user = PFUser.currentUser() else {
@@ -47,12 +47,11 @@ class FeedingsListViewController: UIViewController, DZNEmptyDataSetDelegate, DZN
         }
         user.ACL = PFACL(user: user)
         self.currentUser = user
-        
-        getFeedingsForDay(day.dateObject)
+        pullRemoteChanges()
     }
     
     func getFeedingsOnLaunch() {
-        getFeedingsForDay(day.dateObject)
+        pullRemoteChanges()
     }
     
     func getFeedingsForDay(startingPoint: NSDate) {
@@ -61,17 +60,18 @@ class FeedingsListViewController: UIViewController, DZNEmptyDataSetDelegate, DZN
         let tonight = calendar.dateByAddingUnit(.Day, value: 1, toDate: thisMorning, options: [])!
         let query = PFQuery(className: "Feeding")
         query.fromLocalDatastore()
+        query.whereKey("deleted", notEqualTo: true)
         query.whereKey("date", greaterThanOrEqualTo: thisMorning)
         query.whereKey("date", lessThan: tonight)
         query.findObjectsInBackgroundWithBlock {
             (objects: [PFObject]?, error: NSError?) -> Void in
             if let feedings = objects?.map({FeedingViewModel(feeding: $0)}) {
+                print("\(objects?.count)")
                 self.day = Day(date: thisMorning, feedings: feedings)
                 self.caloriesLabel.text = self.day.calories
                 self.volumeLabel.text = self.day.volume
                 self.dateLabel.text = self.day.date
                 self.tableView.reloadData()
-                self.pullRemoteChanges()
             }
         }
     }
@@ -84,16 +84,20 @@ class FeedingsListViewController: UIViewController, DZNEmptyDataSetDelegate, DZN
         query.whereKey("updatedAt", greaterThanOrEqualTo: lastUpdated)
         query.findObjectsInBackgroundWithBlock {
             (objects: [PFObject]?, error: NSError?) -> Void in
-            PFObject.pinAllInBackground(objects)
+            PFObject.pinAllInBackground(objects) {
+                (success:Bool, error:NSError?) -> () in
+                print("\(objects?.count)")
+                self.getFeedingsForDay(self.day.dateObject)
+                self.refresh.endRefreshing()
+                self.tableView.reloadData()
+            }
         }
         defaults.setObject(rightNow, forKey: "lastUpdated")
-        self.refresh.endRefreshing()
-        tableView.reloadData()
     }
     
     func refreshPulled() {
         refresh.beginRefreshing()
-        getFeedingsForDay(day.dateObject)
+        pullRemoteChanges()
     }
     
     @IBAction func previousDayTapped(sender: AnyObject) {
