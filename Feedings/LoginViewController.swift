@@ -66,6 +66,7 @@ class LoginViewController: UIViewController {
         let alert = UIAlertController.init(title: NSLocalizedString("Forgot password?", comment: ""), message: "Enter your email to recieve a password reset link", preferredStyle: .Alert)
         alert.addTextFieldWithConfigurationHandler {
             textField in
+            textField.font = UIFont(name: "FiraSans-Book", size: 12)!
         }
         let cancel = UIAlertAction.init(title: "Cancel", style: .Cancel, handler:nil)
         alert.addAction(cancel)
