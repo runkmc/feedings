@@ -156,7 +156,9 @@ extension FeedingsListViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             let feeding = day.feedings[indexPath.row].baseFeeding
-            feeding.deleteInBackground()
+            feeding["deleted"] = true
+            feeding.saveEventually()
+            feeding.unpinInBackground()
             day.feedings.removeAtIndex(indexPath.row)
             tableView.reloadData()
             caloriesLabel.text = day.calories
