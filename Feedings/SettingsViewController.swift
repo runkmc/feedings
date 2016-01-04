@@ -17,35 +17,34 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         logoutButton.setTitle(NSLocalizedString("Logout", comment: ""), forState: .Normal)
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func logoutTapped(sender: AnyObject) {
+        let logoutClosure = {
+        (alert:UIAlertAction) -> Void in
         let query = PFQuery(className: "Feeding")
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setObject(NSDate.distantPast(), forKey: "lastUpdated")
         query.fromLocalDatastore()
         query.findObjectsInBackgroundWithBlock {
             (objects: [PFObject]?, error:NSError?) -> Void in
-            PFObject.unpinAllInBackground(objects)
-            PFUser.logOutInBackground()
+            PFObject.unpinAllInBackground(objects) {
+                (success:Bool, error:NSError?) -> Void in
+                PFUser.logOut()
+                print("logout called")
+                self.navigationController?.popToRootViewControllerAnimated(true)
+                }
+            }
         }
+        let alert = UIAlertController.init(title: NSLocalizedString("Logout?", comment: ""), message: "Are you sure?", preferredStyle: .Alert)
+        let cancel = UIAlertAction.init(title: "Cancel", style: .Default, handler:nil)
+        let logout = UIAlertAction.init(title: "Logout", style: .Destructive, handler:logoutClosure)
+        alert.addAction(cancel)
+        alert.addAction(logout)
+        self.presentViewController(alert, animated: true, completion:nil)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
