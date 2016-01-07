@@ -63,14 +63,14 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotPassword(sender: AnyObject) {
-        let alert = UIAlertController.init(title: NSLocalizedString("Forgot password?", comment: ""), message: "Enter your email to recieve a password reset link", preferredStyle: .Alert)
+        let alert = UIAlertController.init(title: NSLocalizedString("Forgot password?", comment: ""), message: NSLocalizedString("Enter your email to recieve a password reset link", comment: ""),preferredStyle: .Alert)
         alert.addTextFieldWithConfigurationHandler {
             textField in
             textField.font = UIFont(name: "FiraSans-Book", size: 12)!
         }
-        let cancel = UIAlertAction.init(title: "Cancel", style: .Cancel, handler:nil)
+        let cancel = UIAlertAction.init(title: NSLocalizedString("Cancel", comment: ""), style: .Cancel, handler:nil)
         alert.addAction(cancel)
-        let send = UIAlertAction.init(title: "Reset Password", style: .Default, handler: {
+        let send = UIAlertAction.init(title: NSLocalizedString("Reset Password", comment: ""), style: .Default, handler: {
             action in
             if let email = alert.textFields?[0].text {
                 PFUser.requestPasswordResetForEmailInBackground(email)
