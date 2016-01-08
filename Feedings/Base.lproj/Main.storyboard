@@ -230,7 +230,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMA-s3-1l8">
-                                                    <rect key="frame" x="20" y="37" width="35" height="17"/>
+                                                    <rect key="frame" x="20" y="37" width="347" height="17"/>
                                                     <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
                                                     <color key="textColor" red="0.5725490196078431" green="0.5725490196078431" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -243,6 +243,7 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="qMA-s3-1l8" firstAttribute="trailing" secondItem="DHb-36-VT5" secondAttribute="trailing" id="1lY-gC-tlW"/>
                                                 <constraint firstAttribute="topMargin" secondItem="9qo-yl-2JP" secondAttribute="top" constant="-4" id="NwP-Ce-L5A"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="DHb-36-VT5" secondAttribute="trailing" constant="8" id="Qu3-D5-e7p"/>
                                                 <constraint firstItem="9qo-yl-2JP" firstAttribute="leading" secondItem="Df9-MP-7dp" secondAttribute="leadingMargin" constant="12" id="Y9c-k2-9Nc"/>
