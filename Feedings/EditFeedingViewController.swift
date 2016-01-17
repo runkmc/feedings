@@ -34,6 +34,7 @@ class EditFeedingViewController: UIViewController {
         addPickerTo(dateField, mode: .Date, format: "MM-dd-yyyy")
         addToolbarTo(caloriesField)
         addToolbarTo(mlField)
+        addToolbarToView(notesField)
         
         saveFeeding.bnd_enabled.observe { enabled in
             if enabled {
@@ -60,9 +61,7 @@ class EditFeedingViewController: UIViewController {
         notesField.layer.borderColor = underlineColor.CGColor
         notesField.layer.borderWidth = 1.0
         notesField.layer.cornerRadius = 3.0
-        
         saveFeeding.backgroundColor = UIColor.darkGrayColor()
-        
     }
     
     func addPickerTo(field:UITextFieldWithDate, mode:UIDatePickerMode, format:String) {
@@ -83,6 +82,16 @@ class EditFeedingViewController: UIViewController {
     }
     
     func addToolbarTo(field:UITextField) {
+        let toolbar = createToolbar()
+        field.inputAccessoryView = toolbar
+    }
+    
+    func addToolbarToView(field:UITextView) {
+        let toolbar = createToolbar()
+        field.inputAccessoryView = toolbar
+    }
+    
+    func createToolbar() -> UIToolbar {
         let toolbar = UIToolbar()
         toolbar.translucent = true
         toolbar.backgroundColor = UIColor.whiteColor()
@@ -91,7 +100,7 @@ class EditFeedingViewController: UIViewController {
         let barItems = [UIBarButtonItem.init(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil),
             UIBarButtonItem(title: "Done", style: .Plain, target: self, action: "tappedDone")]
         toolbar.setItems(barItems, animated: true)
-        field.inputAccessoryView = toolbar
+        return toolbar
     }
 
     func tappedDone() {

@@ -46,6 +46,9 @@ class AddFeedingViewController: UIViewController {
         addPickerTo(dateField, mode: .Date, format: "MM-dd-yyyy", withDate: dateToUse)
         addToolbarTo(caloriesField)
         addToolbarTo(mlField)
+        addToolbarTo(caloriesField)
+        addToolbarTo(mlField)
+        addToolbarToView(notesField)
         
         addFeedingButton.bnd_enabled.observe { enabled in
             if enabled {
@@ -78,6 +81,16 @@ class AddFeedingViewController: UIViewController {
     }
     
     func addToolbarTo(field:UITextField) {
+        let toolbar = createToolbar()
+        field.inputAccessoryView = toolbar
+    }
+    
+    func addToolbarToView(field:UITextView) {
+        let toolbar = createToolbar()
+        field.inputAccessoryView = toolbar
+    }
+    
+    func createToolbar() -> UIToolbar {
         let toolbar = UIToolbar()
         toolbar.translucent = true
         toolbar.backgroundColor = UIColor.whiteColor()
@@ -86,7 +99,7 @@ class AddFeedingViewController: UIViewController {
         let barItems = [UIBarButtonItem.init(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil),
             UIBarButtonItem(title: "Done", style: .Plain, target: self, action: "tappedDone")]
         toolbar.setItems(barItems, animated: true)
-        field.inputAccessoryView = toolbar
+        return toolbar
     }
     
     func tappedDone() {
