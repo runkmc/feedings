@@ -596,7 +596,7 @@
                         <viewControllerLayoutGuide type="top" id="gsl-2R-q5u"/>
                         <viewControllerLayoutGuide type="bottom" id="uBH-9Z-zfv"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="SHZ-0V-nNk">
+                    <view key="view" contentMode="scaleToFill" id="SHZ-0V-nNk" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -712,6 +712,7 @@
                             <constraint firstItem="dEE-0G-XS7" firstAttribute="width" secondItem="xPr-kY-A7I" secondAttribute="width" id="3cv-Bq-a4n"/>
                             <constraint firstItem="SYu-k2-gMk" firstAttribute="trailing" secondItem="SHZ-0V-nNk" secondAttribute="trailingMargin" id="8CM-pX-abE"/>
                             <constraint firstItem="BFv-mn-ADH" firstAttribute="centerX" secondItem="TIN-Sk-3Q4" secondAttribute="centerX" id="8aW-RA-e8l"/>
+                            <constraint firstItem="SYu-k2-gMk" firstAttribute="top" secondItem="gsl-2R-q5u" secondAttribute="bottom" constant="19" id="BXR-fu-Mli"/>
                             <constraint firstItem="a8V-5S-rDn" firstAttribute="centerX" secondItem="SHZ-0V-nNk" secondAttribute="centerX" id="E2O-Dg-Y9a"/>
                             <constraint firstItem="DhE-MJ-RR2" firstAttribute="top" secondItem="TIN-Sk-3Q4" secondAttribute="bottom" constant="28" id="GVZ-En-tah"/>
                             <constraint firstItem="TIN-Sk-3Q4" firstAttribute="top" secondItem="xPr-kY-A7I" secondAttribute="bottom" constant="15" id="HNz-bt-deK"/>
@@ -727,8 +728,8 @@
                             <constraint firstItem="dEE-0G-XS7" firstAttribute="centerX" secondItem="xPr-kY-A7I" secondAttribute="centerX" id="ZCN-qo-VYp"/>
                             <constraint firstItem="dEE-0G-XS7" firstAttribute="top" secondItem="xPr-kY-A7I" secondAttribute="bottom" id="aCK-Bj-xJT"/>
                             <constraint firstItem="TIN-Sk-3Q4" firstAttribute="centerX" secondItem="xPr-kY-A7I" secondAttribute="centerX" id="aaO-3M-cPR"/>
-                            <constraint firstItem="SYu-k2-gMk" firstAttribute="top" secondItem="gsl-2R-q5u" secondAttribute="bottom" constant="19" id="c0c-uy-yeA"/>
                             <constraint firstItem="4AB-H8-hpw" firstAttribute="height" secondItem="DhE-MJ-RR2" secondAttribute="height" id="dqO-3s-tJq"/>
+                            <constraint firstItem="uBH-9Z-zfv" firstAttribute="top" secondItem="R2Z-8h-dRD" secondAttribute="bottom" constant="30" id="eWL-X3-3h4"/>
                             <constraint firstItem="DhE-MJ-RR2" firstAttribute="centerX" secondItem="TIN-Sk-3Q4" secondAttribute="centerX" id="gEo-hA-aSH"/>
                             <constraint firstItem="4AB-H8-hpw" firstAttribute="width" secondItem="DhE-MJ-RR2" secondAttribute="width" id="hzi-Fi-Wtg"/>
                             <constraint firstItem="4AB-H8-hpw" firstAttribute="centerX" secondItem="TIN-Sk-3Q4" secondAttribute="centerX" id="jBT-Rs-paR"/>
@@ -736,10 +737,12 @@
                             <constraint firstItem="a8V-5S-rDn" firstAttribute="top" secondItem="SYu-k2-gMk" secondAttribute="bottom" constant="16" id="rPX-C8-jbc"/>
                             <constraint firstItem="SYu-k2-gMk" firstAttribute="leading" secondItem="SHZ-0V-nNk" secondAttribute="leadingMargin" id="t74-GG-MAj"/>
                             <constraint firstItem="eUf-rQ-fWh" firstAttribute="centerX" secondItem="TIN-Sk-3Q4" secondAttribute="centerX" id="uL3-eZ-OCV"/>
-                            <constraint firstItem="uBH-9Z-zfv" firstAttribute="top" secondItem="R2Z-8h-dRD" secondAttribute="bottom" constant="30" id="wdY-PN-7qa"/>
                             <constraint firstItem="R2Z-8h-dRD" firstAttribute="centerX" secondItem="SHZ-0V-nNk" secondAttribute="centerX" id="wrk-v2-RIu"/>
                             <constraint firstItem="TIN-Sk-3Q4" firstAttribute="width" secondItem="xPr-kY-A7I" secondAttribute="width" id="yqi-8D-sgm"/>
                         </constraints>
+                        <connections>
+                            <action selector="backgroundTapped:" destination="Px8-2o-VlV" eventType="touchDown" id="J0K-Ln-sNo"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="indicator" destination="a8V-5S-rDn" id="ey3-hq-HfF"/>
@@ -764,7 +767,7 @@
                         <viewControllerLayoutGuide type="top" id="yqV-Ug-gs3"/>
                         <viewControllerLayoutGuide type="bottom" id="nmF-66-6iQ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="L7A-Ti-QaH">
+                    <view key="view" contentMode="scaleToFill" id="L7A-Ti-QaH" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -909,6 +912,9 @@
                                 <exclude reference="eTK-of-iLc"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <action selector="backgroundTapped:" destination="RWQ-Ek-mmZ" eventType="touchDown" id="oOL-5H-uHM"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="cancelButton" destination="wLy-pO-bVY" id="06J-0s-DHA"/>

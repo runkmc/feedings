@@ -79,4 +79,8 @@ class LoginViewController: UIViewController {
         alert.addAction(send)
         self.presentViewController(alert, animated: true, completion:nil)
     }
+    
+    @IBAction func backgroundTapped(sender: AnyObject) {
+        view.endEditing(true)
+    }
 }
