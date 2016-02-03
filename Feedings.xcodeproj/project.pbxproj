@@ -28,6 +28,7 @@
 		0A28E0621C0BAA5100D75D04 /* AddFeedingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A28E0611C0BAA5100D75D04 /* AddFeedingViewController.swift */; };
 		0A33C4A11C08F0F1002BB5E9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A33C4A01C08F0F1002BB5E9 /* SettingsViewController.swift */; };
 		0A5555D91BF6F08700F1EA5A /* ParseStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5555D81BF6F08700F1EA5A /* ParseStuff.swift */; };
+		0A93D0051C6294BA000B72F8 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93D0041C6294BA000B72F8 /* user.swift */; };
 		0A993F661C1E565A00785570 /* UILabel+FormattedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A993F651C1E565A00785570 /* UILabel+FormattedText.swift */; };
 		0A9D5D251C34878A001E3A6C /* EditFeedingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9D5D241C34878A001E3A6C /* EditFeedingViewController.swift */; };
 		0AB7699A1C1CFD5B002AD40F /* DaySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB769991C1CFD5B002AD40F /* DaySpec.swift */; };
@@ -83,6 +84,7 @@
 		0A28E0611C0BAA5100D75D04 /* AddFeedingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFeedingViewController.swift; sourceTree = "<group>"; };
 		0A33C4A01C08F0F1002BB5E9 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0A5555D81BF6F08700F1EA5A /* ParseStuff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseStuff.swift; sourceTree = "<group>"; };
+		0A93D0041C6294BA000B72F8 /* user.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		0A993F651C1E565A00785570 /* UILabel+FormattedText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+FormattedText.swift"; sourceTree = "<group>"; };
 		0A9D5D241C34878A001E3A6C /* EditFeedingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditFeedingViewController.swift; sourceTree = "<group>"; };
 		0A9D63E61BE48BC5000F4778 /* Feedings.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Feedings.entitlements; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 		0A93D0031C629426000B72F8 /* protocols */ = {
 			isa = PBXGroup;
 			children = (
+				0A93D0041C6294BA000B72F8 /* user.swift */,
 			);
 			name = protocols;
 			sourceTree = "<group>";
@@ -549,6 +552,7 @@
 				0AFE4F3E1C0AD14B0007C419 /* FeedingsCell.swift in Sources */,
 				0A33C4A11C08F0F1002BB5E9 /* SettingsViewController.swift in Sources */,
 				0A03EE851C1BA816000C9423 /* FeedingViewModel.swift in Sources */,
+				0A93D0051C6294BA000B72F8 /* user.swift in Sources */,
 				0A0BAF961C0662D100933B9F /* LoginViewController.swift in Sources */,
 				0A28E0621C0BAA5100D75D04 /* AddFeedingViewController.swift in Sources */,
 				0A03EE891C1BC35A000C9423 /* Day.swift in Sources */,
