@@ -187,6 +187,7 @@
 		0A28B1051BE1B55600C4FDA5 /* Feedings */ = {
 			isa = PBXGroup;
 			children = (
+				0A93D0031C629426000B72F8 /* protocols */,
 				0A03EE831C1BA740000C9423 /* Controllers */,
 				0A03EE821C1BA72F000C9423 /* models */,
 				0AF412DA1C13755300B8C2A8 /* storyboards */,
@@ -218,6 +219,13 @@
 				0A28B1281BE1B55600C4FDA5 /* Info.plist */,
 			);
 			path = FeedingsUITests;
+			sourceTree = "<group>";
+		};
+		0A93D0031C629426000B72F8 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = protocols;
 			sourceTree = "<group>";
 		};
 		0AF412D91C13752A00B8C2A8 /* subclasses */ = {
