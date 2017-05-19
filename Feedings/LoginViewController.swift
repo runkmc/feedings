@@ -8,8 +8,6 @@
 
 import UIKit
 import Bond
-import Colortools
-import Parse
 
 class LoginViewController: UIViewController {
 
@@ -23,10 +21,10 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         notRegisteredLabel.text = NSLocalizedString("Not registered?", comment: "")
-        loginButton.setTitle(NSLocalizedString("Log in", comment: ""), forState: .Normal)
-        loginButton.backgroundColor = UIColor.darkGrayColor()
+        loginButton.setTitle(NSLocalizedString("Log in", comment: ""), for: UIControlState())
+        loginButton.backgroundColor = UIColor.darkGray
         loginButton.layer.cornerRadius = 24
-        signupButton.setTitle(NSLocalizedString("Sign up", comment: ""), forState: .Normal)
+        signupButton.setTitle(NSLocalizedString("Sign up", comment: ""), for: UIControlState())
         signupButton.layer.cornerRadius = 24
         
         usernameField.placeholder = NSLocalizedString("username", comment: "")
@@ -46,7 +44,7 @@ class LoginViewController: UIViewController {
         }
     }
     
-    @IBAction func loginTapped(sender: AnyObject) {
+    @IBAction func loginTapped(_ sender: AnyObject) {
         PFUser.logInWithUsernameInBackground(usernameField.text!, password: passwordField.text!) {
             (user: PFUser?, error: NSError?) -> Void in
             if let _ = user {
@@ -62,25 +60,25 @@ class LoginViewController: UIViewController {
         }
     }
     
-    @IBAction func forgotPassword(sender: AnyObject) {
-        let alert = UIAlertController.init(title: NSLocalizedString("Forgot password?", comment: ""), message: NSLocalizedString("Enter your email to recieve a password reset link", comment: ""),preferredStyle: .Alert)
-        alert.addTextFieldWithConfigurationHandler {
+    @IBAction func forgotPassword(_ sender: AnyObject) {
+        let alert = UIAlertController.init(title: NSLocalizedString("Forgot password?", comment: ""), message: NSLocalizedString("Enter your email to recieve a password reset link", comment: ""),preferredStyle: .alert)
+        alert.addTextField {
             textField in
             textField.font = UIFont(name: "FiraSans-Book", size: 12)!
         }
-        let cancel = UIAlertAction.init(title: NSLocalizedString("Cancel", comment: ""), style: .Cancel, handler:nil)
+        let cancel = UIAlertAction.init(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler:nil)
         alert.addAction(cancel)
-        let send = UIAlertAction.init(title: NSLocalizedString("Reset Password", comment: ""), style: .Default, handler: {
+        let send = UIAlertAction.init(title: NSLocalizedString("Reset Password", comment: ""), style: .default, handler: {
             action in
             if let email = alert.textFields?[0].text {
                 PFUser.requestPasswordResetForEmailInBackground(email)
             }
         })
         alert.addAction(send)
-        self.presentViewController(alert, animated: true, completion:nil)
+        self.present(alert, animated: true, completion:nil)
     }
     
-    @IBAction func backgroundTapped(sender: AnyObject) {
+    @IBAction func backgroundTapped(_ sender: AnyObject) {
         view.endEditing(true)
     }
 }

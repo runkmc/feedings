@@ -26,12 +26,12 @@ class EditFeedingViewController: UIViewController {
     var feeding: FeedingViewModel? = nil
     var baseFeeding: PFObject? = nil
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         caloriesField.text = String(feeding!.calories)
         mlField.text = String(feeding!.volume)
         notesField.text = feeding!.notes
-        addPickerTo(timeField, mode: .Time, format: "h:mm a")
-        addPickerTo(dateField, mode: .Date, format: "MM-dd-yyyy")
+        addPickerTo(timeField, mode: .time, format: "h:mm a")
+        addPickerTo(dateField, mode: .date, format: "MM-dd-yyyy")
         addToolbarTo(caloriesField)
         addToolbarTo(mlField)
         addToolbarToView(notesField)
@@ -56,22 +56,22 @@ class EditFeedingViewController: UIViewController {
         dateLabel.text = NSLocalizedString("date", comment: "")
         timeLabel.text = NSLocalizedString("time", comment: "")
         notesLabel.text = NSLocalizedString("notes", comment: "")
-        saveFeeding.setTitle(NSLocalizedString("Save Feeding", comment: ""), forState: .Normal)
+        saveFeeding.setTitle(NSLocalizedString("Save Feeding", comment: ""), for: UIControlState())
         let underlineColor = UIColor.init(hex: 0xD5D5D5FF)
         notesField.layer.borderColor = underlineColor.CGColor
         notesField.layer.borderWidth = 1.0
         notesField.layer.cornerRadius = 3.0
-        saveFeeding.backgroundColor = UIColor.darkGrayColor()
+        saveFeeding.backgroundColor = UIColor.darkGray
     }
     
-    func addPickerTo(field:UITextFieldWithDate, mode:UIDatePickerMode, format:String) {
+    func addPickerTo(_ field:UITextFieldWithDate, mode:UIDatePickerMode, format:String) {
         let picker = UIDatePicker()
         picker.datePickerMode = mode
-        picker.backgroundColor = UIColor.whiteColor()
+        picker.backgroundColor = UIColor.white
         picker.tintColor = UIColor.feedingsOrange
-        let formatter = NSDateFormatter()
+        let formatter = DateFormatter()
         formatter.dateFormat = format
-        picker.date = feeding!.date
+        picker.date = feeding!.date as Date
         field.inputView = picker
         addToolbarTo(field)
         
@@ -81,24 +81,24 @@ class EditFeedingViewController: UIViewController {
         }
     }
     
-    func addToolbarTo(field:UITextField) {
+    func addToolbarTo(_ field:UITextField) {
         let toolbar = createToolbar()
         field.inputAccessoryView = toolbar
     }
     
-    func addToolbarToView(field:UITextView) {
+    func addToolbarToView(_ field:UITextView) {
         let toolbar = createToolbar()
         field.inputAccessoryView = toolbar
     }
     
     func createToolbar() -> UIToolbar {
         let toolbar = UIToolbar()
-        toolbar.translucent = true
-        toolbar.backgroundColor = UIColor.whiteColor()
+        toolbar.isTranslucent = true
+        toolbar.backgroundColor = UIColor.white
         toolbar.tintColor = UIColor.feedingsOrange
         toolbar.sizeToFit()
-        let barItems = [UIBarButtonItem.init(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil),
-            UIBarButtonItem(title: "Done", style: .Plain, target: self, action: "tappedDone")]
+        let barItems = [UIBarButtonItem.init(barButtonSystemItem: .flexibleSpace, target: nil, action: nil),
+            UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(EditFeedingViewController.tappedDone))]
         toolbar.setItems(barItems, animated: true)
         return toolbar
     }
@@ -107,7 +107,7 @@ class EditFeedingViewController: UIViewController {
         view.endEditing(true)
     }
     
-    @IBAction func tappedBackground(sender: AnyObject) {
+    @IBAction func tappedBackground(_ sender: AnyObject) {
         view.endEditing(true)
     }
     
@@ -116,29 +116,29 @@ class EditFeedingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func saveFeedingTapped(sender: AnyObject) {
-        let date = putTogetherDate(dateField.date!, timeDate: timeField.date!)
+    @IBAction func saveFeedingTapped(_ sender: AnyObject) {
+        let date = putTogetherDate(dateField.date! as Date, timeDate: timeField.date! as Date)
         let updatedFeeding = feeding!.baseFeeding
         updatedFeeding["date"] = date
         updatedFeeding["calories"] = Int(caloriesField.text!)
         updatedFeeding["volume"] = Int(mlField.text!)
         updatedFeeding["notes"] = notesField.text
         self.baseFeeding = updatedFeeding
-        performSegueWithIdentifier("unwindFromEditingFeeding", sender: self)
+        performSegue(withIdentifier: "unwindFromEditingFeeding", sender: self)
     }
     
-    func putTogetherDate(calendarDate: NSDate, timeDate: NSDate) -> NSDate {
-        let calendar = NSCalendar.currentCalendar()
-        let calendarComponents = calendar.components([.Month, .Day, .Year], fromDate: calendarDate)
-        let timeComponents = calendar.components([.Hour, .Minute], fromDate: timeDate)
-        let components = NSDateComponents()
+    func putTogetherDate(_ calendarDate: Date, timeDate: Date) -> Date {
+        let calendar = Calendar.current
+        let calendarComponents = (calendar as NSCalendar).components([.month, .day, .year], from: calendarDate)
+        let timeComponents = (calendar as NSCalendar).components([.hour, .minute], from: timeDate)
+        var components = DateComponents()
         components.year = calendarComponents.year
         components.month = calendarComponents.month
         components.day = calendarComponents.day
         components.hour = timeComponents.hour
         components.minute = timeComponents.minute
         
-        return calendar.dateFromComponents(components)!
+        return calendar.date(from: components)!
     }
 
     /*

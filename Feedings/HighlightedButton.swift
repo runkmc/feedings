@@ -12,16 +12,16 @@ import Colortools
 class HighlightedButton: UIButton {
   @IBInspectable var buttonColor: UIColor?
     
-    func animateBackgroundColorChange(color: UIColor?) {
+    func animateBackgroundColorChange(_ color: UIColor?) {
         UIView.beginAnimations(nil, context: nil)
         UIView.setAnimationDuration(0.1)
         self.backgroundColor = color
         UIView.commitAnimations()
     }
     
-    override var highlighted: Bool {
+    override var isHighlighted: Bool {
         get {
-            return super.highlighted
+            return super.isHighlighted
         }
         set {
             if newValue {
@@ -29,7 +29,7 @@ class HighlightedButton: UIButton {
             } else {
                 self.backgroundColor = buttonColor
             }
-            super.highlighted = newValue
+            super.isHighlighted = newValue
             }
         }
 }

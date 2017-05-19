@@ -24,7 +24,7 @@ class AddFeedingViewController: UIViewController {
     @IBOutlet weak var notesField: UITextView!
     @IBOutlet weak var addFeedingButton: HighlightedButton!
     var feeding: PFObject?
-    var date: NSDate?
+    var date: Date?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,17 +33,17 @@ class AddFeedingViewController: UIViewController {
         dateLabel.text = NSLocalizedString("date", comment: "")
         timeLabel.text = NSLocalizedString("time", comment: "")
         notesLabel.text = NSLocalizedString("notes", comment: "")
-        addFeedingButton.setTitle(NSLocalizedString("Add Feeding", comment: ""), forState: .Normal)
+        addFeedingButton.setTitle(NSLocalizedString("Add Feeding", comment: ""), for: UIControlState())
         let underlineColor = UIColor.init(hex: 0xD5D5D5FF)
         notesField.layer.borderColor = underlineColor.CGColor
         notesField.layer.borderWidth = 1.0
         notesField.layer.cornerRadius = 3.0
 
-        addFeedingButton.backgroundColor = UIColor.darkGrayColor()
+        addFeedingButton.backgroundColor = UIColor.darkGray
         
-        addPickerTo(timeField, mode: .Time, format: "h:mm a", withDate: NSDate())
-        let dateToUse = self.date ?? NSDate()
-        addPickerTo(dateField, mode: .Date, format: "MM-dd-yyyy", withDate: dateToUse)
+        addPickerTo(timeField, mode: .time, format: "h:mm a", withDate: Date())
+        let dateToUse = self.date ?? Date()
+        addPickerTo(dateField, mode: .date, format: "MM-dd-yyyy", withDate: dateToUse)
         addToolbarTo(caloriesField)
         addToolbarTo(mlField)
         addToolbarTo(caloriesField)
@@ -63,12 +63,12 @@ class AddFeedingViewController: UIViewController {
         }.bindTo(addFeedingButton.bnd_enabled)
     }
     
-    func addPickerTo(field:UITextFieldWithDate, mode:UIDatePickerMode, format:String, withDate:NSDate) {
+    func addPickerTo(_ field:UITextFieldWithDate, mode:UIDatePickerMode, format:String, withDate:Date) {
         let picker = UIDatePicker()
         picker.datePickerMode = mode
-        picker.backgroundColor = UIColor.whiteColor()
+        picker.backgroundColor = UIColor.white
         picker.tintColor = UIColor.feedingsOrange
-        let formatter = NSDateFormatter()
+        let formatter = DateFormatter()
         formatter.dateFormat = format
         picker.date = withDate
         field.inputView = picker
@@ -80,24 +80,24 @@ class AddFeedingViewController: UIViewController {
         }
     }
     
-    func addToolbarTo(field:UITextField) {
+    func addToolbarTo(_ field:UITextField) {
         let toolbar = createToolbar()
         field.inputAccessoryView = toolbar
     }
     
-    func addToolbarToView(field:UITextView) {
+    func addToolbarToView(_ field:UITextView) {
         let toolbar = createToolbar()
         field.inputAccessoryView = toolbar
     }
     
     func createToolbar() -> UIToolbar {
         let toolbar = UIToolbar()
-        toolbar.translucent = true
-        toolbar.backgroundColor = UIColor.whiteColor()
+        toolbar.isTranslucent = true
+        toolbar.backgroundColor = UIColor.white
         toolbar.tintColor = UIColor.feedingsOrange
         toolbar.sizeToFit()
-        let barItems = [UIBarButtonItem.init(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil),
-            UIBarButtonItem(title: "Done", style: .Plain, target: self, action: "tappedDone")]
+        let barItems = [UIBarButtonItem.init(barButtonSystemItem: .flexibleSpace, target: nil, action: nil),
+            UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(AddFeedingViewController.tappedDone))]
         toolbar.setItems(barItems, animated: true)
         return toolbar
     }
@@ -106,33 +106,33 @@ class AddFeedingViewController: UIViewController {
         view.endEditing(true)
     }
     
-    @IBAction func tappedBackground(sender: AnyObject) {
+    @IBAction func tappedBackground(_ sender: AnyObject) {
         view.endEditing(true)
     }
     
-    @IBAction func tappedAdd(sender: AnyObject) {
-        let date = putTogetherDate(dateField.date!, timeDate: timeField.date!)
+    @IBAction func tappedAdd(_ sender: AnyObject) {
+        let date = putTogetherDate(dateField.date! as Date, timeDate: timeField.date! as Date)
         let feeding = PFObject(className: "Feeding")
         feeding["date"] = date
         feeding["calories"] = Int(caloriesField.text!)
         feeding["volume"] = Int(mlField.text!)
         feeding["notes"] = notesField.text
         self.feeding = feeding
-        performSegueWithIdentifier("unwindFromAddingFeeding", sender: self)
+        performSegue(withIdentifier: "unwindFromAddingFeeding", sender: self)
     }
     
-    func putTogetherDate(calendarDate: NSDate, timeDate: NSDate) -> NSDate {
-        let calendar = NSCalendar.currentCalendar()
-        let calendarComponents = calendar.components([.Month, .Day, .Year], fromDate: calendarDate)
-        let timeComponents = calendar.components([.Hour, .Minute], fromDate: timeDate)
-        let components = NSDateComponents()
+    func putTogetherDate(_ calendarDate: Date, timeDate: Date) -> Date {
+        let calendar = Calendar.current
+        let calendarComponents = (calendar as NSCalendar).components([.month, .day, .year], from: calendarDate)
+        let timeComponents = (calendar as NSCalendar).components([.hour, .minute], from: timeDate)
+        var components = DateComponents()
         components.year = calendarComponents.year
         components.month = calendarComponents.month
         components.day = calendarComponents.day
         components.hour = timeComponents.hour
         components.minute = timeComponents.minute
         
-        return calendar.dateFromComponents(components)!
+        return calendar.date(from: components)!
     }
     
     override func didReceiveMemoryWarning() {

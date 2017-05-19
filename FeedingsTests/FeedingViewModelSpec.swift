@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Parse
 import Quick
 import Nimble
 @testable import Feedings
@@ -15,7 +14,7 @@ import Nimble
 class FeedingViewModelSpec: QuickSpec {
     override func spec() {
         describe("View-ready attributes") {
-            let calendar = NSCalendar.currentCalendar()
+            let calendar = NSCalendar.current
             let feeding = PFObject(className: "Feeding")
             feeding["date"] = calendar.dateBySettingHour(13, minute: 30, second: 0, ofDate: NSDate(), options: [])
             feeding["calories"] = 200

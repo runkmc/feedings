@@ -14,26 +14,26 @@ class Day {
     var calories: String
     var volume: String
     let date: String
-    let dateObject: NSDate
+    let dateObject: Date
     var feedings: [FeedingViewModel] {
         didSet {
             updateTotals()
         }
     }
     
-    init(date: NSDate, feedings: [FeedingViewModel]) {
-        self.feedings = feedings.sort()
-        self.volume = "\(feedings.map({$0.volume}).reduce(0, combine: +))"
-        self.calories = "\(feedings.map({$0.calories}).reduce(0, combine: +))"
+    init(date: Date, feedings: [FeedingViewModel]) {
+        self.feedings = feedings.sorted()
+        self.volume = "\(feedings.map({$0.volume}).reduce(0, +))"
+        self.calories = "\(feedings.map({$0.calories}).reduce(0, +))"
         self.dateObject = date
-        let formatter = NSDateFormatter()
+        let formatter = DateFormatter()
         formatter.dateFormat = "MM-dd-yyyy"
-        self.date = formatter.stringFromDate(date)
+        self.date = formatter.string(from: date)
     }
     
     func updateTotals() {
-        self.volume = "\(feedings.map({$0.volume}).reduce(0, combine: +))"
-        self.calories = "\(feedings.map({$0.calories}).reduce(0, combine: +))"
+        self.volume = "\(feedings.map({$0.volume}).reduce(0, +))"
+        self.calories = "\(feedings.map({$0.calories}).reduce(0, +))"
     }
     
 }

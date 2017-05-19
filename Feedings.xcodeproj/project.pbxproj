@@ -354,6 +354,7 @@
 					0A28B1021BE1B55600C4FDA5 = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = P3HAZUW5GC;
+						LastSwiftMigration = 0830;
 						SystemCapabilities = {
 							com.apple.iCloud = {
 								enabled = 0;
@@ -362,10 +363,12 @@
 					};
 					0A28B1161BE1B55600C4FDA5 = {
 						CreatedOnToolsVersion = 7.1;
+						LastSwiftMigration = 0830;
 						TestTargetID = 0A28B1021BE1B55600C4FDA5;
 					};
 					0A28B1211BE1B55600C4FDA5 = {
 						CreatedOnToolsVersion = 7.1;
+						LastSwiftMigration = 0830;
 						TestTargetID = 0A28B1021BE1B55600C4FDA5;
 					};
 				};
@@ -734,6 +737,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kevin.mcgladdery.Feedings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -750,6 +754,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kevin.mcgladdery.Feedings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -765,6 +770,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kevin.mcgladdery.FeedingsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Feedings.app/Feedings";
 			};
 			name = Debug;
@@ -780,6 +786,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kevin.mcgladdery.FeedingsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Feedings.app/Feedings";
 			};
 			name = Release;
@@ -793,6 +800,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kevin.mcgladdery.FeedingsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Feedings;
 				USES_XCTRUNNER = YES;
 			};
@@ -807,6 +815,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kevin.mcgladdery.FeedingsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Feedings;
 				USES_XCTRUNNER = YES;
 			};

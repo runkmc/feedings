@@ -15,7 +15,7 @@ class FeedingsListViewController: UIViewController, DZNEmptyDataSetDelegate, DZN
     
     @IBOutlet weak var tableView: UITableView!
     var currentUser: PFUser?
-    var day = Day(date: NSDate(), feedings: [])
+    var day = Day(date: Date(), feedings: [])
     let refresh = UIRefreshControl()
     @IBOutlet weak var caloriesLabel: UILabel!
     @IBOutlet weak var volumeLabel: UILabel!
@@ -32,17 +32,17 @@ class FeedingsListViewController: UIViewController, DZNEmptyDataSetDelegate, DZN
         caloriesTitle.text = NSLocalizedString("calories", comment: "")
         volumeTitle.text = NSLocalizedString("mililiters", comment: "")
         tableView.addSubview(refresh)
-        refresh.addTarget(self, action: "refreshPulled", forControlEvents: .ValueChanged)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "getFeedingsOnLaunch",
-            name: UIApplicationDidBecomeActiveNotification, object: nil)
+        refresh.addTarget(self, action: #selector(FeedingsListViewController.refreshPulled), for: .valueChanged)
+        NotificationCenter.default.addObserver(self, selector: #selector(FeedingsListViewController.getFeedingsOnLaunch),
+            name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.delegate = self
         tableView.dataSource = self
         guard let user = PFUser.currentUser() else {
-            performSegueWithIdentifier("showLoginController", sender: self)
+            performSegue(withIdentifier: "showLoginController", sender: self)
             return
         }
         user.ACL = PFACL(user: user)
@@ -54,10 +54,10 @@ class FeedingsListViewController: UIViewController, DZNEmptyDataSetDelegate, DZN
         pullRemoteChanges()
     }
     
-    func getFeedingsForDay(startingPoint: NSDate) {
-        let calendar = NSCalendar.currentCalendar()
-        let thisMorning = calendar.startOfDayForDate(startingPoint)
-        let tonight = calendar.dateByAddingUnit(.Day, value: 1, toDate: thisMorning, options: [])!
+    func getFeedingsForDay(_ startingPoint: Date) {
+        let calendar = Calendar.current
+        let thisMorning = calendar.startOfDay(for: startingPoint)
+        let tonight = (calendar as NSCalendar).date(byAdding: .day, value: 1, to: thisMorning, options: [])!
         let query = PFQuery(className: "Feeding")
         query.fromLocalDatastore()
         query.whereKey("deleted", notEqualTo: true)
@@ -77,9 +77,9 @@ class FeedingsListViewController: UIViewController, DZNEmptyDataSetDelegate, DZN
     }
     
     func pullRemoteChanges() {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        let rightNow = NSDate()
-        let lastUpdated = defaults.objectForKey("lastUpdated") as? NSDate ?? NSDate.distantPast()
+        let defaults = UserDefaults.standard
+        let rightNow = Date()
+        let lastUpdated = defaults.object(forKey: "lastUpdated") as? Date ?? Date.distantPast
         let query = PFQuery(className: "Feeding")
         query.whereKey("updatedAt", greaterThanOrEqualTo: lastUpdated)
         query.findObjectsInBackgroundWithBlock {
@@ -92,7 +92,7 @@ class FeedingsListViewController: UIViewController, DZNEmptyDataSetDelegate, DZN
                 self.tableView.reloadData()
             }
         }
-        defaults.setObject(rightNow, forKey: "lastUpdated")
+        defaults.set(rightNow, forKey: "lastUpdated")
     }
     
     func refreshPulled() {
@@ -100,51 +100,51 @@ class FeedingsListViewController: UIViewController, DZNEmptyDataSetDelegate, DZN
         pullRemoteChanges()
     }
     
-    @IBAction func previousDayTapped(sender: AnyObject) {
+    @IBAction func previousDayTapped(_ sender: AnyObject) {
         let shownDate = day.dateObject
-        let previousDay = NSCalendar.currentCalendar().dateByAddingUnit(.Day, value: -1, toDate: shownDate, options: [])!
+        let previousDay = (Calendar.current as NSCalendar).date(byAdding: .day, value: -1, to: shownDate, options: [])!
         getFeedingsForDay(previousDay)
     }
     
-    @IBAction func nextDayTapped(sender: AnyObject) {
+    @IBAction func nextDayTapped(_ sender: AnyObject) {
         let shownDate = day.dateObject
-        let previousDay = NSCalendar.currentCalendar().dateByAddingUnit(.Day, value: 1, toDate: shownDate, options: [])!
+        let previousDay = (Calendar.current as NSCalendar).date(byAdding: .day, value: 1, to: shownDate, options: [])!
         getFeedingsForDay(previousDay)
     }
     
-    @IBAction func unwindFromAddingFeeding(sender: UIStoryboardSegue) {
-        let vc = sender.sourceViewController as! AddFeedingViewController
+    @IBAction func unwindFromAddingFeeding(_ sender: UIStoryboardSegue) {
+        let vc = sender.source as! AddFeedingViewController
         let feeding = vc.feeding!
         feeding.saveEventually()
         feeding.pinInBackgroundWithBlock {
             (success: Bool, error: NSError?) -> Void in
-            self.getFeedingsForDay(NSDate())
+            self.getFeedingsForDay(Date())
         }
     }
     
-    @IBAction func unwindFromEditingFeeding(sender: UIStoryboardSegue) {
-        let vc = sender.sourceViewController as! EditFeedingViewController
+    @IBAction func unwindFromEditingFeeding(_ sender: UIStoryboardSegue) {
+        let vc = sender.source as! EditFeedingViewController
         let feeding = vc.baseFeeding!
         feeding.saveEventually()
         feeding.pinInBackgroundWithBlock {
             (success: Bool, error: NSError?) -> Void in
-            self.getFeedingsForDay(NSDate())
+            self.getFeedingsForDay(Date())
         }
     }
     
-    @IBAction func unwindFromSignup(sender: UIStoryboardSegue) {
+    @IBAction func unwindFromSignup(_ sender: UIStoryboardSegue) {
         self.getFeedingsForDay(day.dateObject)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showEditViewController" {
             guard let cell = sender as? FeedingsCell! else {
                 return
             }
-            let vc = segue.destinationViewController as! EditFeedingViewController
+            let vc = segue.destination as! EditFeedingViewController
             vc.feeding = cell.feeding
         } else if segue.identifier == "showAddViewController" {
-            let vc = segue.destinationViewController as! AddFeedingViewController
+            let vc = segue.destination as! AddFeedingViewController
             vc.date = day.dateObject
         }
     }
@@ -152,29 +152,29 @@ class FeedingsListViewController: UIViewController, DZNEmptyDataSetDelegate, DZN
 
 extension FeedingsListViewController: UITableViewDelegate, UITableViewDataSource {
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.day.feedings.count
     }
     
-    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
     
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
             let feeding = day.feedings[indexPath.row].baseFeeding
             feeding["deleted"] = true
             feeding.saveEventually()
             feeding.unpinInBackground()
-            day.feedings.removeAtIndex(indexPath.row)
+            day.feedings.remove(at: indexPath.row)
             tableView.reloadData()
             caloriesLabel.text = day.calories
             volumeLabel.text = day.volume
         }
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("feedingcell") as! FeedingsCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "feedingcell") as! FeedingsCell
         let feeding = day.feedings[indexPath.row]
         cell.timeLabel.text = feeding.time
         cell.mainLabel.text = feeding.summary
@@ -190,26 +190,26 @@ extension FeedingsListViewController: UITableViewDelegate, UITableViewDataSource
 
 extension FeedingsListViewController {
     
-    func titleForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
+    func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
         let text = NSLocalizedString("No Feedings for Today", comment: "")
         let attribs = [NSFontAttributeName: UIFont(name: "FiraSans-Medium", size: 18)!,
-            NSForegroundColorAttributeName: UIColor.darkGrayColor()]
+            NSForegroundColorAttributeName: UIColor.darkGray]
         return NSAttributedString(string: text, attributes: attribs)
     }
     
-    func descriptionForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
+    func description(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
         let text = NSLocalizedString("Add a feeding using the \"Add Feeding\" button below", comment: "")
-        let lightGrey = UIColor.darkGrayColor().lighten(0.2)!
+        let lightGrey = UIColor.darkGray.lighten(0.2)!
         let attribs = [NSFontAttributeName: UIFont(name: "FiraSans-Book", size: 14)!,
             NSForegroundColorAttributeName: lightGrey]
         return NSAttributedString(string: text, attributes: attribs)
     }
     
-    func verticalOffsetForEmptyDataSet(scrollView: UIScrollView!) -> CGFloat {
+    func verticalOffset(forEmptyDataSet scrollView: UIScrollView!) -> CGFloat {
         return -70.0
     }
     
-    func emptyDataSetShouldAllowScroll(scrollView: UIScrollView!) -> Bool {
+    func emptyDataSetShouldAllowScroll(_ scrollView: UIScrollView!) -> Bool {
         return true
     }
 }

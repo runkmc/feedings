@@ -19,9 +19,9 @@ class DaySpec: QuickSpec {
             let day = self.setupDay(testDate)
             
             it("returns the saved date as a string") {
-                let formatter = NSDateFormatter()
+                let formatter = DateFormatter()
                 formatter.dateFormat = "MM-dd-yyyy"
-                let today = formatter.stringFromDate(NSDate())
+                let today = formatter.string(from: NSDate() as Date)
                 expect(day.date) == today
             }
             
@@ -55,22 +55,22 @@ class DaySpec: QuickSpec {
         }
     }
     
-    func setupDay(date: NSDate) -> Day {
-        let calendar = NSCalendar.currentCalendar()
+    func setupDay(_ date: NSDate) -> Day {
+        let calendar = Calendar.current
         let feeding1 = PFObject(className: "Feeding")
-        feeding1["date"] = calendar.dateBySettingHour(9, minute: 30, second: 0, ofDate: NSDate(), options: [])
+        feeding1["date"] = calendar.dateBySettingHour(9, minute: 30, second: 0, ofDate: Date(), options: [])
         feeding1["calories"] = 200
         feeding1["volume"] = 240
         feeding1["notes"] = "I mixed in some crunchberries. This turned out to be a mistake."
         let model1 = FeedingViewModel(feeding: feeding1)
         let feeding2 = PFObject(className: "Feeding")
-        feeding2["date"] = calendar.dateBySettingHour(11, minute: 45, second: 0, ofDate: NSDate(), options: [])
+        feeding2["date"] = calendar.dateBySettingHour(11, minute: 45, second: 0, ofDate: Date(), options: [])
         feeding2["calories"] = 245
         feeding2["volume"] = 290
         feeding2["notes"] = "I mixed in some bourbon. This turned out to be a mistake."
         let model2 = FeedingViewModel(feeding: feeding2)
         let feeding3 = PFObject(className: "Feeding")
-        feeding3["date"] = calendar.dateBySettingHour(15, minute: 10, second: 0, ofDate: NSDate(), options: [])
+        feeding3["date"] = calendar.dateBySettingHour(15, minute: 10, second: 0, ofDate: Date(), options: [])
         feeding3["calories"] = 200
         feeding3["volume"] = 240
         feeding3["notes"] = "I mixed in some chili powder. This turned out to be a mistake."

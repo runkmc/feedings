@@ -23,13 +23,13 @@ class SignupViewController: UIViewController {
         usernameField.placeholder = NSLocalizedString("username", comment: "")
         passwordField.placeholder = NSLocalizedString("password", comment: "")
         emailField.placeholder = NSLocalizedString("email", comment: "")
-        signupButton.setTitle(NSLocalizedString("Sign up", comment: ""), forState: .Normal)
-        cancelButton.setTitle(NSLocalizedString("Cancel", comment: ""), forState: .Normal)
+        signupButton.setTitle(NSLocalizedString("Sign up", comment: ""), for: UIControlState())
+        cancelButton.setTitle(NSLocalizedString("Cancel", comment: ""), for: UIControlState())
       
         signupButton.layer.cornerRadius = 24
         cancelButton.layer.cornerRadius = 24
-        signupButton.enabled = false
-        self.signupButton.backgroundColor = UIColor.darkGrayColor()
+        signupButton.isEnabled = false
+        self.signupButton.backgroundColor = UIColor.darkGray
         
         signupButton.bnd_enabled.observe {enabled in
             if enabled {
@@ -50,7 +50,7 @@ class SignupViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func signupUser(sender: AnyObject) {
+    @IBAction func signupUser(_ sender: AnyObject) {
         indicator.startAnimating()
         let user = PFUser()
         user.username = usernameField.text
@@ -71,12 +71,12 @@ class SignupViewController: UIViewController {
         }
     }
     
-    @IBAction func backgroundTapped(sender: AnyObject) {
+    @IBAction func backgroundTapped(_ sender: AnyObject) {
         view.endEditing(true)
     }
     
-    @IBAction func cancelTapped(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func cancelTapped(_ sender: AnyObject) {
+        dismiss(animated: true, completion: nil)
     }
     
     /*

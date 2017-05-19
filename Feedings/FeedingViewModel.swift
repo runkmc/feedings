@@ -7,13 +7,12 @@
 //
 
 import Foundation
-import Parse
 
 class FeedingViewModel: Comparable {
     
     let calories: Int
     let volume: Int
-    let date: NSDate
+    let date: Date
     let time: String
     let notes: String
     let baseFeeding: PFObject
@@ -34,11 +33,11 @@ class FeedingViewModel: Comparable {
 }
 
 func ==(x:FeedingViewModel, y:FeedingViewModel) -> Bool {
-    return x.date.isEqualToDate(y.date)
+    return (x.date == y.date)
 }
 
 func <(x:FeedingViewModel, y:FeedingViewModel) -> Bool {
-    let earlier = x.date.earlierDate(y.date)
+    let earlier = (x.date as NSDate).earlierDate(y.date)
     if earlier == x.date {
         return true
     }

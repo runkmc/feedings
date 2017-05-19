@@ -10,5 +10,5 @@ import Foundation
 import UIKit
 
 class UITextFieldWithDate: UITextField {
-    var date: NSDate?
+    var date: Date?
 }
