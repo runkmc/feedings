@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Colortools
 
 extension UIColor {
   
