@@ -8,7 +8,6 @@
 
 import UIKit
 import Bond
-import Parse
 
 class EditFeedingViewController: UIViewController {
 

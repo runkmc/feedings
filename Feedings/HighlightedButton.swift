@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Colortools
 
 class HighlightedButton: UIButton {
   @IBInspectable var buttonColor: UIColor?
