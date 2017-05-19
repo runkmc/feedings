@@ -4,15 +4,13 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'Feedings' do
-  pod 'Bond', '~> 4.2'
-  pod 'Parse', '~> 1.9.1'
-  pod 'Colortools'
-  pod 'DZNEmptyDataSet', '~> 1.7.2'
+  pod 'Bond', '~> 6.2.6'
+  pod 'DZNEmptyDataSet', '~> 1.8.1'
 end
 
 def testing_pods
-  pod 'Quick', '~> 0.8'
-  pod 'Nimble', '~> 3.0.0'
+  pod 'Quick', '~> 1.1.0'
+  pod 'Nimble', '~> 7.0.0'
 end
 
 target 'FeedingsTests' do
