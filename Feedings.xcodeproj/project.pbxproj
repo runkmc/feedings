@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0A03EE851C1BA816000C9423 /* FeedingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A03EE841C1BA816000C9423 /* FeedingViewModel.swift */; };
-		0A03EE871C1BA84E000C9423 /* FeedingViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A03EE861C1BA84E000C9423 /* FeedingViewModelSpec.swift */; };
 		0A03EE891C1BC35A000C9423 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A03EE881C1BC35A000C9423 /* Day.swift */; };
 		0A0BAF911C0583F500933B9F /* FiraSans-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A0BAF901C0583F500933B9F /* FiraSans-Book.otf */; };
 		0A0BAF941C058E6300933B9F /* FeedingsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0BAF931C058E6300933B9F /* FeedingsListViewController.swift */; };
@@ -30,7 +29,6 @@
 		0A93D0051C6294BA000B72F8 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93D0041C6294BA000B72F8 /* user.swift */; };
 		0A993F661C1E565A00785570 /* UILabel+FormattedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A993F651C1E565A00785570 /* UILabel+FormattedText.swift */; };
 		0A9D5D251C34878A001E3A6C /* EditFeedingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9D5D241C34878A001E3A6C /* EditFeedingViewController.swift */; };
-		0AB7699A1C1CFD5B002AD40F /* DaySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB769991C1CFD5B002AD40F /* DaySpec.swift */; };
 		0AC8A5B11C1F409B004DDDED /* FiraSans-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0AC8A5B01C1F409B004DDDED /* FiraSans-SemiBold.otf */; };
 		0AF905731C21EF6D00202167 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF905721C21EF6D00202167 /* libsqlite3.tbd */; };
 		0AFE4F3E1C0AD14B0007C419 /* FeedingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFE4F3D1C0AD14B0007C419 /* FeedingsCell.swift */; };
@@ -59,7 +57,6 @@
 /* Begin PBXFileReference section */
 		05759820D725142AA53093ED /* Pods-FeedingsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedingsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeedingsUITests/Pods-FeedingsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0A03EE841C1BA816000C9423 /* FeedingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedingViewModel.swift; sourceTree = "<group>"; };
-		0A03EE861C1BA84E000C9423 /* FeedingViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedingViewModelSpec.swift; sourceTree = "<group>"; };
 		0A03EE881C1BC35A000C9423 /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		0A0BAF901C0583F500933B9F /* FiraSans-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "FiraSans-Book.otf"; path = "Feedings/FiraSans-Book.otf"; sourceTree = "<group>"; };
 		0A0BAF931C058E6300933B9F /* FeedingsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedingsListViewController.swift; sourceTree = "<group>"; };
@@ -88,7 +85,6 @@
 		0A993F651C1E565A00785570 /* UILabel+FormattedText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+FormattedText.swift"; sourceTree = "<group>"; };
 		0A9D5D241C34878A001E3A6C /* EditFeedingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditFeedingViewController.swift; sourceTree = "<group>"; };
 		0A9D63E61BE48BC5000F4778 /* Feedings.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Feedings.entitlements; sourceTree = "<group>"; };
-		0AB769991C1CFD5B002AD40F /* DaySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaySpec.swift; sourceTree = "<group>"; };
 		0AC8A5B01C1F409B004DDDED /* FiraSans-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-SemiBold.otf"; sourceTree = "<group>"; };
 		0AF905721C21EF6D00202167 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		0AFE4F3D1C0AD14B0007C419 /* FeedingsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedingsCell.swift; sourceTree = "<group>"; };
@@ -208,8 +204,6 @@
 			isa = PBXGroup;
 			children = (
 				0A28B11D1BE1B55600C4FDA5 /* Info.plist */,
-				0A03EE861C1BA84E000C9423 /* FeedingViewModelSpec.swift */,
-				0AB769991C1CFD5B002AD40F /* DaySpec.swift */,
 			);
 			path = FeedingsTests;
 			sourceTree = "<group>";
@@ -590,8 +584,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A03EE871C1BA84E000C9423 /* FeedingViewModelSpec.swift in Sources */,
-				0AB7699A1C1CFD5B002AD40F /* DaySpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
